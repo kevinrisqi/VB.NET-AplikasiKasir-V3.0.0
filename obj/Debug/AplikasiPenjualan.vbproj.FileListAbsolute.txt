@@ -1,0 +1,2 @@
+C:\Users\Anonymous\AppData\Local\Temporary Projects\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.exe.config
+G:\Project\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.exe.config
