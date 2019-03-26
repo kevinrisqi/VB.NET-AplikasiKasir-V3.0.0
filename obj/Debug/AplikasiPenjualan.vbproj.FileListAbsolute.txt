@@ -1,2 +1,11 @@
 C:\Users\Anonymous\AppData\Local\Temporary Projects\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.exe.config
 G:\Project\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.exe.config
+G:\Project\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.exe
+G:\Project\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.pdb
+G:\Project\AplikasiPenjualan\bin\Debug\AplikasiPenjualan.xml
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormMenuUtama.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.Resources.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbproj.GenerateResource.Cache
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.exe
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.xml
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.pdb
