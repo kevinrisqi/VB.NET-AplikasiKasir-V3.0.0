@@ -9,7 +9,7 @@ Module Module1
     Public MyDB As String
 
     Public Sub koneksi()
-        MyDB = "Driver{Mysql ODBC 3.51 Driver};Database=db_penjualan;server=localhost;uid=root"
+        MyDB = "Dsn=db_penjualan;uid=root"
         Conn = New OdbcConnection(MyDB)
         If Conn.State = ConnectionState.Closed Then
             Conn.Open()

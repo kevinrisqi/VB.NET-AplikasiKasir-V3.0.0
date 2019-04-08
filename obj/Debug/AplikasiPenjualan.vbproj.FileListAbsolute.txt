@@ -9,3 +9,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbproj.GenerateResource
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.exe
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.xml
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.pdb
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormLogin.resources
