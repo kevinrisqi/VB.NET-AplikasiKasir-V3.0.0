@@ -56,4 +56,8 @@
     Private Sub KeluarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KeluarToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub MasterBarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterBarangToolStripMenuItem.Click
+        FormBarang.Show()
+    End Sub
 End Class
