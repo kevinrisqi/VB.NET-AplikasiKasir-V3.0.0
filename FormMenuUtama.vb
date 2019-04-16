@@ -60,4 +60,8 @@
     Private Sub MasterBarangToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterBarangToolStripMenuItem.Click
         FormBarang.Show()
     End Sub
+
+    Private Sub MasterUserlistToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterUserlistToolStripMenuItem.Click
+        FormUserlist.Show()
+    End Sub
 End Class
