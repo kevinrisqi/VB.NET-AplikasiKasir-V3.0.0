@@ -10,3 +10,5 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.exe
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.xml
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.pdb
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormLogin.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormBarang.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormUserlist.resources
