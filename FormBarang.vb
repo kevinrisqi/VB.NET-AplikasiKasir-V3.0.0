@@ -46,6 +46,23 @@ Public Class FormBarang
 
     End Sub
 
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Call updateData()
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+
+        TextBox9.Text = DataGridView1.Item(0, i).Value
+        TextBox1.Text = DataGridView1.Item(1, i).Value
+        TextBox2.Text = DataGridView1.Item(2, i).Value
+        TextBox5.Text = DataGridView1.Item(3, i).Value
+        TextBox6.Text = DataGridView1.Item(4, i).Value
+        TextBox3.Text = DataGridView1.Item(5, i).Value
+        TextBox8.Text = DataGridView1.Item(6, i).Value
+        RichTextBox1.Text = DataGridView1.Item(7, i).Value
+        TextBox7.Text = DataGridView1.Item(8, i).Value
+
+    End Sub
+
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
@@ -121,6 +138,7 @@ Public Class FormBarang
         ComboBox1.Enabled = False
 
         Button1.Text = "Input"
+        Button1.Enabled = True
         Button2.Enabled = False
         Button3.Enabled = False
         Button5.Enabled = False
@@ -143,6 +161,22 @@ Public Class FormBarang
         Button5.Enabled = True
     End Sub
 
+    Sub updateData()
+        TextBox1.Focus()
+        TextBox1.Enabled = True
+        TextBox2.Enabled = True
+        TextBox3.Enabled = True
+        TextBox5.Enabled = True
+        TextBox6.Enabled = True
+        TextBox8.Enabled = True
+        RichTextBox1.Enabled = True
+        ComboBox1.Enabled = True
+        DataGridView1.Enabled = True
+        Button5.Enabled = True
+        Button2.Enabled = True
+        Button3.Enabled = True
+        Button1.Enabled = False
+    End Sub
     
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
 
