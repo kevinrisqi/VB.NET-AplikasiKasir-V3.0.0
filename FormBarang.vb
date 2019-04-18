@@ -1,15 +1,11 @@
 ﻿Imports System.Data.Odbc
 Public Class FormBarang
 
-
-    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilBarang()
         Call dgv()
         Call kondisiAwal()
+        Call combobox()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -30,7 +26,7 @@ Public Class FormBarang
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Button1.Text = "Input" Then
             Button1.Text = "Simpan"
-
+            Call isiData()
         End If
 
     End Sub
@@ -75,7 +71,7 @@ Public Class FormBarang
 
     Sub combobox()
         Call koneksi()
-        Dim combo As String = "SELECT kategori_barang.nama_kategori FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori"
+        Dim combo As String = "SELECT DISTINCT kategori_barang.nama_kategori FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori"
         Cmd = New OdbcCommand(combo, Conn)
         Rd = Cmd.ExecuteReader
         Do While Rd.Read = True
@@ -101,12 +97,41 @@ Public Class FormBarang
         TextBox5.Text = ""
         TextBox6.Text = ""
         RichTextBox1.Text = ""
-        ComboBox1.Text = ""
+        'ComboBox1.Text = ""
+
+        TextBox1.Enabled = False
+        TextBox2.Enabled = False
+        TextBox3.Enabled = False
+        TextBox5.Enabled = False
+        TextBox6.Enabled = False
+        RichTextBox1.Enabled = False
+        ComboBox1.Enabled = False
 
         Button1.Text = "Input"
         Button2.Enabled = False
         Button3.Enabled = False
         Button5.Enabled = False
+        DataGridView1.Enabled = True
     End Sub
+
+    Sub isiData()
+        TextBox1.Enabled = True
+        TextBox2.Enabled = True
+        TextBox3.Enabled = True
+        TextBox5.Enabled = True
+        TextBox6.Enabled = True
+        RichTextBox1.Enabled = True
+        ComboBox1.Enabled = True
+        DataGridView1.Enabled = False
+        Button5.Enabled = True
+    End Sub
+
     
+    Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Call kondisiAwal()
+    End Sub
 End Class

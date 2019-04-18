@@ -81,11 +81,9 @@ Partial Class FormBarang
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 16
-        Me.TextBox7.Visible = False
         '
         'ComboBox1
         '
-        Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(295, 74)
         Me.ComboBox1.Name = "ComboBox1"
@@ -94,7 +92,6 @@ Partial Class FormBarang
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Enabled = False
         Me.RichTextBox1.Location = New System.Drawing.Point(122, 127)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(344, 52)
@@ -103,7 +100,6 @@ Partial Class FormBarang
         '
         'TextBox6
         '
-        Me.TextBox6.Enabled = False
         Me.TextBox6.Location = New System.Drawing.Point(344, 101)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
@@ -111,7 +107,6 @@ Partial Class FormBarang
         '
         'TextBox5
         '
-        Me.TextBox5.Enabled = False
         Me.TextBox5.Location = New System.Drawing.Point(122, 101)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
@@ -119,7 +114,6 @@ Partial Class FormBarang
         '
         'TextBox3
         '
-        Me.TextBox3.Enabled = False
         Me.TextBox3.Location = New System.Drawing.Point(122, 75)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(69, 20)
@@ -127,7 +121,6 @@ Partial Class FormBarang
         '
         'TextBox2
         '
-        Me.TextBox2.Enabled = False
         Me.TextBox2.Location = New System.Drawing.Point(122, 49)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(344, 20)
@@ -135,7 +128,6 @@ Partial Class FormBarang
         '
         'TextBox1
         '
-        Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(122, 22)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 20)
@@ -259,7 +251,6 @@ Partial Class FormBarang
         '
         'TextBox4
         '
-        Me.TextBox4.Enabled = False
         Me.TextBox4.Location = New System.Drawing.Point(138, 252)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(130, 20)
@@ -276,7 +267,6 @@ Partial Class FormBarang
         '
         'ComboBox2
         '
-        Me.ComboBox2.Enabled = False
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(354, 251)
         Me.ComboBox2.Name = "ComboBox2"
