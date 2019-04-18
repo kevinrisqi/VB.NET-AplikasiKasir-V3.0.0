@@ -11,21 +11,17 @@ Public Class FormBarang
 
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilBarang()
+        Call dgv()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
     End Sub
 
-    Sub validation()
-        If (TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or RichTextBox1.Text = "" Or ComboBox1.Text = "") Then
-            MsgBox("Silahkan isi data dengan lengkap !")
-        End If
-    End Sub
 
     Sub tampilBarang()
         Call koneksi()
-        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang, harga_beli, harga_jual,stok, satuan, kategori_barang.nama_kategori FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori", Conn)
+        Da = New OdbcDataAdapter("SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "barang")
         DataGridView1.DataSource = Ds.Tables("barang")
@@ -50,7 +46,7 @@ Public Class FormBarang
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Call validation()
+
     End Sub
 
     Private Sub Label9_Click(sender As Object, e As EventArgs)
@@ -61,19 +57,30 @@ Public Class FormBarang
 
     End Sub
 
-    Sub kodeOtomatis()
-        Cmd = New OdbcCommand("select * from barang where id_admin in (select max(id_admin) from admin)", Conn)
-        Dim urutan As String
-        Dim hitung As Long
-        Rd = Cmd.ExecuteReader
-        Rd.Read()
-        If Not Rd.HasRows Then
-            urutan = "ADM" + "001"
-        Else
-            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
-            urutan = "ADM" + Microsoft.VisualBasic.Right("000" & hitung, 3)
-        End If
-        TextBox1.Text = urutan
+    Sub dgv()
+        DataGridView1.Columns(0).Visible = False
+        DataGridView1.Columns(6).Visible = False
+        DataGridView1.Columns(7).Visible = False
+        DataGridView1.Columns(8).Visible = False
+        DataGridView1.Columns(9).Visible = False
+
+        DataGridView1.Columns(1).HeaderText = "ID Barang"
+        DataGridView1.Columns(2).HeaderText = "Nama Barang"
+        DataGridView1.Columns(3).HeaderText = "Harga Beli"
+        DataGridView1.Columns(4).HeaderText = "Harga Jual"
+        DataGridView1.Columns(5).HeaderText = "Stok"
+        DataGridView1.Columns(10).HeaderText = "Kategori"
+
+        DataGridView1.Columns(1).Width = "90"
+        DataGridView1.Columns(2).Width = "150"
+        DataGridView1.Columns(3).Width = "100"
+        DataGridView1.Columns(4).Width = "100"
+        DataGridView1.Columns(5).Width = "50"
+        DataGridView1.Columns(10).Width = "100"
+
+
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
+
 
 End Class
