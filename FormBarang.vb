@@ -60,4 +60,20 @@ Public Class FormBarang
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
+
+    Sub kodeOtomatis()
+        Cmd = New OdbcCommand("select * from barang where id_admin in (select max(id_admin) from admin)", Conn)
+        Dim urutan As String
+        Dim hitung As Long
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Not Rd.HasRows Then
+            urutan = "ADM" + "001"
+        Else
+            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
+            urutan = "ADM" + Microsoft.VisualBasic.Right("000" & hitung, 3)
+        End If
+        TextBox1.Text = urutan
+    End Sub
+
 End Class

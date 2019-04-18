@@ -42,6 +42,9 @@ Partial Class FormBarang
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -64,7 +67,7 @@ Partial Class FormBarang
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(502, 285)
+        Me.GroupBox1.Size = New System.Drawing.Size(502, 216)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -72,7 +75,7 @@ Partial Class FormBarang
         '
         Me.ComboBox1.Enabled = False
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(320, 77)
+        Me.ComboBox1.Location = New System.Drawing.Point(122, 19)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(171, 21)
         Me.ComboBox1.TabIndex = 15
@@ -80,16 +83,16 @@ Partial Class FormBarang
         'RichTextBox1
         '
         Me.RichTextBox1.Enabled = False
-        Me.RichTextBox1.Location = New System.Drawing.Point(147, 157)
+        Me.RichTextBox1.Location = New System.Drawing.Point(122, 151)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(344, 105)
+        Me.RichTextBox1.Size = New System.Drawing.Size(344, 52)
         Me.RichTextBox1.TabIndex = 14
         Me.RichTextBox1.Text = ""
         '
         'TextBox6
         '
         Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(147, 129)
+        Me.TextBox6.Location = New System.Drawing.Point(344, 125)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
         Me.TextBox6.TabIndex = 12
@@ -97,7 +100,7 @@ Partial Class FormBarang
         'TextBox5
         '
         Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(147, 103)
+        Me.TextBox5.Location = New System.Drawing.Point(122, 125)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
         Me.TextBox5.TabIndex = 11
@@ -105,7 +108,7 @@ Partial Class FormBarang
         'TextBox3
         '
         Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(147, 77)
+        Me.TextBox3.Location = New System.Drawing.Point(122, 99)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(69, 20)
         Me.TextBox3.TabIndex = 9
@@ -113,7 +116,7 @@ Partial Class FormBarang
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(147, 51)
+        Me.TextBox2.Location = New System.Drawing.Point(122, 73)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(344, 20)
         Me.TextBox2.TabIndex = 8
@@ -121,7 +124,7 @@ Partial Class FormBarang
         'TextBox1
         '
         Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(147, 24)
+        Me.TextBox1.Location = New System.Drawing.Point(122, 46)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 20)
         Me.TextBox1.TabIndex = 7
@@ -129,7 +132,7 @@ Partial Class FormBarang
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(33, 157)
+        Me.Label7.Location = New System.Drawing.Point(33, 154)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 13)
         Me.Label7.TabIndex = 6
@@ -138,7 +141,7 @@ Partial Class FormBarang
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 129)
+        Me.Label6.Location = New System.Drawing.Point(255, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(58, 13)
         Me.Label6.TabIndex = 5
@@ -147,7 +150,7 @@ Partial Class FormBarang
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(34, 103)
+        Me.Label5.Location = New System.Drawing.Point(34, 125)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 13)
         Me.Label5.TabIndex = 4
@@ -156,7 +159,7 @@ Partial Class FormBarang
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(33, 51)
+        Me.Label4.Location = New System.Drawing.Point(33, 73)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(72, 13)
         Me.Label4.TabIndex = 3
@@ -165,7 +168,7 @@ Partial Class FormBarang
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(33, 80)
+        Me.Label3.Location = New System.Drawing.Point(33, 102)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(29, 13)
         Me.Label3.TabIndex = 2
@@ -174,7 +177,7 @@ Partial Class FormBarang
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(245, 80)
+        Me.Label2.Location = New System.Drawing.Point(34, 22)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 1
@@ -183,7 +186,7 @@ Partial Class FormBarang
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 27)
+        Me.Label1.Location = New System.Drawing.Point(33, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 0
@@ -192,26 +195,26 @@ Partial Class FormBarang
         'Button2
         '
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(113, 293)
+        Me.Button2.Location = New System.Drawing.Point(113, 221)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(85, 36)
         Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Edit"
+        Me.Button2.Text = "Ubah"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(22, 293)
+        Me.Button1.Location = New System.Drawing.Point(22, 221)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(85, 36)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Tambah"
+        Me.Button1.Text = "Input"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button3
         '
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(204, 293)
+        Me.Button3.Location = New System.Drawing.Point(204, 221)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(85, 36)
         Me.Button3.TabIndex = 18
@@ -220,7 +223,7 @@ Partial Class FormBarang
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(418, 293)
+        Me.Button4.Location = New System.Drawing.Point(418, 221)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(85, 36)
         Me.Button4.TabIndex = 19
@@ -230,17 +233,47 @@ Partial Class FormBarang
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 338)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 297)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(501, 248)
+        Me.DataGridView1.Size = New System.Drawing.Size(501, 266)
         Me.DataGridView1.TabIndex = 22
+        '
+        'Button5
+        '
+        Me.Button5.Enabled = False
+        Me.Button5.Location = New System.Drawing.Point(295, 221)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(85, 36)
+        Me.Button5.TabIndex = 23
+        Me.Button5.Text = "Batal"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(159, 272)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(344, 20)
+        Me.TextBox4.TabIndex = 16
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(46, 275)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Pencarian Nama"
         '
         'FormBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(525, 596)
+        Me.ClientSize = New System.Drawing.Size(525, 575)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -255,6 +288,7 @@ Partial Class FormBarang
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -277,4 +311,7 @@ Partial Class FormBarang
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
