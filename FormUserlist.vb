@@ -101,16 +101,16 @@ Public Class FormUserlist
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         'Call isiData()
 
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-            Else
-                Call koneksi()
-                Dim updateData As String = "UPDATE admin set nama_admin = '" & TextBox2.Text & "', password_admin = '" & TextBox3.Text & "', level_admin = '" & ComboBox1.Text & "' WHERE id_admin = '" & TextBox1.Text & "'"
-                Cmd = New OdbcCommand(updateData, Conn)
-                Cmd.ExecuteNonQuery()
-                MsgBox("Data berhasil diubah")
-                Call kondisiAwal()
-            End If
+        Else
+            Call koneksi()
+            Dim updateData As String = "UPDATE admin set nama_admin = '" & TextBox2.Text & "', password_admin = '" & TextBox3.Text & "', level_admin = '" & ComboBox1.Text & "' WHERE id_admin = '" & TextBox1.Text & "'"
+            Cmd = New OdbcCommand(updateData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil diubah")
+            Call kondisiAwal()
+        End If
     End Sub
 
     Sub kodeOtomatis()
