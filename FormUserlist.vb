@@ -7,11 +7,16 @@ Public Class FormUserlist
 
         DataGridView1.Columns(0).HeaderText = "ID Admin"
         DataGridView1.Columns(1).HeaderText = "Username"
-        DataGridView1.Columns(2).HeaderText = "Level Admin"
+        DataGridView1.Columns(2).HeaderText = "Password"
+        DataGridView1.Columns(3).HeaderText = "Level Admin"
+
+        'hide column password
+        DataGridView1.Columns(2).Visible = False
 
         DataGridView1.Columns(0).Width = "100"
         DataGridView1.Columns(1).Width = "200"
-        DataGridView1.Columns(2).Width = "120"
+        DataGridView1.Columns(2).Width = "50"
+        DataGridView1.Columns(3).Width = "120"
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
@@ -34,7 +39,7 @@ Public Class FormUserlist
         ComboBox1.Text = ""
 
         Call koneksi()
-        Da = New OdbcDataAdapter("SELECT id_admin, nama_admin, level_admin FROM admin", Conn)
+        Da = New OdbcDataAdapter("SELECT * FROM admin", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "admin")
         DataGridView1.DataSource = Ds.Tables("admin")
@@ -125,13 +130,14 @@ Public Class FormUserlist
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Call updateData()
+        'Call comboChecked()
         Dim i As Integer
         i = DataGridView1.CurrentRow.Index
 
         TextBox1.Text = DataGridView1.Item(0, i).Value
         TextBox2.Text = DataGridView1.Item(1, i).Value
         TextBox3.Text = DataGridView1.Item(2, i).Value
-        'ComboBox1.Text = DataGridView1.Item(3, i).Value
+        ComboBox1.Text = DataGridView1.Item(3, i).Value
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -170,4 +176,15 @@ Public Class FormUserlist
             DataGridView1.DataSource = Ds.Tables(0)
         End If
     End Sub
+
+    Sub comboChecked()
+        Call koneksi()
+        Dim combo As String = "SELECT * FROM admin WHERE id_admin = 'ADM001'"
+        Cmd = New OdbcCommand(combo, Conn)
+        Rd.Read()
+        If Rd.HasRows Then
+            ComboBox1.Items.Add(Rd.Item(3))
+        End If
+    End Sub
+
 End Class
