@@ -43,6 +43,7 @@ Public Class FormBarang
         Button3.Enabled = True
         Button3.Text = "Cancel"
         TextBox1.Focus()
+        Call combobox()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -83,4 +84,31 @@ Public Class FormBarang
     End Sub
 
 
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Call showCategoriById()
+    End Sub
+
+    Sub combobox()
+        Call koneksi()
+        Dim combo As String = "SELECT kategori_barang.nama_kategori FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori"
+        Cmd = New OdbcCommand(combo, Conn)
+        Rd = Cmd.ExecuteReader
+        Do While Rd.Read = True
+            ComboBox1.Items.Add(Rd.Item("nama_kategori"))
+        Loop
+    End Sub
+
+    Sub showCategoriById()
+        Call koneksi()
+        Dim showcat As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE kategori_barang.nama_kategori = '" & ComboBox1.Text & "'"
+        Cmd = New OdbcCommand(showcat, Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Rd.HasRows Then
+            TextBox7.Text = Rd.Item("id_kategori")
+        End If
+    End Sub
+
+
+    
 End Class
