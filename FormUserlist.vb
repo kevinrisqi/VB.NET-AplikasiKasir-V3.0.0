@@ -177,14 +177,5 @@ Public Class FormUserlist
         End If
     End Sub
 
-    Sub comboChecked()
-        Call koneksi()
-        Dim combo As String = "SELECT * FROM admin WHERE id_admin = 'ADM001'"
-        Cmd = New OdbcCommand(combo, Conn)
-        Rd.Read()
-        If Rd.HasRows Then
-            ComboBox1.Items.Add(Rd.Item(3))
-        End If
-    End Sub
 
 End Class
