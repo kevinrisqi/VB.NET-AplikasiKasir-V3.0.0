@@ -1,9 +1,6 @@
 ﻿Imports System.Data.Odbc
 Public Class FormBarang
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs)
 
@@ -12,6 +9,7 @@ Public Class FormBarang
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call tampilBarang()
         Call dgv()
+        Call kondisiAwal()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -30,27 +28,14 @@ Public Class FormBarang
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Button1.Text = "Simpan"
-        TextBox1.Enabled = True
-        TextBox2.Enabled = True
-        TextBox3.Enabled = True
-        TextBox5.Enabled = True
-        TextBox6.Enabled = True
-        RichTextBox1.Enabled = True
-        ComboBox1.Enabled = True
-        Button1.Enabled = True
-        Button2.Enabled = False
-        Button3.Enabled = True
-        Button3.Text = "Cancel"
-        TextBox1.Focus()
-        Call combobox()
+        If Button1.Text = "Input" Then
+            Button1.Text = "Simpan"
+
+        End If
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
-
-    Private Sub Label9_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -109,6 +94,19 @@ Public Class FormBarang
         End If
     End Sub
 
+    Sub kondisiAwal()
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        TextBox3.Text = ""
+        TextBox5.Text = ""
+        TextBox6.Text = ""
+        RichTextBox1.Text = ""
+        ComboBox1.Text = ""
 
+        Button1.Text = "Input"
+        Button2.Enabled = False
+        Button3.Enabled = False
+        Button5.Enabled = False
+    End Sub
     
 End Class
