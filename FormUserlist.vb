@@ -4,6 +4,15 @@ Public Class FormUserlist
 
     Private Sub FormUserlist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kondisiAwal()
+
+        DataGridView1.Columns(0).HeaderText = "ID Admin"
+        DataGridView1.Columns(1).HeaderText = "Username"
+        DataGridView1.Columns(2).HeaderText = "Level Admin"
+
+        DataGridView1.Columns(0).Width = "100"
+        DataGridView1.Columns(1).Width = "200"
+        DataGridView1.Columns(2).Width = "120"
+        DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
     Sub kondisiAwal()
