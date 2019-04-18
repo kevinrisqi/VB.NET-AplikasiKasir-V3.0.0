@@ -48,12 +48,16 @@ Partial Class FormBarang
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.TextBox7)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.RichTextBox1)
@@ -77,15 +81,17 @@ Partial Class FormBarang
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(327, 23)
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.Location = New System.Drawing.Point(20, 146)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 16
+        Me.TextBox7.Visible = False
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(295, 74)
+        Me.ComboBox1.Location = New System.Drawing.Point(320, 22)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(171, 21)
         Me.ComboBox1.TabIndex = 15
@@ -94,7 +100,7 @@ Partial Class FormBarang
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(122, 127)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(344, 52)
+        Me.RichTextBox1.Size = New System.Drawing.Size(369, 52)
         Me.RichTextBox1.TabIndex = 14
         Me.RichTextBox1.Text = ""
         '
@@ -123,7 +129,7 @@ Partial Class FormBarang
         '
         Me.TextBox2.Location = New System.Drawing.Point(122, 49)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(344, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(369, 20)
         Me.TextBox2.TabIndex = 8
         '
         'TextBox1
@@ -181,7 +187,7 @@ Partial Class FormBarang
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(207, 77)
+        Me.Label2.Location = New System.Drawing.Point(232, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 1
@@ -282,6 +288,22 @@ Partial Class FormBarang
         Me.Label9.TabIndex = 16
         Me.Label9.Text = "Kategori"
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(255, 78)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(41, 13)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Satuan"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(344, 75)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(82, 20)
+        Me.TextBox8.TabIndex = 18
+        '
         'FormBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -336,4 +358,6 @@ Partial Class FormBarang
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

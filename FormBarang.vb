@@ -2,9 +2,9 @@
 Public Class FormBarang
 
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call tampilBarang()
-        Call dgv()
+        'Call tampilBarang()
         Call kondisiAwal()
+        Call dgv()
         Call combobox()
     End Sub
 
@@ -27,6 +27,17 @@ Public Class FormBarang
         If Button1.Text = "Input" Then
             Button1.Text = "Simpan"
             Call isiData()
+        Else
+            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or RichTextBox1.Text = "" Or ComboBox1.Text = "" Then
+                MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+            Else
+                Call koneksi()
+                Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori) values ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox5.Text & "', '" & TextBox6.Text & "', '" & TextBox3.Text & "', '" & TextBox8.Text & "', '" & RichTextBox1.Text & "', '" & TextBox7.Text & "')"
+                Cmd = New OdbcCommand(inputData, Conn)
+                Cmd.ExecuteNonQuery()
+                MsgBox("Data berhasil diinputkan")
+                Call kondisiAwal()
+            End If
         End If
 
     End Sub
@@ -96,6 +107,7 @@ Public Class FormBarang
         TextBox3.Text = ""
         TextBox5.Text = ""
         TextBox6.Text = ""
+        TextBox8.Text = ""
         RichTextBox1.Text = ""
         'ComboBox1.Text = ""
 
@@ -104,6 +116,7 @@ Public Class FormBarang
         TextBox3.Enabled = False
         TextBox5.Enabled = False
         TextBox6.Enabled = False
+        TextBox8.Enabled = False
         RichTextBox1.Enabled = False
         ComboBox1.Enabled = False
 
@@ -112,14 +125,18 @@ Public Class FormBarang
         Button3.Enabled = False
         Button5.Enabled = False
         DataGridView1.Enabled = True
+
+        Call tampilBarang()
     End Sub
 
     Sub isiData()
+        TextBox1.Focus()
         TextBox1.Enabled = True
         TextBox2.Enabled = True
         TextBox3.Enabled = True
         TextBox5.Enabled = True
         TextBox6.Enabled = True
+        TextBox8.Enabled = True
         RichTextBox1.Enabled = True
         ComboBox1.Enabled = True
         DataGridView1.Enabled = False
