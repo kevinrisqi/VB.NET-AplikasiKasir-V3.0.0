@@ -23,10 +23,9 @@ Public Class FormKategori
         DataGridView1.ReadOnly = True
     End Sub
 
-
-
     Sub kondisiAwal()
         TextBox1.Text = ""
+        TextBox1.Enabled = False
 
         Button1.Enabled = True
         Button2.Enabled = False
@@ -36,7 +35,33 @@ Public Class FormKategori
         Call dgv()
     End Sub
 
+    Sub isiData()
+        TextBox1.Enabled = True
+        Button1.Enabled = True
+        Button2.Enabled = False
+        Button3.Enabled = False
+    End Sub
+
+
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If Button1.Text = "Tambah" Then
+            Button1.Text = "Simpan"
+            Call isiData()
+        Else
+            If TextBox1.Text = "" Then
+                MsgBox("Silahkan isi nama kategori barang !", vbInformation)
+            Else
+                Call koneksi()
+                Dim inputData As String = "INSERT INTO kategori_barang (nama_kategori) values ('" & TextBox1.Text & "')"
+                Cmd = New OdbcCommand(inputData, Conn)
+                Cmd.ExecuteNonQuery()
+                MsgBox("Data berhasil diinputkan")
+                Call kondisiAwal()
+            End If
+        End If
     End Sub
 End Class

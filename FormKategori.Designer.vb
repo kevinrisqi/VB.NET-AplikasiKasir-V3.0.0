@@ -67,7 +67,7 @@ Partial Class FormKategori
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(89, 41)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Input"
+        Me.Button1.Text = "Tambah"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
