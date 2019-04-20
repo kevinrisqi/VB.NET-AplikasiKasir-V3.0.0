@@ -43,12 +43,36 @@ Public Class FormBarang
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or TextBox7.Text = "" Or TextBox8.Text = "" Or RichTextBox1.Text = "" Or ComboBox1.Text = "" Then
+            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        Else
+            Call koneksi()
+            Dim updateData As String = "UPDATE barang SET id_barang = '" & TextBox1.Text & "',nama_barang = '" & TextBox2.Text & "', harga_beli = '" & TextBox5.Text & "', harga_jual = '" & TextBox6.Text & "',stok = '" & TextBox3.Text & "', satuan = '" & TextBox8.Text & "', keterangan = '" & RichTextBox1.Text & "',id_kategori = '" & TextBox7.Text & "' WHERE id = '" & TextBox9.Text & "' "
+            Cmd = New OdbcCommand(updateData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil diubah")
+            Call kondisiAwal()
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Call updateData()
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+
+        TextBox9.Text = DataGridView1.Item(0, i).Value
+        TextBox1.Text = DataGridView1.Item(1, i).Value
+        TextBox2.Text = DataGridView1.Item(2, i).Value
+        TextBox5.Text = DataGridView1.Item(3, i).Value
+        TextBox6.Text = DataGridView1.Item(4, i).Value
+        TextBox3.Text = DataGridView1.Item(5, i).Value
+        TextBox8.Text = DataGridView1.Item(6, i).Value
+        RichTextBox1.Text = DataGridView1.Item(7, i).Value
+        TextBox7.Text = DataGridView1.Item(8, i).Value
 
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
+    
 
     Sub dgv()
         DataGridView1.Columns(0).Visible = False
@@ -121,6 +145,7 @@ Public Class FormBarang
         ComboBox1.Enabled = False
 
         Button1.Text = "Input"
+        Button1.Enabled = True
         Button2.Enabled = False
         Button3.Enabled = False
         Button5.Enabled = False
@@ -143,6 +168,22 @@ Public Class FormBarang
         Button5.Enabled = True
     End Sub
 
+    Sub updateData()
+        TextBox1.Focus()
+        TextBox1.Enabled = True
+        TextBox2.Enabled = True
+        TextBox3.Enabled = True
+        TextBox5.Enabled = True
+        TextBox6.Enabled = True
+        TextBox8.Enabled = True
+        RichTextBox1.Enabled = True
+        ComboBox1.Enabled = True
+        DataGridView1.Enabled = True
+        Button5.Enabled = True
+        Button2.Enabled = True
+        Button3.Enabled = True
+        Button1.Enabled = False
+    End Sub
     
     Private Sub TextBox7_TextChanged(sender As Object, e As EventArgs) Handles TextBox7.TextChanged
 
@@ -150,5 +191,56 @@ Public Class FormBarang
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Call kondisiAwal()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
+            Call koneksi()
+            Dim deleteData As String = "DELETE FROM barang WHERE id = '" & TextBox9.Text & "'"
+            Cmd = New OdbcCommand(deleteData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil dihapus")
+            Call kondisiAwal()
+        End If
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+        Call koneksi()
+        Dim searchData As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang like '%" & TextBox4.Text & "%'"
+        Cmd = New OdbcCommand(searchData, Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Rd.HasRows Then
+            Call koneksi()
+            Dim query As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang like '%" & TextBox4.Text & "%'"
+            Da = New OdbcDataAdapter(query, Conn)
+            Ds = New DataSet
+            Da.Fill(Ds, "barang")
+            DataGridView1.DataSource = Ds.Tables("barang")
+        End If
+    End Sub
+
+    Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox3.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
+
+    End Sub
+
+    Private Sub TextBox5_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox5.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
+
+    End Sub
+
+    Private Sub TextBox6_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox6.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
+
     End Sub
 End Class
