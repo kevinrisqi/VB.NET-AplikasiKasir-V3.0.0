@@ -12,3 +12,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.pdb
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormLogin.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormBarang.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormUserlist.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormKategori.resources
