@@ -98,4 +98,15 @@ Public Class FormKategori
             Call kondisiAwal()
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
+            Call koneksi()
+            Dim deleteData As String = "DELETE FROM kategori_barang WHERE id_kategori = '" & TextBox2.Text & "'"
+            Cmd = New OdbcCommand(deleteData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil dihapus")
+            Call kondisiAwal()
+        End If
+    End Sub
 End Class
