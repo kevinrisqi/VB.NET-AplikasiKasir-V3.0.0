@@ -96,6 +96,12 @@
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSetupToko.Designer.vb">
+      <DependentUpon>FormSetupToko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSetupToko.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormUserlist.Designer.vb">
       <DependentUpon>FormUserlist.vb</DependentUpon>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSetupToko.resx">
+      <DependentUpon>FormSetupToko.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserlist.resx">
       <DependentUpon>FormUserlist.vb</DependentUpon>
