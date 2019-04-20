@@ -42,6 +42,14 @@ Public Class FormKategori
         Button3.Enabled = False
     End Sub
 
+    Sub updateData()
+        TextBox1.Enabled = True
+        Button1.Enabled = False
+        Button2.Enabled = True
+        Button3.Enabled = True
+    End Sub
+
+
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Me.Close()
@@ -62,6 +70,32 @@ Public Class FormKategori
                 MsgBox("Data berhasil diinputkan")
                 Call kondisiAwal()
             End If
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Call updateData()
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+
+        TextBox2.Text = DataGridView1.Item(0, i).Value
+        TextBox1.Text = DataGridView1.Item(1, i).Value
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If TextBox1.Text = "" Then
+            MsgBox("Silahkan isi nama kategori barang !", vbInformation)
+        Else
+            Call koneksi()
+            Dim updateData As String = "UPDATE kategori_barang SET nama_kategori = '" & TextBox1.Text & "' WHERE id_kategori = '" & TextBox2.Text & "'"
+            Cmd = New OdbcCommand(updateData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil diubah !")
+            Call kondisiAwal()
         End If
     End Sub
 End Class
