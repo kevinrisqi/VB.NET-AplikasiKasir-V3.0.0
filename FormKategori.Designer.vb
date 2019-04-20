@@ -56,6 +56,7 @@ Partial Class FormKategori
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(143, 34)
+        Me.TextBox1.MaxLength = 15
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(221, 20)
         Me.TextBox1.TabIndex = 1
