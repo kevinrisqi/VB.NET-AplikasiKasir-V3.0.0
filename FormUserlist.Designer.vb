@@ -72,6 +72,7 @@ Partial Class FormUserlist
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(147, 78)
+        Me.TextBox3.MaxLength = 25
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox3.Size = New System.Drawing.Size(211, 20)
@@ -80,6 +81,7 @@ Partial Class FormUserlist
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(147, 51)
+        Me.TextBox2.MaxLength = 50
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(296, 20)
         Me.TextBox2.TabIndex = 10
@@ -123,6 +125,7 @@ Partial Class FormUserlist
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(147, 23)
+        Me.TextBox1.MaxLength = 6
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(74, 20)
         Me.TextBox1.TabIndex = 5
