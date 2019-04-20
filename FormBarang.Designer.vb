@@ -91,7 +91,7 @@ Partial Class FormBarang
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(344, 75)
-        Me.TextBox8.MaxLength = 25
+        Me.TextBox8.MaxLength = 15
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(82, 20)
         Me.TextBox8.TabIndex = 18
@@ -134,7 +134,7 @@ Partial Class FormBarang
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(344, 101)
-        Me.TextBox6.MaxLength = 11
+        Me.TextBox6.MaxLength = 10
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
         Me.TextBox6.TabIndex = 12
@@ -142,7 +142,7 @@ Partial Class FormBarang
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(122, 101)
-        Me.TextBox5.MaxLength = 11
+        Me.TextBox5.MaxLength = 10
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
         Me.TextBox5.TabIndex = 11
@@ -158,7 +158,7 @@ Partial Class FormBarang
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(122, 49)
-        Me.TextBox2.MaxLength = 50
+        Me.TextBox2.MaxLength = 45
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(369, 20)
         Me.TextBox2.TabIndex = 8
@@ -290,7 +290,7 @@ Partial Class FormBarang
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(138, 252)
-        Me.TextBox4.MaxLength = 50
+        Me.TextBox4.MaxLength = 15
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(365, 20)
         Me.TextBox4.TabIndex = 16
