@@ -48,7 +48,7 @@ Public Class FormUserlist
     End Sub
 
     Sub isiData()
-        TextBox1.Enabled = True
+        TextBox1.Enabled = False
         TextBox2.Enabled = True
         TextBox3.Enabled = True
         ComboBox1.Enabled = True
@@ -59,7 +59,7 @@ Public Class FormUserlist
     End Sub
 
     Sub updateData()
-        TextBox1.Enabled = True
+        TextBox1.Enabled = False
         TextBox2.Enabled = True
         TextBox3.Enabled = True
         ComboBox1.Enabled = True
@@ -149,9 +149,7 @@ Public Class FormUserlist
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
-            MsgBox("Silahkan pilih data yang akan dihapus !", vbInformation)
-        Else
+        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
             Call koneksi()
             Dim deleteData As String = "DELETE FROM admin WHERE id_admin = '" & TextBox1.Text & "'"
             Cmd = New OdbcCommand(deleteData, Conn)
