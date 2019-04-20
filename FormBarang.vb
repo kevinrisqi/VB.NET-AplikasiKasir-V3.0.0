@@ -24,7 +24,7 @@ Public Class FormBarang
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Button1.Text = "Input" Then
+        If Button1.Text = "Tambah" Then
             Button1.Text = "Simpan"
             Call isiData()
         Else
@@ -144,7 +144,7 @@ Public Class FormBarang
         RichTextBox1.Enabled = False
         ComboBox1.Enabled = False
 
-        Button1.Text = "Input"
+        Button1.Text = "Tambah"
         Button1.Enabled = True
         Button2.Enabled = False
         Button3.Enabled = False

@@ -26,7 +26,7 @@ Public Class FormUserlist
         TextBox3.Text = ""
         'ComboBox1.Items.Clear()
 
-        Button1.Text = "Input"
+        Button1.Text = "Tambah"
         'Button3.Text = "Hapus"
 
         TextBox1.Enabled = False
@@ -71,7 +71,7 @@ Public Class FormUserlist
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Button1.Text = "Input" Then
+        If Button1.Text = "Tambah" Then
             Button1.Text = "Simpan"
             'Button3.Text = "Batal"
             Call isiData()

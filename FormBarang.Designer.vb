@@ -249,7 +249,7 @@ Partial Class FormBarang
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(85, 36)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Input"
+        Me.Button1.Text = "Tambah"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button3

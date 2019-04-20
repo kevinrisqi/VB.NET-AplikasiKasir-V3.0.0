@@ -23,8 +23,9 @@ Partial Class FormKategori
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -36,6 +37,7 @@ Partial Class FormKategori
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
@@ -43,6 +45,23 @@ Partial Class FormKategori
         Me.GroupBox1.Size = New System.Drawing.Size(374, 70)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(143, 8)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(41, 20)
+        Me.TextBox2.TabIndex = 2
+        Me.TextBox2.Visible = False
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(143, 34)
+        Me.TextBox1.MaxLength = 15
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(221, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'Label1
         '
@@ -53,20 +72,13 @@ Partial Class FormKategori
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nama Kategori"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(143, 34)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(221, 20)
-        Me.TextBox1.TabIndex = 1
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(12, 88)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(89, 41)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Input"
+        Me.Button1.Text = "Tambah"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -134,4 +146,5 @@ Partial Class FormKategori
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 End Class
