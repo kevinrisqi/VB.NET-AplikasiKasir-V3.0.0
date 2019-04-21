@@ -45,6 +45,7 @@ Partial Class FormMenuUtama
         Me.ListSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OdbcConnection1 = New System.Data.Odbc.OdbcConnection()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,9 +108,9 @@ Partial Class FormMenuUtama
         'MasterSupplierToolStripMenuItem
         '
         Me.MasterSupplierToolStripMenuItem.Name = "MasterSupplierToolStripMenuItem"
-        Me.MasterSupplierToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.MasterSupplierToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.MasterSupplierToolStripMenuItem.Text = "Master Supplier"
+        Me.MasterSupplierToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.MasterSupplierToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.MasterSupplierToolStripMenuItem.Text = "Master Kategori"
         '
         'MasterUserlistToolStripMenuItem
         '
@@ -127,7 +128,7 @@ Partial Class FormMenuUtama
         '
         Me.SetupTokoToolStripMenuItem.Name = "SetupTokoToolStripMenuItem"
         Me.SetupTokoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
-        Me.SetupTokoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.SetupTokoToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.SetupTokoToolStripMenuItem.Text = "Setup Toko"
         '
         'TransaksiToolStripMenuItem
@@ -203,11 +204,20 @@ Partial Class FormMenuUtama
         '
         Me.OdbcConnection1.ConnectionString = "Dsn=db_penjualan;uid=root"
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 455)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(881, 22)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
         'FormMenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(881, 477)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormMenuUtama"
@@ -243,5 +253,6 @@ Partial Class FormMenuUtama
     Friend WithEvents ListSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OdbcConnection1 As System.Data.Odbc.OdbcConnection
+    Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
 
 End Class

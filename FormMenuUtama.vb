@@ -64,4 +64,12 @@
     Private Sub MasterUserlistToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterUserlistToolStripMenuItem.Click
         FormUserlist.Show()
     End Sub
+
+    Private Sub MasterSupplierToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MasterSupplierToolStripMenuItem.Click
+        FormKategori.Show()
+    End Sub
+
+    Private Sub SetupTokoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetupTokoToolStripMenuItem.Click
+        FormSetupToko.Show()
+    End Sub
 End Class
