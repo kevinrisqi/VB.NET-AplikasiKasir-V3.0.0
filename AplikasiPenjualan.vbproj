@@ -102,6 +102,12 @@
     <Compile Include="FormPembelian.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormPenjualan.Designer.vb">
+      <DependentUpon>FormPenjualan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPenjualan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormSetupToko.Designer.vb">
       <DependentUpon>FormSetupToko.vb</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPembelian.resx">
       <DependentUpon>FormPembelian.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPenjualan.resx">
+      <DependentUpon>FormPenjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSetupToko.resx">
       <DependentUpon>FormSetupToko.vb</DependentUpon>

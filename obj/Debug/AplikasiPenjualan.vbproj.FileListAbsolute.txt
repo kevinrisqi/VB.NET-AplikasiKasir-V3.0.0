@@ -15,3 +15,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormUserlist.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormKategori.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormSetupToko.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormPembelian.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormPenjualan.resources
