@@ -108,9 +108,9 @@ Partial Class FormMenuUtama
         'MasterSupplierToolStripMenuItem
         '
         Me.MasterSupplierToolStripMenuItem.Name = "MasterSupplierToolStripMenuItem"
-        Me.MasterSupplierToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
-        Me.MasterSupplierToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
-        Me.MasterSupplierToolStripMenuItem.Text = "Master Supplier"
+        Me.MasterSupplierToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
+        Me.MasterSupplierToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
+        Me.MasterSupplierToolStripMenuItem.Text = "Master Kategori"
         '
         'MasterUserlistToolStripMenuItem
         '
@@ -128,7 +128,7 @@ Partial Class FormMenuUtama
         '
         Me.SetupTokoToolStripMenuItem.Name = "SetupTokoToolStripMenuItem"
         Me.SetupTokoToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
-        Me.SetupTokoToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.SetupTokoToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.SetupTokoToolStripMenuItem.Text = "Setup Toko"
         '
         'TransaksiToolStripMenuItem
