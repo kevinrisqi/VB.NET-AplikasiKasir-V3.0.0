@@ -70,6 +70,7 @@ Partial Class FormPenjualan
         '
         'TextBox4
         '
+        Me.TextBox4.Enabled = False
         Me.TextBox4.Location = New System.Drawing.Point(124, 56)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(122, 20)
@@ -86,6 +87,7 @@ Partial Class FormPenjualan
         '
         'TextBox3
         '
+        Me.TextBox3.Enabled = False
         Me.TextBox3.Location = New System.Drawing.Point(552, 56)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(98, 20)
@@ -102,6 +104,7 @@ Partial Class FormPenjualan
         '
         'TextBox2
         '
+        Me.TextBox2.Enabled = False
         Me.TextBox2.Location = New System.Drawing.Point(552, 31)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(115, 20)
@@ -118,6 +121,7 @@ Partial Class FormPenjualan
         '
         'TextBox1
         '
+        Me.TextBox1.Enabled = False
         Me.TextBox1.Location = New System.Drawing.Point(124, 31)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(77, 20)
@@ -215,6 +219,7 @@ Partial Class FormPenjualan
         '
         'TextBox9
         '
+        Me.TextBox9.Enabled = False
         Me.TextBox9.Location = New System.Drawing.Point(140, 82)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(175, 20)
@@ -229,6 +234,7 @@ Partial Class FormPenjualan
         '
         'TextBox7
         '
+        Me.TextBox7.Enabled = False
         Me.TextBox7.Location = New System.Drawing.Point(140, 30)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(175, 20)

@@ -72,4 +72,12 @@
     Private Sub SetupTokoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetupTokoToolStripMenuItem.Click
         FormSetupToko.Show()
     End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Me.panel1.Text = Format(Now, "dddd, dd/MM/yyyy " + " hh:mm:ss")
+    End Sub
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
+
+    End Sub
 End Class
