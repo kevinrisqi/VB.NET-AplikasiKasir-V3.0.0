@@ -162,6 +162,7 @@ Partial Class B_FormLogin
         Me.Controls.Add(Me.txtpassword)
         Me.Controls.Add(Me.txtusername)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "B_FormLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "B_FormLogin"
