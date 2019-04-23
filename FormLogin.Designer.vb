@@ -59,11 +59,11 @@ Partial Class FormLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(173, 36)
+        Me.Label1.Location = New System.Drawing.Point(180, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 13)
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Citra Cellular"
+        Me.Label1.Text = "Form Login"
         '
         'TextBox1
         '
@@ -74,7 +74,7 @@ Partial Class FormLogin
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(156, 142)
+        Me.TextBox2.Location = New System.Drawing.Point(156, 129)
         Me.TextBox2.MaxLength = 20
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -93,7 +93,7 @@ Partial Class FormLogin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(86, 145)
+        Me.Label3.Location = New System.Drawing.Point(88, 132)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 5
@@ -101,18 +101,18 @@ Partial Class FormLogin
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(156, 175)
+        Me.Button1.Location = New System.Drawing.Point(156, 164)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(83, 27)
+        Me.Button1.Size = New System.Drawing.Size(83, 33)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "&Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(245, 174)
+        Me.Button2.Location = New System.Drawing.Point(245, 164)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(83, 28)
+        Me.Button2.Size = New System.Drawing.Size(83, 33)
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "&Batal"
         Me.Button2.UseVisualStyleBackColor = True

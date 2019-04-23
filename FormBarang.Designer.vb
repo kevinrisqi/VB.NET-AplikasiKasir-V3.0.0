@@ -94,7 +94,7 @@ Partial Class FormBarang
         Me.TextBox8.MaxLength = 15
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(82, 20)
-        Me.TextBox8.TabIndex = 18
+        Me.TextBox8.TabIndex = 5
         '
         'Label10
         '
@@ -120,7 +120,7 @@ Partial Class FormBarang
         Me.ComboBox1.Location = New System.Drawing.Point(320, 22)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(171, 21)
-        Me.ComboBox1.TabIndex = 15
+        Me.ComboBox1.TabIndex = 2
         '
         'RichTextBox1
         '
@@ -128,7 +128,7 @@ Partial Class FormBarang
         Me.RichTextBox1.MaxLength = 255
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(369, 52)
-        Me.RichTextBox1.TabIndex = 14
+        Me.RichTextBox1.TabIndex = 8
         Me.RichTextBox1.Text = ""
         '
         'TextBox6
@@ -137,7 +137,7 @@ Partial Class FormBarang
         Me.TextBox6.MaxLength = 10
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox6.TabIndex = 12
+        Me.TextBox6.TabIndex = 7
         '
         'TextBox5
         '
@@ -145,7 +145,7 @@ Partial Class FormBarang
         Me.TextBox5.MaxLength = 10
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(122, 20)
-        Me.TextBox5.TabIndex = 11
+        Me.TextBox5.TabIndex = 6
         '
         'TextBox3
         '
@@ -153,7 +153,7 @@ Partial Class FormBarang
         Me.TextBox3.MaxLength = 10
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(69, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.TextBox3.TabIndex = 4
         '
         'TextBox2
         '
@@ -161,7 +161,7 @@ Partial Class FormBarang
         Me.TextBox2.MaxLength = 45
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(369, 20)
-        Me.TextBox2.TabIndex = 8
+        Me.TextBox2.TabIndex = 3
         '
         'TextBox1
         '
@@ -169,7 +169,7 @@ Partial Class FormBarang
         Me.TextBox1.MaxLength = 6
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 20)
-        Me.TextBox1.TabIndex = 7
+        Me.TextBox1.TabIndex = 1
         '
         'Label7
         '
@@ -230,9 +230,9 @@ Partial Class FormBarang
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(33, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(69, 13)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID Barang"
+        Me.Label1.Text = "Kode Barang"
         '
         'Button2
         '

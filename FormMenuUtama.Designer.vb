@@ -240,8 +240,8 @@ Partial Class FormMenuUtama
         Me.panel2.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
         Me.panel2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panel2.Name = "panel2"
-        Me.panel2.Padding = New System.Windows.Forms.Padding(250, 0, 0, 0)
-        Me.panel2.Size = New System.Drawing.Size(254, 27)
+        Me.panel2.Padding = New System.Windows.Forms.Padding(150, 0, 0, 0)
+        Me.panel2.Size = New System.Drawing.Size(154, 27)
         '
         'panel3
         '
@@ -251,8 +251,8 @@ Partial Class FormMenuUtama
         Me.panel3.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
         Me.panel3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.panel3.Name = "panel3"
-        Me.panel3.Padding = New System.Windows.Forms.Padding(0, 0, 150, 0)
-        Me.panel3.Size = New System.Drawing.Size(154, 27)
+        Me.panel3.Padding = New System.Windows.Forms.Padding(0, 0, 100, 0)
+        Me.panel3.Size = New System.Drawing.Size(104, 27)
         '
         'Timer1
         '
@@ -272,15 +272,16 @@ Partial Class FormMenuUtama
         '
         'FormMenuUtama
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(881, 477)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormMenuUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Menu Utama Citra Cellular"
+        Me.Text = "Aplikasi Kasir V.1.0.0"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(false)
         Me.MenuStrip1.PerformLayout
