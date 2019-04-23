@@ -25,6 +25,7 @@ Public Class FormBarang
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Button1.Text = "Tambah" Then
+            TextBox1.Focus()
             Button1.Text = "Simpan"
             Call isiData()
         Else

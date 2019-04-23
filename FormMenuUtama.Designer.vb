@@ -22,6 +22,7 @@ Partial Class FormMenuUtama
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,7 +47,13 @@ Partial Class FormMenuUtama
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OdbcConnection1 = New System.Data.Odbc.OdbcConnection()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.panel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.panel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.panel3 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.panel4 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -102,7 +109,7 @@ Partial Class FormMenuUtama
         '
         Me.MasterBarangToolStripMenuItem.Name = "MasterBarangToolStripMenuItem"
         Me.MasterBarangToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
-        Me.MasterBarangToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.MasterBarangToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.MasterBarangToolStripMenuItem.Text = "Master Barang"
         '
         'MasterSupplierToolStripMenuItem
@@ -116,13 +123,13 @@ Partial Class FormMenuUtama
         '
         Me.MasterUserlistToolStripMenuItem.Name = "MasterUserlistToolStripMenuItem"
         Me.MasterUserlistToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
-        Me.MasterUserlistToolStripMenuItem.Size = New System.Drawing.Size(196, 22)
+        Me.MasterUserlistToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
         Me.MasterUserlistToolStripMenuItem.Text = "Master Userlist"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(193, 6)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(197, 6)
         '
         'SetupTokoToolStripMenuItem
         '
@@ -206,11 +213,62 @@ Partial Class FormMenuUtama
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 455)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.panel1, Me.panel2, Me.panel3, Me.panel4})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 445)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(881, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(881, 32)
         Me.StatusStrip1.TabIndex = 1
         Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'panel1
+        '
+        Me.panel1.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.panel1.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.panel1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel1.Name = "panel1"
+        Me.panel1.Padding = New System.Windows.Forms.Padding(0, 8, 50, 0)
+        Me.panel1.Size = New System.Drawing.Size(143, 27)
+        Me.panel1.Text = "Tanggal & Waktu"
+        '
+        'panel2
+        '
+        Me.panel2.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.panel2.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.panel2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel2.Name = "panel2"
+        Me.panel2.Padding = New System.Windows.Forms.Padding(150, 0, 0, 0)
+        Me.panel2.Size = New System.Drawing.Size(154, 27)
+        '
+        'panel3
+        '
+        Me.panel3.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.panel3.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.panel3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel3.Name = "panel3"
+        Me.panel3.Padding = New System.Windows.Forms.Padding(0, 0, 100, 0)
+        Me.panel3.Size = New System.Drawing.Size(104, 27)
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'panel4
+        '
+        Me.panel4.BorderSides = CType((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) _
+            Or System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom), System.Windows.Forms.ToolStripStatusLabelBorderSides)
+        Me.panel4.BorderStyle = System.Windows.Forms.Border3DStyle.SunkenInner
+        Me.panel4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.panel4.Name = "panel4"
+        Me.panel4.Padding = New System.Windows.Forms.Padding(0, 0, 397, 0)
+        Me.panel4.Size = New System.Drawing.Size(585, 27)
+        Me.panel4.Text = "Copyright ZenAI Software @ 2019"
         '
         'FormMenuUtama
         '
@@ -219,17 +277,20 @@ Partial Class FormMenuUtama
         Me.ClientSize = New System.Drawing.Size(881, 477)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FormMenuUtama"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Menu Utama Citra Cellular"
+        Me.Text = "Aplikasi Kasir V.1.0.0"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(false)
+        Me.MenuStrip1.PerformLayout
+        Me.StatusStrip1.ResumeLayout(false)
+        Me.StatusStrip1.PerformLayout
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
+End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -254,5 +315,10 @@ Partial Class FormMenuUtama
     Friend WithEvents AboutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OdbcConnection1 As System.Data.Odbc.OdbcConnection
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
+    Friend WithEvents panel1 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents panel2 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents panel3 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents panel4 As System.Windows.Forms.ToolStripStatusLabel
 
 End Class

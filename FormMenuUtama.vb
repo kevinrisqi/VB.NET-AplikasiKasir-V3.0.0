@@ -22,6 +22,9 @@
         ListBarangToolStripMenuItem.Enabled = False
         ListSupplierToolStripMenuItem.Enabled = False
         LogoutToolStripMenuItem.Visible = False
+        LoginToolStripMenuItem.Visible = True
+        panel2.Text = ""
+        panel3.Text = ""
     End Sub
 
     Sub terbuka()
@@ -71,5 +74,21 @@
 
     Private Sub SetupTokoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetupTokoToolStripMenuItem.Click
         FormSetupToko.Show()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Me.panel1.Text = Format(Now, "dddd, dd/MM/yyyy " + " hh:mm:ss")
+    End Sub
+
+    Private Sub StatusStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles StatusStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        Call terkunci()
+    End Sub
+
+    Private Sub TransaksiPenjualanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TransaksiPenjualanToolStripMenuItem.Click
+        FormPenjualan.Show()
     End Sub
 End Class
