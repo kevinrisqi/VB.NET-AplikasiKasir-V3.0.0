@@ -16,3 +16,5 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormKategori.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormSetupToko.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormPembelian.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormPenjualan.resources
+G:\Project\AplikasiPenjualan\bin\Debug\Bunifu_UI_v1.52.dll
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.B_FormLogin.resources
