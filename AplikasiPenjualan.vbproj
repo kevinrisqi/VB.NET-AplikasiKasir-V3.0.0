@@ -69,6 +69,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -111,6 +112,12 @@
       <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.vb">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenuUtama.vb">
@@ -174,6 +181,9 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +237,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
