@@ -22,17 +22,15 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -55,26 +53,13 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.BunifuImageButton1)
+        Me.TabPage1.Controls.Add(Me.BunifuTileButton1)
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(721, 82)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Login"
-        '
-        'BunifuImageButton1
-        '
-        Me.BunifuImageButton1.BackColor = System.Drawing.Color.SeaGreen
-        Me.BunifuImageButton1.Image = CType(resources.GetObject("BunifuImageButton1.Image"), System.Drawing.Image)
-        Me.BunifuImageButton1.ImageActive = Nothing
-        Me.BunifuImageButton1.Location = New System.Drawing.Point(8, 6)
-        Me.BunifuImageButton1.Name = "BunifuImageButton1"
-        Me.BunifuImageButton1.Size = New System.Drawing.Size(71, 71)
-        Me.BunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuImageButton1.TabIndex = 0
-        Me.BunifuImageButton1.TabStop = False
-        Me.BunifuImageButton1.Zoom = 10
         '
         'TabPage2
         '
@@ -113,6 +98,27 @@ Partial Class FormMain
         Me.TabPage5.Text = "About"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
+        'BunifuTileButton1
+        '
+        Me.BunifuTileButton1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuTileButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BunifuTileButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BunifuTileButton1.color = System.Drawing.Color.Transparent
+        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.Black
+        Me.BunifuTileButton1.Image = Global.AplikasiPenjualan.My.Resources.Resources.Login_Manager
+        Me.BunifuTileButton1.ImagePosition = 0
+        Me.BunifuTileButton1.ImageZoom = 70
+        Me.BunifuTileButton1.LabelPosition = 20
+        Me.BunifuTileButton1.LabelText = "Login"
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(7, 3)
+        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(4)
+        Me.BunifuTileButton1.Name = "BunifuTileButton1"
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(75, 75)
+        Me.BunifuTileButton1.TabIndex = 2
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -129,7 +135,6 @@ Partial Class FormMain
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -139,5 +144,5 @@ Partial Class FormMain
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
 End Class
