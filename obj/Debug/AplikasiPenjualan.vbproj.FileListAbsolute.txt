@@ -19,3 +19,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormPenjualan.resources
 G:\Project\AplikasiPenjualan\bin\Debug\Bunifu_UI_v1.52.dll
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.B_FormLogin.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormMain.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormUtama.resources
