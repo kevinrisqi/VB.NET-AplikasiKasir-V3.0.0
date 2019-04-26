@@ -117,7 +117,7 @@ Partial Class FormUtama
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.Location = New System.Drawing.Point(3, 250)
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 256)
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -129,8 +129,8 @@ Partial Class FormUtama
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(288, 116)
-        Me.SplitContainer1.SplitterDistance = 58
+        Me.SplitContainer1.Size = New System.Drawing.Size(288, 110)
+        Me.SplitContainer1.SplitterDistance = 55
         Me.SplitContainer1.TabIndex = 2
         '
         'Label3
