@@ -29,6 +29,24 @@ Partial Class MainForm
         Me.footer = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlBarang = New System.Windows.Forms.Panel()
+        Me.pnlDashboard = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.BunifuTileButton4 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuTileButton3 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuTileButton2 = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
@@ -48,6 +66,11 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
+        Me.pnlDashboard.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sidebar.SuspendLayout()
@@ -102,6 +125,230 @@ Partial Class MainForm
         Me.pnlBarang.Size = New System.Drawing.Size(1060, 636)
         Me.pnlBarang.TabIndex = 3
         Me.pnlBarang.Visible = False
+        '
+        'pnlDashboard
+        '
+        Me.pnlDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.pnlDashboard.Controls.Add(Me.BunifuTileButton4)
+        Me.pnlDashboard.Controls.Add(Me.GroupBox4)
+        Me.pnlDashboard.Controls.Add(Me.BunifuTileButton3)
+        Me.pnlDashboard.Controls.Add(Me.GroupBox3)
+        Me.pnlDashboard.Controls.Add(Me.BunifuTileButton2)
+        Me.pnlDashboard.Controls.Add(Me.GroupBox2)
+        Me.pnlDashboard.Controls.Add(Me.BunifuTileButton1)
+        Me.pnlDashboard.Controls.Add(Me.Label3)
+        Me.pnlDashboard.Controls.Add(Me.GroupBox1)
+        Me.pnlDashboard.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pnlDashboard.Location = New System.Drawing.Point(306, 54)
+        Me.pnlDashboard.Name = "pnlDashboard"
+        Me.pnlDashboard.Size = New System.Drawing.Size(1060, 636)
+        Me.pnlDashboard.TabIndex = 0
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(34, 28)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(102, 24)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Dashboard"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Location = New System.Drawing.Point(37, 70)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(210, 93)
+        Me.GroupBox1.TabIndex = 4
+        Me.GroupBox1.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(109, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(72, 20)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Products"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(110, 50)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(24, 16)
+        Me.Label5.TabIndex = 1
+        Me.Label5.Text = "25"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Location = New System.Drawing.Point(278, 70)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(210, 93)
+        Me.GroupBox2.TabIndex = 6
+        Me.GroupBox2.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(110, 50)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(16, 16)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "4"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(109, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(51, 20)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Users"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.Label9)
+        Me.GroupBox3.Location = New System.Drawing.Point(521, 70)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(210, 93)
+        Me.GroupBox3.TabIndex = 8
+        Me.GroupBox3.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(110, 50)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(24, 16)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "78"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(109, 16)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(49, 20)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Sales"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label10)
+        Me.GroupBox4.Controls.Add(Me.Label11)
+        Me.GroupBox4.Location = New System.Drawing.Point(768, 70)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(210, 93)
+        Me.GroupBox4.TabIndex = 10
+        Me.GroupBox4.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(110, 50)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(96, 16)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Rp 2.300.000"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(109, 16)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(62, 20)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Income"
+        '
+        'BunifuTileButton4
+        '
+        Me.BunifuTileButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuTileButton4.color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuTileButton4.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuTileButton4.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BunifuTileButton4.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton4.ForeColor = System.Drawing.Color.White
+        Me.BunifuTileButton4.Image = Global.AplikasiPenjualan.My.Resources.Resources.money_bag_80px
+        Me.BunifuTileButton4.ImagePosition = 20
+        Me.BunifuTileButton4.ImageZoom = 50
+        Me.BunifuTileButton4.LabelPosition = 10
+        Me.BunifuTileButton4.LabelText = ""
+        Me.BunifuTileButton4.Location = New System.Drawing.Point(768, 76)
+        Me.BunifuTileButton4.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton4.Name = "BunifuTileButton4"
+        Me.BunifuTileButton4.Size = New System.Drawing.Size(85, 85)
+        Me.BunifuTileButton4.TabIndex = 9
+        '
+        'BunifuTileButton3
+        '
+        Me.BunifuTileButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.BunifuTileButton3.color = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.BunifuTileButton3.colorActive = System.Drawing.Color.FromArgb(CType(CType(221, Byte), Integer), CType(CType(75, Byte), Integer), CType(CType(57, Byte), Integer))
+        Me.BunifuTileButton3.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BunifuTileButton3.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton3.ForeColor = System.Drawing.Color.White
+        Me.BunifuTileButton3.Image = Global.AplikasiPenjualan.My.Resources.Resources.shopping_cart_50px
+        Me.BunifuTileButton3.ImagePosition = 20
+        Me.BunifuTileButton3.ImageZoom = 50
+        Me.BunifuTileButton3.LabelPosition = 10
+        Me.BunifuTileButton3.LabelText = ""
+        Me.BunifuTileButton3.Location = New System.Drawing.Point(521, 76)
+        Me.BunifuTileButton3.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton3.Name = "BunifuTileButton3"
+        Me.BunifuTileButton3.Size = New System.Drawing.Size(85, 85)
+        Me.BunifuTileButton3.TabIndex = 7
+        '
+        'BunifuTileButton2
+        '
+        Me.BunifuTileButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
+        Me.BunifuTileButton2.color = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
+        Me.BunifuTileButton2.colorActive = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(156, Byte), Integer), CType(CType(18, Byte), Integer))
+        Me.BunifuTileButton2.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BunifuTileButton2.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton2.ForeColor = System.Drawing.Color.White
+        Me.BunifuTileButton2.Image = Global.AplikasiPenjualan.My.Resources.Resources.conference_background_selected_80px
+        Me.BunifuTileButton2.ImagePosition = 20
+        Me.BunifuTileButton2.ImageZoom = 50
+        Me.BunifuTileButton2.LabelPosition = 10
+        Me.BunifuTileButton2.LabelText = ""
+        Me.BunifuTileButton2.Location = New System.Drawing.Point(278, 76)
+        Me.BunifuTileButton2.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton2.Name = "BunifuTileButton2"
+        Me.BunifuTileButton2.Size = New System.Drawing.Size(85, 85)
+        Me.BunifuTileButton2.TabIndex = 5
+        '
+        'BunifuTileButton1
+        '
+        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(239, Byte), Integer))
+        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
+        Me.BunifuTileButton1.Image = Global.AplikasiPenjualan.My.Resources.Resources.box_50px
+        Me.BunifuTileButton1.ImagePosition = 20
+        Me.BunifuTileButton1.ImageZoom = 50
+        Me.BunifuTileButton1.LabelPosition = 10
+        Me.BunifuTileButton1.LabelText = ""
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(37, 76)
+        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton1.Name = "BunifuTileButton1"
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(85, 85)
+        Me.BunifuTileButton1.TabIndex = 3
         '
         'btnLogin
         '
@@ -597,6 +844,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1366, 720)
+        Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.pnlBarang)
         Me.Controls.Add(Me.footer)
         Me.Controls.Add(Me.header)
@@ -608,6 +856,16 @@ Partial Class MainForm
         Me.header.ResumeLayout(False)
         Me.footer.ResumeLayout(False)
         Me.footer.PerformLayout()
+        Me.pnlDashboard.ResumeLayout(False)
+        Me.pnlDashboard.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sidebar.ResumeLayout(False)
@@ -638,4 +896,22 @@ Partial Class MainForm
     Friend WithEvents btnLaporan As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton9 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents btnLogin As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents pnlDashboard As System.Windows.Forms.Panel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents BunifuTileButton4 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents BunifuTileButton3 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents BunifuTileButton2 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

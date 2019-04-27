@@ -316,6 +316,21 @@
   <ItemGroup>
     <None Include="Resources\gender_neutral_user_16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference_background_selected_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\us_dollar_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_bag_80px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

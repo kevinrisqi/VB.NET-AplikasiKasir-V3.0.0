@@ -30,6 +30,14 @@
 
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Call nonAktif()
+        'Call nonAktif()
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        pnlDashboard.Show()
+    End Sub
+
+    Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
+        pnlBarang.Show()
     End Sub
 End Class
