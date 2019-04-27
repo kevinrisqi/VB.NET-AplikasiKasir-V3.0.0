@@ -40,6 +40,8 @@ Partial Class FormAddBarang
         Me.namaKategori = New Bunifu.Framework.UI.BunifuDropdown()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.submit = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -237,7 +239,7 @@ Partial Class FormAddBarang
         Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
         Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ppn.HintForeColor = System.Drawing.Color.Empty
-        Me.ppn.HintText = "PPN"
+        Me.ppn.HintText = "Ppn"
         Me.ppn.isPassword = False
         Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
         Me.ppn.LineIdleColor = System.Drawing.Color.Gray
@@ -248,6 +250,7 @@ Partial Class FormAddBarang
         Me.ppn.Name = "ppn"
         Me.ppn.Size = New System.Drawing.Size(209, 44)
         Me.ppn.TabIndex = 14
+        Me.ppn.Text = "PPN"
         Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'namaKategori
@@ -301,12 +304,53 @@ Partial Class FormAddBarang
         Me.submit.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.submit.OnHoverTextColor = System.Drawing.Color.White
         Me.submit.selected = False
-        Me.submit.Size = New System.Drawing.Size(118, 35)
+        Me.submit.Size = New System.Drawing.Size(91, 35)
         Me.submit.TabIndex = 17
         Me.submit.Text = "Submit"
         Me.submit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.submit.Textcolor = System.Drawing.Color.White
         Me.submit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'cancel
+        '
+        Me.cancel.Activecolor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(188, Byte), Integer))
+        Me.cancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cancel.BorderRadius = 0
+        Me.cancel.ButtonText = "Cancel"
+        Me.cancel.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cancel.DisabledColor = System.Drawing.Color.Gray
+        Me.cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cancel.Iconcolor = System.Drawing.Color.Transparent
+        Me.cancel.Iconimage = Nothing
+        Me.cancel.Iconimage_right = Nothing
+        Me.cancel.Iconimage_right_Selected = Nothing
+        Me.cancel.Iconimage_Selected = Nothing
+        Me.cancel.IconMarginLeft = 0
+        Me.cancel.IconMarginRight = 0
+        Me.cancel.IconRightVisible = True
+        Me.cancel.IconRightZoom = 0.0R
+        Me.cancel.IconVisible = True
+        Me.cancel.IconZoom = 90.0R
+        Me.cancel.IsTab = False
+        Me.cancel.Location = New System.Drawing.Point(238, 525)
+        Me.cancel.Margin = New System.Windows.Forms.Padding(5)
+        Me.cancel.Name = "cancel"
+        Me.cancel.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.cancel.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.cancel.OnHoverTextColor = System.Drawing.Color.White
+        Me.cancel.selected = False
+        Me.cancel.Size = New System.Drawing.Size(91, 35)
+        Me.cancel.TabIndex = 18
+        Me.cancel.Text = "Cancel"
+        Me.cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.cancel.Textcolor = System.Drawing.Color.White
+        Me.cancel.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 5
+        Me.BunifuElipse2.TargetControl = Me.cancel
         '
         'FormAddBarang
         '
@@ -315,17 +359,18 @@ Partial Class FormAddBarang
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
         Me.Controls.Add(Me.submit)
+        Me.Controls.Add(Me.cancel)
         Me.Controls.Add(Me.namaKategori)
         Me.Controls.Add(Me.kategoriID)
         Me.Controls.Add(Me.id)
-        Me.Controls.Add(Me.kodeBarang)
-        Me.Controls.Add(Me.jual)
-        Me.Controls.Add(Me.keterangan)
-        Me.Controls.Add(Me.namaBarang)
-        Me.Controls.Add(Me.ppn)
-        Me.Controls.Add(Me.beli)
         Me.Controls.Add(Me.stok)
+        Me.Controls.Add(Me.beli)
+        Me.Controls.Add(Me.namaBarang)
+        Me.Controls.Add(Me.keterangan)
         Me.Controls.Add(Me.satuan)
+        Me.Controls.Add(Me.jual)
+        Me.Controls.Add(Me.kodeBarang)
+        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -356,4 +401,6 @@ Partial Class FormAddBarang
     Friend WithEvents namaKategori As Bunifu.Framework.UI.BunifuDropdown
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
 End Class

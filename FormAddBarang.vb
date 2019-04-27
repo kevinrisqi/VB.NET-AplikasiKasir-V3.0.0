@@ -14,6 +14,32 @@ Public Class FormAddBarang
     End Sub
 
     Private Sub FormAddBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        namaKategori.AddItem("Voucher")
+        'namaKategori.AddItem("Voucher")
+        Call combobox()
+    End Sub
+
+    Sub combobox()
+        Call koneksi()
+        Dim combo As String = "SELECT DISTINCT * FROM kategori_barang"
+        Cmd = New OdbcCommand(combo, Conn)
+        Rd = Cmd.ExecuteReader
+        Do While Rd.Read = True
+            namaKategori.AddItem(Rd.Item("nama_kategori"))
+        Loop
+    End Sub
+
+    Sub showCategoriById()
+        Call koneksi()
+        Dim showcat As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE kategori_barang.nama_kategori = '" & namaKategori.Text & "'"
+        Cmd = New OdbcCommand(showcat, Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Rd.HasRows Then
+            kategoriID.Text = Rd.Item("id_kategori")
+        End If
+    End Sub
+
+    Private Sub namaKategori_onItemSelected(sender As Object, e As EventArgs) Handles namaKategori.onItemSelected
+        Call showCategoriById()
     End Sub
 End Class
