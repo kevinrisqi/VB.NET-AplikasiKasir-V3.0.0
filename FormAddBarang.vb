@@ -24,13 +24,13 @@ Public Class FormAddBarang
         Cmd = New OdbcCommand(combo, Conn)
         Rd = Cmd.ExecuteReader
         Do While Rd.Read = True
-            namaKategori.AddItem(Rd.Item("nama_kategori"))
+            namaKategori.Items.Add(Rd.Item("nama_kategori"))
         Loop
     End Sub
 
     Sub showCategoriById()
         Call koneksi()
-        Dim showcat As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE kategori_barang.nama_kategori = '" & namaKategori.Text & "'"
+        Dim showcat As String = "SELECT * FROM kategori_barang WHERE nama_kategori = '" & namaKategori.Text & "'"
         Cmd = New OdbcCommand(showcat, Conn)
         Rd = Cmd.ExecuteReader
         Rd.Read()
@@ -39,7 +39,7 @@ Public Class FormAddBarang
         End If
     End Sub
 
-    Private Sub namaKategori_onItemSelected(sender As Object, e As EventArgs) Handles namaKategori.onItemSelected
+    Private Sub namaKategori_SelectedIndexChanged(sender As Object, e As EventArgs) Handles namaKategori.SelectedIndexChanged, namaKategori.SelectedIndexChanged
         Call showCategoriById()
     End Sub
 End Class
