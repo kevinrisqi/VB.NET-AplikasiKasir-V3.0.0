@@ -17,4 +17,12 @@
     Private Sub BunifuImageButton2_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Maximized
     End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+        pnlBarang.Show()
+    End Sub
+
+    Private Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
+
+    End Sub
 End Class
