@@ -121,11 +121,11 @@
   <data name="shop_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shop_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="phonelink_setup_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phonelink_setup_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="User-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="under_computer_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\under_computer_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maximize_window_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximize_window_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,14 +133,14 @@
   <data name="list-add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list-add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_sign_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_sign_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_group_man_woman_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_group_man_woman_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maximize_window_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maximize_window_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize_window_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize_window_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="find_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="accounting_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accounting_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,9 +150,6 @@
   </data>
   <data name="BG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shopping_basket_2_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping_basket_2_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,31 +169,31 @@
   <data name="dashboard_50px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard_50px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="money_bag_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\money_bag_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cardboard_box_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cardboard_box_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize_window_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize_window_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="box_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\box_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="phonelink_setup_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\phonelink_setup_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashboard_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashboard_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user_group_man_woman_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user_group_man_woman_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_sign_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_sign_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="us_dollar_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\us_dollar_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="maximize_window_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize_window_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="under_computer_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\under_computer_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="shopping_cart_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping_cart_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cardboard_box_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cardboard_box_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="money_bag_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\money_bag_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

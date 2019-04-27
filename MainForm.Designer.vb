@@ -889,8 +889,8 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1366, 720)
-        Me.Controls.Add(Me.pnlBarang)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlBarang)
         Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.footer)
         Me.Controls.Add(Me.header)
