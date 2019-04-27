@@ -286,6 +286,30 @@
   <ItemGroup>
     <None Include="Resources\minimize_window_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardboard_box_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group_man_woman_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_basket_2_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonelink_setup_64px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

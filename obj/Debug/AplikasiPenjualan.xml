@@ -15,7 +15,15 @@ AplikasiPenjualan
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.accounting_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:AplikasiPenjualan.My.Resources.Resources.BG">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.cardboard_box_64px">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -24,6 +32,14 @@ AplikasiPenjualan
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:AplikasiPenjualan.My.Resources.Resources.close_window_48px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.dashboard_50px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.dashboard_50px1">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -52,6 +68,22 @@ AplikasiPenjualan
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:AplikasiPenjualan.My.Resources.Resources.minimize_window_48px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.phonelink_setup_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.shop_48px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.shopping_basket_2_100px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.user_group_man_woman_64px">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
