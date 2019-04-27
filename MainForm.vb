@@ -18,11 +18,18 @@
         Me.WindowState = FormWindowState.Maximized
     End Sub
 
-    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
-        pnlBarang.Show()
+    Sub nonAktif()
+        btnLogin.Text = "Login"
+        btnBarang.Enabled = False
+        btnUser.Enabled = False
+        btnDashboard.Enabled = False
+        btnPenjualan.Enabled = False
+        btnLaporan.Enabled = False
+        btnSetup.Enabled = False
     End Sub
 
-    Private Sub BunifuFlatButton4_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton4.Click
 
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Call nonAktif()
     End Sub
 End Class
