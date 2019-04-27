@@ -1,4 +1,5 @@
-﻿Public Class MainForm
+﻿Imports System.Data.Odbc
+Public Class MainForm
 
     Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs)
 
@@ -31,13 +32,32 @@
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call nonAktif()
+        'Call tampilBarang()
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         pnlDashboard.Show()
+        pnlBarang.Hide()
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
-        pnlBarang.Show()
+        switchPanel(FormBarang)
+    End Sub
+
+    Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs) Handles pnlBarang.Paint
+        FormBarang.Show()
+    End Sub
+
+    
+
+    Sub switchPanel(ByVal panel As Form)
+        Panel1.Controls.Clear()
+        panel.TopLevel = False
+        Panel1.Controls.Add(panel)
+        panel.Show()
+    End Sub
+
+    Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
+        switchPanel(FormUserlist)
     End Sub
 End Class

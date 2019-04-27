@@ -64,8 +64,12 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
+        Me.pnlBarang.SuspendLayout()
         Me.pnlDashboard.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -75,6 +79,7 @@ Partial Class MainForm
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'header
@@ -119,6 +124,8 @@ Partial Class MainForm
         '
         'pnlBarang
         '
+        Me.pnlBarang.Controls.Add(Me.DataGridView1)
+        Me.pnlBarang.Controls.Add(Me.Label12)
         Me.pnlBarang.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlBarang.Location = New System.Drawing.Point(306, 54)
         Me.pnlBarang.Name = "pnlBarang"
@@ -838,14 +845,41 @@ Partial Class MainForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular"
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(33, 28)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(131, 24)
+        Me.Label12.TabIndex = 2
+        Me.Label12.Text = "Master Barang"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(37, 122)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(983, 330)
+        Me.DataGridView1.TabIndex = 3
+        '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(306, 54)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1060, 636)
+        Me.Panel1.TabIndex = 4
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1366, 720)
-        Me.Controls.Add(Me.pnlDashboard)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.pnlBarang)
+        Me.Controls.Add(Me.pnlDashboard)
         Me.Controls.Add(Me.footer)
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.sidebar)
@@ -856,6 +890,8 @@ Partial Class MainForm
         Me.header.ResumeLayout(False)
         Me.footer.ResumeLayout(False)
         Me.footer.PerformLayout()
+        Me.pnlBarang.ResumeLayout(False)
+        Me.pnlBarang.PerformLayout()
         Me.pnlDashboard.ResumeLayout(False)
         Me.pnlDashboard.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -871,6 +907,7 @@ Partial Class MainForm
         Me.sidebar.ResumeLayout(False)
         Me.sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -914,4 +951,7 @@ Partial Class MainForm
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class
