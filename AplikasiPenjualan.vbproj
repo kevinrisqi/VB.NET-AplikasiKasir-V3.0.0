@@ -96,6 +96,12 @@
     <Compile Include="B_FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormAddBarang.Designer.vb">
+      <DependentUpon>FormAddBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormBarang.Designer.vb">
       <DependentUpon>FormBarang.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,18 @@
     <Compile Include="FormUserlist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormUtama.Designer.vb">
+      <DependentUpon>FormUtama.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtama.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -171,6 +189,9 @@
   <ItemGroup>
     <EmbeddedResource Include="B_FormLogin.resx">
       <DependentUpon>B_FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddBarang.resx">
+      <DependentUpon>FormAddBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
@@ -198,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserlist.resx">
       <DependentUpon>FormUserlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -243,6 +270,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login-Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Box_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list-add-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_sign_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_window_48px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardboard_box_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_group_man_woman_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_basket_2_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phonelink_setup_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\under_computer_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender_neutral_user_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference_background_selected_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_cart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\us_dollar_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_bag_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box_edit_1_100px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

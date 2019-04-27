@@ -24,11 +24,12 @@ Partial Class FormMain
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.tabExit = New Bunifu.Framework.UI.BunifuTileButton()
+        Me.tabLogin = New Bunifu.Framework.UI.BunifuTileButton()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.SuspendLayout()
@@ -53,13 +54,56 @@ Partial Class FormMain
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.TabPage1.Controls.Add(Me.BunifuTileButton1)
+        Me.TabPage1.Controls.Add(Me.tabExit)
+        Me.TabPage1.Controls.Add(Me.tabLogin)
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage1.Size = New System.Drawing.Size(721, 82)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Login"
+        '
+        'tabExit
+        '
+        Me.tabExit.BackColor = System.Drawing.Color.Transparent
+        Me.tabExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.tabExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tabExit.color = System.Drawing.Color.Transparent
+        Me.tabExit.colorActive = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tabExit.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tabExit.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tabExit.ForeColor = System.Drawing.Color.Black
+        Me.tabExit.Image = Global.AplikasiPenjualan.My.Resources.Resources.Close_Box_Red
+        Me.tabExit.ImagePosition = 10
+        Me.tabExit.ImageZoom = 55
+        Me.tabExit.LabelPosition = 20
+        Me.tabExit.LabelText = "Exit"
+        Me.tabExit.Location = New System.Drawing.Point(84, 3)
+        Me.tabExit.Margin = New System.Windows.Forms.Padding(4)
+        Me.tabExit.Name = "tabExit"
+        Me.tabExit.Size = New System.Drawing.Size(75, 75)
+        Me.tabExit.TabIndex = 3
+        '
+        'tabLogin
+        '
+        Me.tabLogin.BackColor = System.Drawing.Color.Transparent
+        Me.tabLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.tabLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tabLogin.color = System.Drawing.Color.Transparent
+        Me.tabLogin.colorActive = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.tabLogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.tabLogin.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tabLogin.ForeColor = System.Drawing.Color.Black
+        Me.tabLogin.Image = Global.AplikasiPenjualan.My.Resources.Resources.Login_Manager
+        Me.tabLogin.ImagePosition = 0
+        Me.tabLogin.ImageZoom = 70
+        Me.tabLogin.LabelPosition = 20
+        Me.tabLogin.LabelText = "Login"
+        Me.tabLogin.Location = New System.Drawing.Point(5, 3)
+        Me.tabLogin.Margin = New System.Windows.Forms.Padding(4)
+        Me.tabLogin.Name = "tabLogin"
+        Me.tabLogin.Size = New System.Drawing.Size(75, 75)
+        Me.tabLogin.TabIndex = 2
         '
         'TabPage2
         '
@@ -98,27 +142,6 @@ Partial Class FormMain
         Me.TabPage5.Text = "About"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'BunifuTileButton1
-        '
-        Me.BunifuTileButton1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuTileButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.BunifuTileButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BunifuTileButton1.color = System.Drawing.Color.Transparent
-        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.Black
-        Me.BunifuTileButton1.Image = Global.AplikasiPenjualan.My.Resources.Resources.Login_Manager
-        Me.BunifuTileButton1.ImagePosition = 0
-        Me.BunifuTileButton1.ImageZoom = 70
-        Me.BunifuTileButton1.LabelPosition = 20
-        Me.BunifuTileButton1.LabelText = "Login"
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(7, 3)
-        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(75, 75)
-        Me.BunifuTileButton1.TabIndex = 2
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -144,5 +167,6 @@ Partial Class FormMain
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage5 As System.Windows.Forms.TabPage
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents tabLogin As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents tabExit As Bunifu.Framework.UI.BunifuTileButton
 End Class

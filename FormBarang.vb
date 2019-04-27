@@ -244,4 +244,15 @@ Public Class FormBarang
     Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
 
     End Sub
+
+    Sub switchPanel(ByVal panel As Form)
+        MainForm.Panel2.Controls.Clear()
+        panel.TopLevel = False
+        MainForm.Panel2.Controls.Add(panel)
+        panel.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        switchPanel(FormAddBarang)
+    End Sub
 End Class
