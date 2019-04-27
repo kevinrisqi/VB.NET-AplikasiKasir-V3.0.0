@@ -21,3 +21,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.B_FormLogin.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormMain.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormUtama.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.MainForm.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormAddBarang.resources

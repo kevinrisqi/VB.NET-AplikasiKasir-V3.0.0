@@ -52,6 +52,7 @@ Partial Class FormBarang
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button6 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -320,6 +321,15 @@ Partial Class FormBarang
         Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
         '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(521, 155)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(115, 46)
+        Me.Button6.TabIndex = 27
+        Me.Button6.Text = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'FormBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,6 +337,7 @@ Partial Class FormBarang
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TextBox9)
@@ -396,4 +407,5 @@ Partial Class FormBarang
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
