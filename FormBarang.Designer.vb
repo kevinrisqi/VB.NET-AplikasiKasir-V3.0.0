@@ -118,14 +118,14 @@ Partial Class FormBarang
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(115, 46)
         Me.Button6.TabIndex = 27
-        Me.Button6.Text = "Button6"
+        Me.Button6.Text = "Tambah Barang"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'search
         '
         Me.search.BackColor = System.Drawing.Color.White
-        Me.search.BackgroundImage = CType(resources.GetObject("search.BackgroundImage"), System.Drawing.Image)
         Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.search.ForeColor = System.Drawing.Color.Black
         Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
         Me.search.Location = New System.Drawing.Point(211, 185)
