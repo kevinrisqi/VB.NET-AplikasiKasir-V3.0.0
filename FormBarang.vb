@@ -260,14 +260,15 @@ Public Class FormBarang
         Dim i As Integer
         i = DataGridView1.CurrentRow.Index
 
-        FormAddBarang.kodeBarang.Text = DataGridView1.Item(0, i).Value
-        FormAddBarang.namaBarang.Text = DataGridView1.Item(1, i).Value
-        TextBox2.Text = DataGridView1.Item(2, i).Value
-        TextBox5.Text = DataGridView1.Item(3, i).Value
-        TextBox6.Text = DataGridView1.Item(4, i).Value
-        TextBox3.Text = DataGridView1.Item(5, i).Value
-        TextBox8.Text = DataGridView1.Item(6, i).Value
-        RichTextBox1.Text = DataGridView1.Item(7, i).Value
-        TextBox7.Text = DataGridView1.Item(8, i).Value
+        FormAddBarang.id.Text = DataGridView1.Item(0, i).Value
+        FormAddBarang.kodeBarang.Text = DataGridView1.Item(1, i).Value
+        FormAddBarang.namaBarang.Text = DataGridView1.Item(2, i).Value
+        FormAddBarang.beli.Text = DataGridView1.Item(3, i).Value
+        FormAddBarang.jual.Text = DataGridView1.Item(4, i).Value
+        FormAddBarang.stok.Text = DataGridView1.Item(5, i).Value
+        FormAddBarang.satuan.Text = DataGridView1.Item(6, i).Value
+        FormAddBarang.keterangan.Text = DataGridView1.Item(7, i).Value
+        FormAddBarang.kategoriID.Text = DataGridView1.Item(8, i).Value
+        switchPanel(FormAddBarang)
     End Sub
 End Class
