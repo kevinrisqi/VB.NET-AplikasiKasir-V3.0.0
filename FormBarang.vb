@@ -85,18 +85,34 @@ Public Class FormBarang
     End Sub
 
     Private Sub search_OnTextChange(sender As Object, e As EventArgs) Handles search.OnTextChange
-        Call koneksi()
-        Dim searchData As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang like '%" & search.text & "%'"
-        Cmd = New OdbcCommand(searchData, Conn)
-        Rd = Cmd.ExecuteReader
-        Rd.Read()
-        If Rd.HasRows Then
+        If RadioButton1.Checked Then
             Call koneksi()
-            Dim query As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang like '%" & search.text & "%'"
-            Da = New OdbcDataAdapter(query, Conn)
-            Ds = New DataSet
-            Da.Fill(Ds, "barang")
-            DataGridView1.DataSource = Ds.Tables("barang")
+            Dim searchData As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.id_barang  like '%" & search.text & "%'"
+            Cmd = New OdbcCommand(searchData, Conn)
+            Rd = Cmd.ExecuteReader
+            Rd.Read()
+            If Rd.HasRows Then
+                Call koneksi()
+                Dim query As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.id_barang like '%" & search.text & "%'"
+                Da = New OdbcDataAdapter(query, Conn)
+                Ds = New DataSet
+                Da.Fill(Ds, "barang")
+                DataGridView1.DataSource = Ds.Tables("barang")
+            End If
+        Else
+            Call koneksi()
+            Dim searchData As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang  like '%" & search.text & "%'"
+            Cmd = New OdbcCommand(searchData, Conn)
+            Rd = Cmd.ExecuteReader
+            Rd.Read()
+            If Rd.HasRows Then
+                Call koneksi()
+                Dim query As String = "SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori WHERE barang.nama_barang like '%" & search.text & "%'"
+                Da = New OdbcDataAdapter(query, Conn)
+                Ds = New DataSet
+                Da.Fill(Ds, "barang")
+                DataGridView1.DataSource = Ds.Tables("barang")
+            End If
         End If
     End Sub
 
@@ -114,5 +130,16 @@ Public Class FormBarang
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         switchPanel(FormAddBarang)
+    End Sub
+
+    Private Sub BunifuiOSSwitch1_OnValueChange(sender As Object, e As EventArgs)
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        
     End Sub
 End Class

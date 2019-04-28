@@ -46,6 +46,7 @@ Public Class MainForm
 
     Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs) Handles pnlBarang.Paint
         FormBarang.Show()
+        FormBarang.tampilBarang()
     End Sub
 
     

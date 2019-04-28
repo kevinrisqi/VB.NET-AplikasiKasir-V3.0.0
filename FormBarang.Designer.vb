@@ -30,10 +30,11 @@ Partial Class FormBarang
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
-        Me.BunifuiOSSwitch1 = New Bunifu.Framework.UI.BunifuiOSSwitch()
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,7 +50,7 @@ Partial Class FormBarang
         'idBarang
         '
         Me.idBarang.Enabled = False
-        Me.idBarang.Location = New System.Drawing.Point(654, 192)
+        Me.idBarang.Location = New System.Drawing.Point(705, 193)
         Me.idBarang.MaxLength = 15
         Me.idBarang.Name = "idBarang"
         Me.idBarang.Size = New System.Drawing.Size(29, 20)
@@ -114,25 +115,10 @@ Partial Class FormBarang
         Me.BunifuTileButton1.Size = New System.Drawing.Size(60, 40)
         Me.BunifuTileButton1.TabIndex = 32
         '
-        'BunifuiOSSwitch1
-        '
-        Me.BunifuiOSSwitch1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuiOSSwitch1.BackgroundImage = CType(resources.GetObject("BunifuiOSSwitch1.BackgroundImage"), System.Drawing.Image)
-        Me.BunifuiOSSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuiOSSwitch1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuiOSSwitch1.Location = New System.Drawing.Point(507, 187)
-        Me.BunifuiOSSwitch1.Name = "BunifuiOSSwitch1"
-        Me.BunifuiOSSwitch1.OffColor = System.Drawing.Color.Gray
-        Me.BunifuiOSSwitch1.OnColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(202, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.BunifuiOSSwitch1.Size = New System.Drawing.Size(43, 25)
-        Me.BunifuiOSSwitch1.TabIndex = 31
-        Me.BunifuiOSSwitch1.Value = True
-        '
         'search
         '
         Me.search.BackColor = System.Drawing.Color.White
         Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.search.ForeColor = System.Drawing.Color.Black
         Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
         Me.search.Location = New System.Drawing.Point(211, 185)
@@ -184,6 +170,28 @@ Partial Class FormBarang
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(480, 192)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(87, 17)
+        Me.RadioButton1.TabIndex = 34
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Kode Barang"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(595, 192)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton2.TabIndex = 35
+        Me.RadioButton2.Text = "Nama Barang"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
         'FormBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,9 +199,10 @@ Partial Class FormBarang
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
         Me.ControlBox = False
+        Me.Controls.Add(Me.RadioButton2)
+        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.BunifuTileButton1)
-        Me.Controls.Add(Me.BunifuiOSSwitch1)
         Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
@@ -219,7 +228,8 @@ Partial Class FormBarang
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents search As Bunifu.Framework.UI.BunifuTextbox
-    Friend WithEvents BunifuiOSSwitch1 As Bunifu.Framework.UI.BunifuiOSSwitch
     Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
 End Class
