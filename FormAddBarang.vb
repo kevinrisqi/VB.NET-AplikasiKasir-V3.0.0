@@ -42,4 +42,58 @@ Public Class FormAddBarang
     Private Sub namaKategori_SelectedIndexChanged(sender As Object, e As EventArgs) Handles namaKategori.SelectedIndexChanged, namaKategori.SelectedIndexChanged
         Call showCategoriById()
     End Sub
+
+    Private Sub kodeBarang_OnValueChanged(sender As Object, e As EventArgs) Handles kodeBarang.OnValueChanged
+        If kodeBarang.Text.Length = 7 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub namaBarang_OnValueChanged(sender As Object, e As EventArgs) Handles namaBarang.OnValueChanged
+        If namaBarang.Text.Length = 35 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub stok_OnValueChanged(sender As Object, e As EventArgs) Handles stok.OnValueChanged
+        If stok.Text.Length = 4 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub beli_OnValueChanged(sender As Object, e As EventArgs) Handles beli.OnValueChanged
+        If beli.Text.Length = 10 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub jual_OnValueChanged(sender As Object, e As EventArgs) Handles jual.OnValueChanged
+        If jual.Text.Length = 10 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub ppn_OnValueChanged(sender As Object, e As EventArgs)
+        If ppn.Text.Length = 9 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub satuan_OnValueChanged(sender As Object, e As EventArgs) Handles satuan.OnValueChanged
+        If satuan.Text.Length = 15 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub keterangan_OnValueChanged(sender As Object, e As EventArgs) Handles keterangan.OnValueChanged
+        If keterangan.Text.Length = 150 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
+
+    Private Sub ppn_OnValueChanged_1(sender As Object, e As EventArgs) Handles ppn.OnValueChanged
+        If ppn.Text.Length = 9 Then
+            MsgBox("Karakter melebihi batas !")
+        End If
+    End Sub
 End Class

@@ -36,12 +36,12 @@ Partial Class FormAddBarang
         Me.keterangan = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.id = New System.Windows.Forms.TextBox()
         Me.kategoriID = New System.Windows.Forms.TextBox()
-        Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.submit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.namaKategori = New System.Windows.Forms.ComboBox()
+        Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -233,26 +233,6 @@ Partial Class FormAddBarang
         Me.kategoriID.Size = New System.Drawing.Size(35, 26)
         Me.kategoriID.TabIndex = 11
         '
-        'ppn
-        '
-        Me.ppn.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ppn.HintForeColor = System.Drawing.Color.Empty
-        Me.ppn.HintText = "Ppn"
-        Me.ppn.isPassword = False
-        Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
-        Me.ppn.LineIdleColor = System.Drawing.Color.Gray
-        Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.ppn.LineThickness = 3
-        Me.ppn.Location = New System.Drawing.Point(594, 386)
-        Me.ppn.Margin = New System.Windows.Forms.Padding(4)
-        Me.ppn.Name = "ppn"
-        Me.ppn.Size = New System.Drawing.Size(209, 44)
-        Me.ppn.TabIndex = 14
-        Me.ppn.Text = "PPN"
-        Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
         'BunifuElipse1
         '
         Me.BunifuElipse1.ElipseRadius = 5
@@ -344,6 +324,25 @@ Partial Class FormAddBarang
         Me.namaKategori.Size = New System.Drawing.Size(205, 26)
         Me.namaKategori.TabIndex = 19
         '
+        'ppn
+        '
+        Me.ppn.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ppn.HintForeColor = System.Drawing.Color.Empty
+        Me.ppn.HintText = "PPN"
+        Me.ppn.isPassword = False
+        Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
+        Me.ppn.LineIdleColor = System.Drawing.Color.Gray
+        Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.ppn.LineThickness = 3
+        Me.ppn.Location = New System.Drawing.Point(594, 386)
+        Me.ppn.Margin = New System.Windows.Forms.Padding(4)
+        Me.ppn.Name = "ppn"
+        Me.ppn.Size = New System.Drawing.Size(161, 44)
+        Me.ppn.TabIndex = 20
+        Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
         'FormAddBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
@@ -351,18 +350,18 @@ Partial Class FormAddBarang
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
         Me.Controls.Add(Me.namaKategori)
-        Me.Controls.Add(Me.cancel)
-        Me.Controls.Add(Me.submit)
         Me.Controls.Add(Me.kategoriID)
         Me.Controls.Add(Me.id)
-        Me.Controls.Add(Me.satuan)
+        Me.Controls.Add(Me.submit)
+        Me.Controls.Add(Me.cancel)
+        Me.Controls.Add(Me.beli)
         Me.Controls.Add(Me.namaBarang)
         Me.Controls.Add(Me.jual)
-        Me.Controls.Add(Me.beli)
+        Me.Controls.Add(Me.satuan)
         Me.Controls.Add(Me.kodeBarang)
         Me.Controls.Add(Me.keterangan)
-        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.stok)
+        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -389,10 +388,10 @@ Partial Class FormAddBarang
     Friend WithEvents keterangan As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents id As System.Windows.Forms.TextBox
     Friend WithEvents kategoriID As System.Windows.Forms.TextBox
-    Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
+    Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
 End Class
