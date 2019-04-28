@@ -255,4 +255,19 @@ Public Class FormBarang
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         switchPanel(FormAddBarang)
     End Sub
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+
+        FormAddBarang.kodeBarang.Text = DataGridView1.Item(0, i).Value
+        FormAddBarang.namaBarang.Text = DataGridView1.Item(1, i).Value
+        TextBox2.Text = DataGridView1.Item(2, i).Value
+        TextBox5.Text = DataGridView1.Item(3, i).Value
+        TextBox6.Text = DataGridView1.Item(4, i).Value
+        TextBox3.Text = DataGridView1.Item(5, i).Value
+        TextBox8.Text = DataGridView1.Item(6, i).Value
+        RichTextBox1.Text = DataGridView1.Item(7, i).Value
+        TextBox7.Text = DataGridView1.Item(8, i).Value
+    End Sub
 End Class
