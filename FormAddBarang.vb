@@ -43,57 +43,79 @@ Public Class FormAddBarang
         Call showCategoriById()
     End Sub
 
-    Private Sub kodeBarang_OnValueChanged(sender As Object, e As EventArgs) Handles kodeBarang.OnValueChanged
-        If kodeBarang.Text.Length = 7 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub kodeBarang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles kodeBarang.KeyPress
+        If kodeBarang.Text.Length >= 6 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub namaBarang_OnValueChanged(sender As Object, e As EventArgs) Handles namaBarang.OnValueChanged
-        If namaBarang.Text.Length = 35 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub namaBarang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles namaBarang.KeyPress
+        If namaBarang.Text.Length >= 35 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub stok_OnValueChanged(sender As Object, e As EventArgs) Handles stok.OnValueChanged
-        If stok.Text.Length = 4 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub stok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles stok.KeyPress
+        If stok.Text.Length >= 4 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub beli_OnValueChanged(sender As Object, e As EventArgs) Handles beli.OnValueChanged
-        If beli.Text.Length = 10 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub stokMax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles stok.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub beliMax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles beli.KeyPress
+        If beli.Text.Length >= 9 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub jual_OnValueChanged(sender As Object, e As EventArgs) Handles jual.OnValueChanged
-        If jual.Text.Length = 10 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub beli_KeyPress(sender As Object, e As KeyPressEventArgs) Handles beli.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub jual_KeyPress(sender As Object, e As KeyPressEventArgs) Handles jual.KeyPress
+        If jual.Text.Length >= 10 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub ppn_OnValueChanged(sender As Object, e As EventArgs)
-        If ppn.Text.Length = 9 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub jualMax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles jual.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub ppn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ppn.KeyPress
+        If ppn.Text.Length >= 9 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub satuan_OnValueChanged(sender As Object, e As EventArgs) Handles satuan.OnValueChanged
-        If satuan.Text.Length = 15 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub satuan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles satuan.KeyPress
+        If satuan.Text.Length >= 15 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 
-    Private Sub keterangan_OnValueChanged(sender As Object, e As EventArgs) Handles keterangan.OnValueChanged
-        If keterangan.Text.Length = 150 Then
-            MsgBox("Karakter melebihi batas !")
-        End If
-    End Sub
-
-    Private Sub ppn_OnValueChanged_1(sender As Object, e As EventArgs) Handles ppn.OnValueChanged
-        If ppn.Text.Length = 9 Then
-            MsgBox("Karakter melebihi batas !")
+    Private Sub keterangan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles keterangan.KeyPress
+        If keterangan.Text.Length >= 130 Then
+            If e.KeyChar <> ControlChars.Back Then
+                e.Handled = True
+            End If
         End If
     End Sub
 End Class

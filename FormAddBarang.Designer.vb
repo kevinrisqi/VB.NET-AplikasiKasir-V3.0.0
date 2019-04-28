@@ -102,7 +102,7 @@ Partial Class FormAddBarang
         Me.kodeBarang.Margin = New System.Windows.Forms.Padding(4)
         Me.kodeBarang.Name = "kodeBarang"
         Me.kodeBarang.Size = New System.Drawing.Size(114, 44)
-        Me.kodeBarang.TabIndex = 3
+        Me.kodeBarang.TabIndex = 1
         Me.kodeBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'namaBarang
@@ -121,7 +121,7 @@ Partial Class FormAddBarang
         Me.namaBarang.Margin = New System.Windows.Forms.Padding(4)
         Me.namaBarang.Name = "namaBarang"
         Me.namaBarang.Size = New System.Drawing.Size(353, 44)
-        Me.namaBarang.TabIndex = 4
+        Me.namaBarang.TabIndex = 2
         Me.namaBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'satuan
@@ -140,7 +140,7 @@ Partial Class FormAddBarang
         Me.satuan.Margin = New System.Windows.Forms.Padding(4)
         Me.satuan.Name = "satuan"
         Me.satuan.Size = New System.Drawing.Size(166, 44)
-        Me.satuan.TabIndex = 5
+        Me.satuan.TabIndex = 3
         Me.satuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'stok
@@ -159,7 +159,7 @@ Partial Class FormAddBarang
         Me.stok.Margin = New System.Windows.Forms.Padding(4)
         Me.stok.Name = "stok"
         Me.stok.Size = New System.Drawing.Size(79, 44)
-        Me.stok.TabIndex = 6
+        Me.stok.TabIndex = 5
         Me.stok.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'beli
@@ -178,7 +178,7 @@ Partial Class FormAddBarang
         Me.beli.Margin = New System.Windows.Forms.Padding(4)
         Me.beli.Name = "beli"
         Me.beli.Size = New System.Drawing.Size(209, 44)
-        Me.beli.TabIndex = 7
+        Me.beli.TabIndex = 6
         Me.beli.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'jual
@@ -197,7 +197,7 @@ Partial Class FormAddBarang
         Me.jual.Margin = New System.Windows.Forms.Padding(4)
         Me.jual.Name = "jual"
         Me.jual.Size = New System.Drawing.Size(209, 44)
-        Me.jual.TabIndex = 8
+        Me.jual.TabIndex = 7
         Me.jual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'keterangan
@@ -221,6 +221,7 @@ Partial Class FormAddBarang
         '
         'id
         '
+        Me.id.Enabled = False
         Me.id.Location = New System.Drawing.Point(947, 187)
         Me.id.Name = "id"
         Me.id.Size = New System.Drawing.Size(35, 26)
@@ -228,6 +229,7 @@ Partial Class FormAddBarang
         '
         'kategoriID
         '
+        Me.kategoriID.Enabled = False
         Me.kategoriID.Location = New System.Drawing.Point(947, 241)
         Me.kategoriID.Name = "kategoriID"
         Me.kategoriID.Size = New System.Drawing.Size(35, 26)
@@ -322,7 +324,7 @@ Partial Class FormAddBarang
         Me.namaKategori.Location = New System.Drawing.Point(82, 404)
         Me.namaKategori.Name = "namaKategori"
         Me.namaKategori.Size = New System.Drawing.Size(205, 26)
-        Me.namaKategori.TabIndex = 19
+        Me.namaKategori.TabIndex = 4
         '
         'ppn
         '
@@ -340,7 +342,7 @@ Partial Class FormAddBarang
         Me.ppn.Margin = New System.Windows.Forms.Padding(4)
         Me.ppn.Name = "ppn"
         Me.ppn.Size = New System.Drawing.Size(161, 44)
-        Me.ppn.TabIndex = 20
+        Me.ppn.TabIndex = 8
         Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'FormAddBarang
