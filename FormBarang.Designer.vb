@@ -29,11 +29,11 @@ Partial Class FormBarang
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.BunifuiOSSwitch1 = New Bunifu.Framework.UI.BunifuiOSSwitch()
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,15 +95,6 @@ Partial Class FormBarang
         Me.LineShape1.Y1 = 100
         Me.LineShape1.Y2 = 100
         '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(841, 170)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(115, 46)
-        Me.Button6.TabIndex = 27
-        Me.Button6.Text = "Tambah Barang"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
         'BunifuTileButton1
         '
         Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
@@ -140,7 +131,6 @@ Partial Class FormBarang
         'search
         '
         Me.search.BackColor = System.Drawing.Color.White
-        Me.search.BackgroundImage = CType(resources.GetObject("search.BackgroundImage"), System.Drawing.Image)
         Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.search.ForeColor = System.Drawing.Color.Black
@@ -160,6 +150,40 @@ Partial Class FormBarang
         Me.PictureBox1.TabIndex = 26
         Me.PictureBox1.TabStop = False
         '
+        'BunifuFlatButton1
+        '
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton1.BorderRadius = 0
+        Me.BunifuFlatButton1.ButtonText = "Tambah Barang"
+        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
+        Me.BunifuFlatButton1.Iconimage_right = Nothing
+        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton1.IconMarginLeft = 0
+        Me.BunifuFlatButton1.IconMarginRight = 0
+        Me.BunifuFlatButton1.IconRightVisible = True
+        Me.BunifuFlatButton1.IconRightZoom = 0.0R
+        Me.BunifuFlatButton1.IconVisible = True
+        Me.BunifuFlatButton1.IconZoom = 90.0R
+        Me.BunifuFlatButton1.IsTab = False
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(757, 169)
+        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.selected = False
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(130, 48)
+        Me.BunifuFlatButton1.TabIndex = 33
+        Me.BunifuFlatButton1.Text = "Tambah Barang"
+        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'FormBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,10 +191,10 @@ Partial Class FormBarang
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
         Me.ControlBox = False
+        Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.BunifuTileButton1)
         Me.Controls.Add(Me.BunifuiOSSwitch1)
         Me.Controls.Add(Me.search)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -194,8 +218,8 @@ Partial Class FormBarang
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents search As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents BunifuiOSSwitch1 As Bunifu.Framework.UI.BunifuiOSSwitch
     Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
+    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
 End Class

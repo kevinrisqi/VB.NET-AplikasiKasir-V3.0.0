@@ -56,8 +56,8 @@ Public Class FormBarang
         panel.Show()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        switchPanel(FormAddBarang)
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
@@ -110,5 +110,9 @@ Public Class FormBarang
             idBarang.Text = ""
             Call tampilBarang()
         End If
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        switchPanel(FormAddBarang)
     End Sub
 End Class
