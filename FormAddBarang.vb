@@ -119,4 +119,15 @@ Public Class FormAddBarang
             Call FormBarang.tampilBarang()
         End If
     End Sub
+
+    Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
+        switchPanel(FormBarang)
+    End Sub
+
+    Sub switchPanel(ByVal panel As Form)
+        MainForm.Panel2.Controls.Clear()
+        panel.TopLevel = False
+        MainForm.Panel2.Controls.Add(panel)
+        panel.Show()
+    End Sub
 End Class
