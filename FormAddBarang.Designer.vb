@@ -26,7 +26,6 @@ Partial Class FormAddBarang
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.kodeBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.namaBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.satuan = New Bunifu.Framework.UI.BunifuMaterialTextbox()
@@ -42,6 +41,11 @@ Partial Class FormAddBarang
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.namaKategori = New System.Windows.Forms.ComboBox()
         Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.tanggalInput = New System.Windows.Forms.TextBox()
+        Me.tanggalUpdate = New System.Windows.Forms.TextBox()
+        Me.namaAdmin = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,17 +78,6 @@ Partial Class FormAddBarang
         Me.Label1.Size = New System.Drawing.Size(113, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Form Barang"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(89, 27)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 69)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'kodeBarang
         '
@@ -345,12 +338,54 @@ Partial Class FormAddBarang
         Me.ppn.TabIndex = 8
         Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(89, 27)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(70, 69)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'tanggalInput
+        '
+        Me.tanggalInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalInput.Location = New System.Drawing.Point(828, 300)
+        Me.tanggalInput.Name = "tanggalInput"
+        Me.tanggalInput.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalInput.TabIndex = 19
+        '
+        'tanggalUpdate
+        '
+        Me.tanggalUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalUpdate.Location = New System.Drawing.Point(828, 332)
+        Me.tanggalUpdate.Name = "tanggalUpdate"
+        Me.tanggalUpdate.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalUpdate.TabIndex = 20
+        '
+        'namaAdmin
+        '
+        Me.namaAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.namaAdmin.Location = New System.Drawing.Point(828, 364)
+        Me.namaAdmin.Name = "namaAdmin"
+        Me.namaAdmin.Size = New System.Drawing.Size(154, 20)
+        Me.namaAdmin.TabIndex = 21
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'FormAddBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
+        Me.Controls.Add(Me.namaAdmin)
+        Me.Controls.Add(Me.tanggalUpdate)
+        Me.Controls.Add(Me.tanggalInput)
         Me.Controls.Add(Me.namaKategori)
         Me.Controls.Add(Me.kategoriID)
         Me.Controls.Add(Me.id)
@@ -396,4 +431,8 @@ Partial Class FormAddBarang
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
     Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents tanggalInput As System.Windows.Forms.TextBox
+    Friend WithEvents tanggalUpdate As System.Windows.Forms.TextBox
+    Friend WithEvents namaAdmin As System.Windows.Forms.TextBox
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

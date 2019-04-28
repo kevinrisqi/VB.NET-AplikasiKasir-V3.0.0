@@ -153,7 +153,7 @@ Public Class FormAddBarang
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         Else
             Call koneksi()
-            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "')"
+            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "')"
             Cmd = New OdbcCommand(inputData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
@@ -167,12 +167,17 @@ Public Class FormAddBarang
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         Else
             Call koneksi()
-            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "' WHERE id = '" & id.Text & "' "
+            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "' WHERE id = '" & id.Text & "' "
             Cmd = New OdbcCommand(updateData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
             Call kondisiAwal()
             switchPanel(FormBarang)
         End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        tanggalInput.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        tanggalUpdate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
 End Class
