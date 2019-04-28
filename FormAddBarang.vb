@@ -122,6 +122,7 @@ Public Class FormAddBarang
 
     Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
         switchPanel(FormBarang)
+        Call kondisiAwal()
     End Sub
 
     Sub switchPanel(ByVal panel As Form)
@@ -130,4 +131,17 @@ Public Class FormAddBarang
         MainForm.Panel2.Controls.Add(panel)
         panel.Show()
     End Sub
+
+    Sub kondisiAwal()
+        kodeBarang.Text = ""
+        namaBarang.Text = ""
+        satuan.Text = ""
+        beli.Text = ""
+        jual.Text = ""
+        keterangan.Text = ""
+        stok.Text = ""
+        kategoriID.Text = ""
+        id.Text = ""
+    End Sub
+
 End Class
