@@ -29,12 +29,13 @@ Partial Class FormBarang
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class FormBarang
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(51, 223)
+        Me.DataGridView1.Location = New System.Drawing.Point(51, 186)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(905, 309)
         Me.DataGridView1.TabIndex = 22
@@ -50,7 +51,7 @@ Partial Class FormBarang
         'idBarang
         '
         Me.idBarang.Enabled = False
-        Me.idBarang.Location = New System.Drawing.Point(705, 193)
+        Me.idBarang.Location = New System.Drawing.Point(636, 157)
         Me.idBarang.MaxLength = 15
         Me.idBarang.Name = "idBarang"
         Me.idBarang.Size = New System.Drawing.Size(29, 20)
@@ -60,7 +61,7 @@ Partial Class FormBarang
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(62, 192)
+        Me.Label8.Location = New System.Drawing.Point(62, 155)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(125, 18)
         Me.Label8.TabIndex = 16
@@ -96,45 +97,27 @@ Partial Class FormBarang
         Me.LineShape1.Y1 = 100
         Me.LineShape1.Y2 = 100
         '
-        'BunifuTileButton1
+        'RadioButton1
         '
-        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
-        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
-        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
-        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
-        Me.BunifuTileButton1.Image = Global.AplikasiPenjualan.My.Resources.Resources.waste_50px
-        Me.BunifuTileButton1.ImagePosition = 5
-        Me.BunifuTileButton1.ImageZoom = 50
-        Me.BunifuTileButton1.LabelPosition = 0
-        Me.BunifuTileButton1.LabelText = ""
-        Me.BunifuTileButton1.Location = New System.Drawing.Point(896, 541)
-        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
-        Me.BunifuTileButton1.Name = "BunifuTileButton1"
-        Me.BunifuTileButton1.Size = New System.Drawing.Size(60, 40)
-        Me.BunifuTileButton1.TabIndex = 32
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(437, 157)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(87, 17)
+        Me.RadioButton1.TabIndex = 34
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Kode Barang"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'search
+        'RadioButton2
         '
-        Me.search.BackColor = System.Drawing.Color.White
-        Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.search.ForeColor = System.Drawing.Color.Black
-        Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
-        Me.search.Location = New System.Drawing.Point(211, 185)
-        Me.search.Name = "search"
-        Me.search.Size = New System.Drawing.Size(250, 32)
-        Me.search.TabIndex = 29
-        Me.search.text = ""
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.cardboard_box_64px
-        Me.PictureBox1.Location = New System.Drawing.Point(83, 29)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(60, 60)
-        Me.PictureBox1.TabIndex = 26
-        Me.PictureBox1.TabStop = False
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(530, 157)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton2.TabIndex = 35
+        Me.RadioButton2.Text = "Nama Barang"
+        Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'BunifuFlatButton1
         '
@@ -157,7 +140,7 @@ Partial Class FormBarang
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(757, 169)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(690, 132)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
@@ -170,27 +153,80 @@ Partial Class FormBarang
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'RadioButton1
+        'BunifuFlatButton2
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Checked = True
-        Me.RadioButton1.Location = New System.Drawing.Point(480, 192)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(87, 17)
-        Me.RadioButton1.TabIndex = 34
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Kode Barang"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton2.BorderRadius = 0
+        Me.BunifuFlatButton2.ButtonText = "Tambah Kategori"
+        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton2.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.tags_16px
+        Me.BunifuFlatButton2.Iconimage_right = Nothing
+        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton2.IconMarginLeft = 0
+        Me.BunifuFlatButton2.IconMarginRight = 0
+        Me.BunifuFlatButton2.IconRightVisible = True
+        Me.BunifuFlatButton2.IconRightZoom = 0.0R
+        Me.BunifuFlatButton2.IconVisible = True
+        Me.BunifuFlatButton2.IconZoom = 55.0R
+        Me.BunifuFlatButton2.IsTab = False
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(826, 132)
+        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.selected = False
+        Me.BunifuFlatButton2.Size = New System.Drawing.Size(130, 48)
+        Me.BunifuFlatButton2.TabIndex = 36
+        Me.BunifuFlatButton2.Text = "Tambah Kategori"
+        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'RadioButton2
+        'BunifuTileButton1
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(595, 192)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButton2.TabIndex = 35
-        Me.RadioButton2.Text = "Nama Barang"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.BunifuTileButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.BunifuTileButton1.color = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
+        Me.BunifuTileButton1.colorActive = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuTileButton1.Font = New System.Drawing.Font("Century Gothic", 15.75!)
+        Me.BunifuTileButton1.ForeColor = System.Drawing.Color.White
+        Me.BunifuTileButton1.Image = Global.AplikasiPenjualan.My.Resources.Resources.waste_50px
+        Me.BunifuTileButton1.ImagePosition = 5
+        Me.BunifuTileButton1.ImageZoom = 50
+        Me.BunifuTileButton1.LabelPosition = 0
+        Me.BunifuTileButton1.LabelText = ""
+        Me.BunifuTileButton1.Location = New System.Drawing.Point(896, 504)
+        Me.BunifuTileButton1.Margin = New System.Windows.Forms.Padding(6)
+        Me.BunifuTileButton1.Name = "BunifuTileButton1"
+        Me.BunifuTileButton1.Size = New System.Drawing.Size(60, 40)
+        Me.BunifuTileButton1.TabIndex = 32
+        '
+        'search
+        '
+        Me.search.BackColor = System.Drawing.Color.White
+        Me.search.BackgroundImage = CType(resources.GetObject("search.BackgroundImage"), System.Drawing.Image)
+        Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.search.ForeColor = System.Drawing.Color.Black
+        Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
+        Me.search.Location = New System.Drawing.Point(211, 148)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(201, 32)
+        Me.search.TabIndex = 29
+        Me.search.text = ""
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.cardboard_box_64px
+        Me.PictureBox1.Location = New System.Drawing.Point(83, 29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox1.TabIndex = 26
+        Me.PictureBox1.TabStop = False
         '
         'FormBarang
         '
@@ -207,6 +243,7 @@ Partial Class FormBarang
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.BunifuFlatButton2)
         Me.Controls.Add(Me.idBarang)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -232,4 +269,5 @@ Partial Class FormBarang
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
 End Class

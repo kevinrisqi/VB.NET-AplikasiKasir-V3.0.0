@@ -2,8 +2,14 @@
 Public Class FormBarang
 
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call kondisiAwal()
+    End Sub
+
+    Sub kondisiAwal()
         Call dgv()
         Call tampilBarang()
+        search.text = ""
+        idBarang.Text = ""
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs)
@@ -27,14 +33,14 @@ Public Class FormBarang
         DataGridView1.Columns(8).Visible = False
         DataGridView1.Columns(9).Visible = False
 
-        DataGridView1.Columns(1).HeaderText = "ID Barang"
+        DataGridView1.Columns(1).HeaderText = "Kode Barang"
         DataGridView1.Columns(2).HeaderText = "Nama Barang"
         DataGridView1.Columns(3).HeaderText = "Harga Beli"
         DataGridView1.Columns(4).HeaderText = "Harga Jual"
         DataGridView1.Columns(5).HeaderText = "Stok"
         DataGridView1.Columns(10).HeaderText = "Kategori"
 
-        DataGridView1.Columns(1).Width = "90"
+        DataGridView1.Columns(1).Width = "120"
         DataGridView1.Columns(2).Width = "150"
         DataGridView1.Columns(3).Width = "100"
         DataGridView1.Columns(4).Width = "100"
@@ -117,7 +123,9 @@ Public Class FormBarang
     End Sub
 
     Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
-        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
+        If idBarang.Text = "" Then
+            MsgBox("Pilih data yang akan dihapus !", vbInformation)
+        ElseIf MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
             Call koneksi()
             Dim deleteData As String = "DELETE FROM barang WHERE id = '" & idBarang.Text & "'"
             Cmd = New OdbcCommand(deleteData, Conn)
@@ -125,6 +133,7 @@ Public Class FormBarang
             MsgBox("Data berhasil dihapus")
             idBarang.Text = ""
             Call tampilBarang()
+        Else
         End If
     End Sub
 

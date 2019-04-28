@@ -42,6 +42,7 @@ Public Class MainForm
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
         switchPanel(FormBarang)
+        FormBarang.kondisiAwal()
     End Sub
 
     Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs) Handles pnlBarang.Paint
