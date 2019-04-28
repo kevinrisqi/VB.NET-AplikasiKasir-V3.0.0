@@ -108,7 +108,11 @@ Public Class FormAddBarang
 
     Private Sub keteranganSubmit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles keterangan.KeyPress
         If (e.KeyChar = Chr(13)) Then
-            Call insertData()
+            If id.Text = "" Then
+                Call insertData()
+            Else
+                Call updateData()
+            End If
         End If
     End Sub
 
@@ -158,7 +162,7 @@ Public Class FormAddBarang
     End Sub
 
     Sub updateData()
-        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
+        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         Else
             Call koneksi()
