@@ -113,7 +113,11 @@ Public Class FormAddBarang
     End Sub
 
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
-        Call insertData()
+        If id.Text = "" Then
+            Call insertData()
+        Else
+            Call updateData()
+        End If
     End Sub
 
     Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
@@ -153,4 +157,16 @@ Public Class FormAddBarang
         End If
     End Sub
 
+    Sub updateData()
+        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
+            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        Else
+            Call koneksi()
+            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "' WHERE id = '" & id.Text & "' "
+            Cmd = New OdbcCommand(updateData, Conn)
+            Cmd.ExecuteNonQuery()
+            Call FormBarang.tampilBarang()
+            switchPanel(FormBarang)
+        End If
+    End Sub
 End Class
