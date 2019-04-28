@@ -2,6 +2,7 @@
 Public Class FormBarang
 
     Private Sub FormBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call dgv()
         Call tampilBarang()
     End Sub
 
@@ -18,13 +19,6 @@ Public Class FormBarang
         DataGridView1.DataSource = Ds.Tables("barang")
         DataGridView1.ReadOnly = True
     End Sub
-
-
-    
-
- 
-
-    
 
     Sub dgv()
         DataGridView1.Columns(0).Visible = False
@@ -51,14 +45,8 @@ Public Class FormBarang
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
-            Call koneksi()
-            Dim deleteData As String = "DELETE FROM barang WHERE id = '" & idBarang.Text & "'"
-            Cmd = New OdbcCommand(deleteData, Conn)
-            Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil dihapus")
-        End If
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Sub switchPanel(ByVal panel As Form)
@@ -76,6 +64,7 @@ Public Class FormBarang
         Dim i As Integer
         i = DataGridView1.CurrentRow.Index
 
+        idBarang.Text = DataGridView1.Item(0, i).Value
         FormAddBarang.id.Text = DataGridView1.Item(0, i).Value
         FormAddBarang.kodeBarang.Text = DataGridView1.Item(1, i).Value
         FormAddBarang.namaBarang.Text = DataGridView1.Item(2, i).Value
@@ -86,6 +75,13 @@ Public Class FormBarang
         FormAddBarang.keterangan.Text = DataGridView1.Item(7, i).Value
         FormAddBarang.kategoriID.Text = DataGridView1.Item(8, i).Value
         switchPanel(FormAddBarang)
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+
+        idBarang.Text = DataGridView1.Item(0, i).Value
     End Sub
 
     Private Sub search_OnTextChange(sender As Object, e As EventArgs) Handles search.OnTextChange
@@ -101,6 +97,18 @@ Public Class FormBarang
             Ds = New DataSet
             Da.Fill(Ds, "barang")
             DataGridView1.DataSource = Ds.Tables("barang")
+        End If
+    End Sub
+
+    Private Sub BunifuTileButton1_Click(sender As Object, e As EventArgs) Handles BunifuTileButton1.Click
+        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
+            Call koneksi()
+            Dim deleteData As String = "DELETE FROM barang WHERE id = '" & idBarang.Text & "'"
+            Cmd = New OdbcCommand(deleteData, Conn)
+            Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil dihapus")
+            idBarang.Text = ""
+            Call tampilBarang()
         End If
     End Sub
 End Class
