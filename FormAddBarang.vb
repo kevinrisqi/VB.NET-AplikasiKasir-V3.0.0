@@ -157,6 +157,7 @@ Public Class FormAddBarang
             Cmd = New OdbcCommand(inputData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
+            Call kondisiAwal()
             switchPanel(FormBarang)
         End If
     End Sub
@@ -170,6 +171,7 @@ Public Class FormAddBarang
             Cmd = New OdbcCommand(updateData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
+            Call kondisiAwal()
             switchPanel(FormBarang)
         End If
     End Sub
