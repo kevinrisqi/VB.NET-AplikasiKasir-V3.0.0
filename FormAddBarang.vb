@@ -2,7 +2,6 @@
 Public Class FormAddBarang
 
     Private Sub FormAddBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'namaKategori.AddItem("Voucher")
         Call combobox()
     End Sub
 
@@ -107,17 +106,14 @@ Public Class FormAddBarang
         End If
     End Sub
 
-    Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
-        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
-            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-        Else
-            Call koneksi()
-            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "')"
-            Cmd = New OdbcCommand(inputData, Conn)
-            Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil diinputkan")
-            Call FormBarang.tampilBarang()
+    Private Sub keteranganSubmit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles keterangan.KeyPress
+        If (e.KeyChar = Chr(13)) Then
+            Call insertData()
         End If
+    End Sub
+
+    Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
+        Call insertData()
     End Sub
 
     Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
@@ -142,6 +138,19 @@ Public Class FormAddBarang
         stok.Text = ""
         kategoriID.Text = ""
         id.Text = ""
+    End Sub
+
+    Sub insertData()
+        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
+            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        Else
+            Call koneksi()
+            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "')"
+            Cmd = New OdbcCommand(inputData, Conn)
+            Cmd.ExecuteNonQuery()
+            Call FormBarang.tampilBarang()
+            switchPanel(FormBarang)
+        End If
     End Sub
 
 End Class
