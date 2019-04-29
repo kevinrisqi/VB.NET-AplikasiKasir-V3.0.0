@@ -42,7 +42,6 @@ Partial Class FormBarang
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,10 +50,13 @@ Partial Class FormBarang
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -261,8 +263,10 @@ Partial Class FormBarang
         '
         'BunifuCustomDataGrid1
         '
+        Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
         Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White
         Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
@@ -275,8 +279,8 @@ Partial Class FormBarang
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
-        Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 50
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12})
+        Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 41
+        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column9, Me.Column14})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -300,94 +304,113 @@ Partial Class FormBarang
         Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(905, 309)
         Me.BunifuCustomDataGrid1.TabIndex = 37
         '
-        'BunifuElipse1
-        '
-        Me.BunifuElipse1.ElipseRadius = 7
-        Me.BunifuElipse1.TargetControl = Me.BunifuCustomDataGrid1
-        '
         'Column1
         '
         Me.Column1.DataPropertyName = "id"
         Me.Column1.HeaderText = "ID"
         Me.Column1.Name = "Column1"
-        Me.Column1.Width = 75
+        Me.Column1.Visible = False
+        Me.Column1.Width = 47
         '
         'Column2
         '
         Me.Column2.DataPropertyName = "id_barang"
         Me.Column2.HeaderText = "Kode Barang"
         Me.Column2.Name = "Column2"
-        Me.Column2.Width = 76
+        Me.Column2.Width = 120
         '
         'Column3
         '
         Me.Column3.DataPropertyName = "nama_barang"
         Me.Column3.HeaderText = "Nama Barang"
         Me.Column3.Name = "Column3"
-        Me.Column3.Width = 75
+        Me.Column3.Width = 126
         '
         'Column4
         '
         Me.Column4.DataPropertyName = "harga_beli"
         Me.Column4.HeaderText = "Harga Beli"
         Me.Column4.Name = "Column4"
-        Me.Column4.Width = 76
+        Me.Column4.Width = 103
         '
         'Column5
         '
         Me.Column5.DataPropertyName = "harga_jual"
         Me.Column5.HeaderText = "Harga Jual"
         Me.Column5.Name = "Column5"
-        Me.Column5.Width = 75
+        Me.Column5.Width = 105
         '
         'Column6
         '
         Me.Column6.DataPropertyName = "stok"
         Me.Column6.HeaderText = "Stok"
         Me.Column6.Name = "Column6"
-        Me.Column6.Width = 75
+        Me.Column6.Width = 62
         '
         'Column7
         '
         Me.Column7.DataPropertyName = "satuan"
         Me.Column7.HeaderText = "Satuan"
         Me.Column7.Name = "Column7"
-        Me.Column7.Width = 76
+        Me.Column7.Visible = False
+        Me.Column7.Width = 79
         '
         'Column8
         '
         Me.Column8.DataPropertyName = "keterangan"
         Me.Column8.HeaderText = "Keterangan"
         Me.Column8.Name = "Column8"
-        Me.Column8.Width = 75
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "id_kategori"
-        Me.Column9.HeaderText = "ID Kategori"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Width = 76
+        Me.Column8.Visible = False
+        Me.Column8.Width = 111
         '
         'Column10
         '
         Me.Column10.DataPropertyName = "tanggal_input"
         Me.Column10.HeaderText = "Tanggal Input"
         Me.Column10.Name = "Column10"
-        Me.Column10.Width = 75
+        Me.Column10.Width = 126
         '
         'Column11
         '
         Me.Column11.DataPropertyName = "tanggal_update"
         Me.Column11.HeaderText = "Tanggal Update"
         Me.Column11.Name = "Column11"
-        Me.Column11.Width = 76
+        Me.Column11.Width = 140
         '
         'Column12
         '
         Me.Column12.DataPropertyName = "nama_admin"
         Me.Column12.HeaderText = "Nama Admin"
         Me.Column12.Name = "Column12"
-        Me.Column12.Width = 75
+        Me.Column12.Width = 122
+        '
+        'Column13
+        '
+        Me.Column13.DataPropertyName = "nama_kategori"
+        Me.Column13.HeaderText = "Kategori"
+        Me.Column13.Name = "Column13"
+        Me.Column13.Width = 90
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "id_kategori"
+        Me.Column9.HeaderText = "ID Kategori"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Visible = False
+        Me.Column9.Width = 109
+        '
+        'Column14
+        '
+        Me.Column14.DataPropertyName = "id_kategori1"
+        Me.Column14.HeaderText = "ID Kategori 1"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Visible = False
+        Me.Column14.Width = 119
+        '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 7
+        Me.BunifuElipse1.TargetControl = Me.BunifuCustomDataGrid1
         '
         'FormBarang
         '
@@ -443,8 +466,10 @@ Partial Class FormBarang
     Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column11 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column14 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
