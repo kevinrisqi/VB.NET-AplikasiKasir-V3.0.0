@@ -151,6 +151,8 @@ Public Class FormAddBarang
     Sub insertData()
         If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        ElseIf beli.Text > jual.Text Then
+            MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
             Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "')"
@@ -158,6 +160,7 @@ Public Class FormAddBarang
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
             Call kondisiAwal()
+            Call FormBarang.kondisiAwal()
             switchPanel(FormBarang)
         End If
     End Sub
@@ -165,6 +168,8 @@ Public Class FormAddBarang
     Sub updateData()
         If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        ElseIf beli.Text > jual.Text Then
+            MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
             Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "' WHERE id = '" & id.Text & "' "
@@ -172,6 +177,7 @@ Public Class FormAddBarang
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
             Call kondisiAwal()
+            Call FormBarang.kondisiAwal()
             switchPanel(FormBarang)
         End If
     End Sub

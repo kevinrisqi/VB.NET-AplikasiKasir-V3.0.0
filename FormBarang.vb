@@ -6,7 +6,7 @@ Public Class FormBarang
     End Sub
 
     Sub kondisiAwal()
-        Call dgv()
+        'Call dgv()
         Call tampilBarang()
         search.text = ""
         idBarang.Text = ""
@@ -22,8 +22,8 @@ Public Class FormBarang
         Da = New OdbcDataAdapter("SELECT * FROM barang JOIN kategori_barang ON barang.id_kategori = kategori_barang.id_kategori", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "barang")
-        DataGridView1.DataSource = Ds.Tables("barang")
-        DataGridView1.ReadOnly = True
+        BunifuCustomDataGrid1.DataSource = Ds.Tables("barang")
+        BunifuCustomDataGrid1.ReadOnly = True
     End Sub
 
     Sub dgv()
@@ -31,23 +31,32 @@ Public Class FormBarang
         DataGridView1.Columns(6).Visible = False
         DataGridView1.Columns(7).Visible = False
         DataGridView1.Columns(8).Visible = False
-        DataGridView1.Columns(9).Visible = False
+        'DataGridView1.Columns(11).Visible = False
+        DataGridView1.Columns(12).Visible = False
 
         DataGridView1.Columns(1).HeaderText = "Kode Barang"
         DataGridView1.Columns(2).HeaderText = "Nama Barang"
         DataGridView1.Columns(3).HeaderText = "Harga Beli"
         DataGridView1.Columns(4).HeaderText = "Harga Jual"
         DataGridView1.Columns(5).HeaderText = "Stok"
-        DataGridView1.Columns(10).HeaderText = "Kategori"
+        'DataGridView1.Columns(8).HeaderText = "Kategori"
+        DataGridView1.Columns(9).HeaderText = "Tanggal Input"
+        DataGridView1.Columns(10).HeaderText = "Tanggal Update"
+        DataGridView1.Columns(13).HeaderText = "Kategori"
+        DataGridView1.Columns(11).HeaderText = "Nama Admin"
 
         DataGridView1.Columns(1).Width = "120"
         DataGridView1.Columns(2).Width = "150"
         DataGridView1.Columns(3).Width = "100"
         DataGridView1.Columns(4).Width = "100"
         DataGridView1.Columns(5).Width = "50"
-        DataGridView1.Columns(10).Width = "100"
+        'DataGridView1.Columns(8).Width = "100"
+        DataGridView1.Columns(9).Width = "110"
+        DataGridView1.Columns(10).Width = "110"
+        DataGridView1.Columns(13).Width = "100"
+        DataGridView1.Columns(11).Width = "100"
 
-
+        'DataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Coral
         DataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Silver
     End Sub
 
