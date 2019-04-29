@@ -77,7 +77,7 @@ Public Class FormBarang
                 Da = New OdbcDataAdapter(query, Conn)
                 Ds = New DataSet
                 Da.Fill(Ds, "barang")
-                DataGridView1.DataSource = Ds.Tables("barang")
+                BunifuCustomDataGrid1.DataSource = Ds.Tables("barang")
             End If
         Else
             Call koneksi()
@@ -91,7 +91,7 @@ Public Class FormBarang
                 Da = New OdbcDataAdapter(query, Conn)
                 Ds = New DataSet
                 Da.Fill(Ds, "barang")
-                DataGridView1.DataSource = Ds.Tables("barang")
+                BunifuCustomDataGrid1.DataSource = Ds.Tables("barang")
             End If
         End If
     End Sub
