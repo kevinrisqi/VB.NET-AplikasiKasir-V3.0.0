@@ -355,6 +355,9 @@
   <ItemGroup>
     <None Include="Resources\cancel_subscription_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_trash_64px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

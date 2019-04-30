@@ -67,6 +67,10 @@ AplikasiPenjualan
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:AplikasiPenjualan.My.Resources.Resources.full_trash_64px">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:AplikasiPenjualan.My.Resources.Resources.gender_neutral_user_16px">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

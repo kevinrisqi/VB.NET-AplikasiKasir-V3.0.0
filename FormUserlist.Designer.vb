@@ -22,9 +22,9 @@ Partial Class FormUserlist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormUserlist))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -53,12 +53,12 @@ Partial Class FormUserlist
         Me.username = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.password = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.kodeAdmin = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.hapus = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.simpan = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.batal = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.input = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,9 +75,9 @@ Partial Class FormUserlist
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(504, 393)
+        Me.GroupBox1.Location = New System.Drawing.Point(459, 442)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(449, 148)
+        Me.GroupBox1.Size = New System.Drawing.Size(449, 119)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -229,31 +229,31 @@ Partial Class FormUserlist
         'BunifuCustomDataGrid1
         '
         Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White
         Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 41
         Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle9
         Me.BunifuCustomDataGrid1.DoubleBuffered = True
         Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
         Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -371,107 +371,107 @@ Partial Class FormUserlist
         Me.kodeAdmin.TabIndex = 41
         Me.kodeAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuFlatButton4
+        'hapus
         '
-        Me.BunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.BunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.BunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton4.BorderRadius = 0
-        Me.BunifuFlatButton4.ButtonText = "Hapus"
-        Me.BunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton4.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.full_trash_64px
-        Me.BunifuFlatButton4.Iconimage_right = Nothing
-        Me.BunifuFlatButton4.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton4.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton4.IconMarginLeft = 0
-        Me.BunifuFlatButton4.IconMarginRight = 0
-        Me.BunifuFlatButton4.IconRightVisible = True
-        Me.BunifuFlatButton4.IconRightZoom = 0.0R
-        Me.BunifuFlatButton4.IconVisible = True
-        Me.BunifuFlatButton4.IconZoom = 59.0R
-        Me.BunifuFlatButton4.IsTab = False
-        Me.BunifuFlatButton4.Location = New System.Drawing.Point(457, 275)
-        Me.BunifuFlatButton4.Name = "BunifuFlatButton4"
-        Me.BunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.BunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.BunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton4.selected = False
-        Me.BunifuFlatButton4.Size = New System.Drawing.Size(104, 48)
-        Me.BunifuFlatButton4.TabIndex = 48
-        Me.BunifuFlatButton4.Text = "Hapus"
-        Me.BunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton4.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton4.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hapus.Activecolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.hapus.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.hapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.hapus.BorderRadius = 0
+        Me.hapus.ButtonText = "Hapus"
+        Me.hapus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.hapus.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.hapus.Iconcolor = System.Drawing.Color.Transparent
+        Me.hapus.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.full_trash_64px
+        Me.hapus.Iconimage_right = Nothing
+        Me.hapus.Iconimage_right_Selected = Nothing
+        Me.hapus.Iconimage_Selected = Nothing
+        Me.hapus.IconMarginLeft = 0
+        Me.hapus.IconMarginRight = 0
+        Me.hapus.IconRightVisible = True
+        Me.hapus.IconRightZoom = 0.0R
+        Me.hapus.IconVisible = True
+        Me.hapus.IconZoom = 59.0R
+        Me.hapus.IsTab = False
+        Me.hapus.Location = New System.Drawing.Point(852, 393)
+        Me.hapus.Name = "hapus"
+        Me.hapus.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.hapus.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.hapus.OnHoverTextColor = System.Drawing.Color.White
+        Me.hapus.selected = False
+        Me.hapus.Size = New System.Drawing.Size(104, 48)
+        Me.hapus.TabIndex = 48
+        Me.hapus.Text = "Hapus"
+        Me.hapus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.hapus.Textcolor = System.Drawing.Color.White
+        Me.hapus.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton1
+        'simpan
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton1.BorderRadius = 0
-        Me.BunifuFlatButton1.ButtonText = "Simpan"
-        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton1.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
-        Me.BunifuFlatButton1.Iconimage_right = Nothing
-        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton1.IconMarginLeft = 0
-        Me.BunifuFlatButton1.IconMarginRight = 0
-        Me.BunifuFlatButton1.IconRightVisible = True
-        Me.BunifuFlatButton1.IconRightZoom = 0.0R
-        Me.BunifuFlatButton1.IconVisible = True
-        Me.BunifuFlatButton1.IconZoom = 90.0R
-        Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(161, 442)
-        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.selected = False
-        Me.BunifuFlatButton1.Size = New System.Drawing.Size(104, 48)
-        Me.BunifuFlatButton1.TabIndex = 45
-        Me.BunifuFlatButton1.Text = "Simpan"
-        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.simpan.Activecolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.simpan.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.simpan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.simpan.BorderRadius = 0
+        Me.simpan.ButtonText = "Ubah"
+        Me.simpan.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.simpan.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.simpan.Iconcolor = System.Drawing.Color.Transparent
+        Me.simpan.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
+        Me.simpan.Iconimage_right = Nothing
+        Me.simpan.Iconimage_right_Selected = Nothing
+        Me.simpan.Iconimage_Selected = Nothing
+        Me.simpan.IconMarginLeft = 0
+        Me.simpan.IconMarginRight = 0
+        Me.simpan.IconRightVisible = True
+        Me.simpan.IconRightZoom = 0.0R
+        Me.simpan.IconVisible = True
+        Me.simpan.IconZoom = 90.0R
+        Me.simpan.IsTab = False
+        Me.simpan.Location = New System.Drawing.Point(171, 442)
+        Me.simpan.Name = "simpan"
+        Me.simpan.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.simpan.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.simpan.OnHoverTextColor = System.Drawing.Color.White
+        Me.simpan.selected = False
+        Me.simpan.Size = New System.Drawing.Size(114, 48)
+        Me.simpan.TabIndex = 45
+        Me.simpan.Text = "Ubah"
+        Me.simpan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.simpan.Textcolor = System.Drawing.Color.White
+        Me.simpan.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuFlatButton3
+        'batal
         '
-        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.BunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton3.BorderRadius = 0
-        Me.BunifuFlatButton3.ButtonText = "Batal"
-        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton3.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.cancel_subscription_48px
-        Me.BunifuFlatButton3.Iconimage_right = Nothing
-        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton3.IconMarginLeft = 0
-        Me.BunifuFlatButton3.IconMarginRight = 0
-        Me.BunifuFlatButton3.IconRightVisible = True
-        Me.BunifuFlatButton3.IconRightZoom = 0.0R
-        Me.BunifuFlatButton3.IconVisible = True
-        Me.BunifuFlatButton3.IconZoom = 59.0R
-        Me.BunifuFlatButton3.IsTab = False
-        Me.BunifuFlatButton3.Location = New System.Drawing.Point(271, 442)
-        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
-        Me.BunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
-        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
-        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.selected = False
-        Me.BunifuFlatButton3.Size = New System.Drawing.Size(104, 48)
-        Me.BunifuFlatButton3.TabIndex = 47
-        Me.BunifuFlatButton3.Text = "Batal"
-        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.batal.Activecolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.batal.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.batal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.batal.BorderRadius = 0
+        Me.batal.ButtonText = "Batal"
+        Me.batal.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.batal.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.batal.Iconcolor = System.Drawing.Color.Transparent
+        Me.batal.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.cancel_subscription_48px
+        Me.batal.Iconimage_right = Nothing
+        Me.batal.Iconimage_right_Selected = Nothing
+        Me.batal.Iconimage_Selected = Nothing
+        Me.batal.IconMarginLeft = 0
+        Me.batal.IconMarginRight = 0
+        Me.batal.IconRightVisible = True
+        Me.batal.IconRightZoom = 0.0R
+        Me.batal.IconVisible = True
+        Me.batal.IconZoom = 59.0R
+        Me.batal.IsTab = False
+        Me.batal.Location = New System.Drawing.Point(291, 442)
+        Me.batal.Name = "batal"
+        Me.batal.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.batal.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.batal.OnHoverTextColor = System.Drawing.Color.White
+        Me.batal.selected = False
+        Me.batal.Size = New System.Drawing.Size(114, 48)
+        Me.batal.TabIndex = 47
+        Me.batal.Text = "Batal"
+        Me.batal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.batal.Textcolor = System.Drawing.Color.White
+        Me.batal.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'search
         '
@@ -495,39 +495,39 @@ Partial Class FormUserlist
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
-        'BunifuFlatButton2
+        'input
         '
-        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton2.BorderRadius = 0
-        Me.BunifuFlatButton2.ButtonText = "Input"
-        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton2.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.strategy_board_40px
-        Me.BunifuFlatButton2.Iconimage_right = Nothing
-        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton2.IconMarginLeft = 0
-        Me.BunifuFlatButton2.IconMarginRight = 0
-        Me.BunifuFlatButton2.IconRightVisible = True
-        Me.BunifuFlatButton2.IconRightZoom = 0.0R
-        Me.BunifuFlatButton2.IconVisible = True
-        Me.BunifuFlatButton2.IconZoom = 58.0R
-        Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(51, 442)
-        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
-        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
-        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.selected = False
-        Me.BunifuFlatButton2.Size = New System.Drawing.Size(104, 48)
-        Me.BunifuFlatButton2.TabIndex = 46
-        Me.BunifuFlatButton2.Text = "Input"
-        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.input.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.input.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.input.BorderRadius = 0
+        Me.input.ButtonText = "Tambah"
+        Me.input.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.input.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.input.Iconcolor = System.Drawing.Color.Transparent
+        Me.input.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.strategy_board_40px
+        Me.input.Iconimage_right = Nothing
+        Me.input.Iconimage_right_Selected = Nothing
+        Me.input.Iconimage_Selected = Nothing
+        Me.input.IconMarginLeft = 0
+        Me.input.IconMarginRight = 0
+        Me.input.IconRightVisible = True
+        Me.input.IconRightZoom = 0.0R
+        Me.input.IconVisible = True
+        Me.input.IconZoom = 58.0R
+        Me.input.IsTab = False
+        Me.input.Location = New System.Drawing.Point(51, 442)
+        Me.input.Name = "input"
+        Me.input.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.input.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.input.OnHoverTextColor = System.Drawing.Color.White
+        Me.input.selected = False
+        Me.input.Size = New System.Drawing.Size(114, 48)
+        Me.input.TabIndex = 46
+        Me.input.Text = "Tambah"
+        Me.input.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.input.Textcolor = System.Drawing.Color.White
+        Me.input.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'FormUserlist
         '
@@ -536,9 +536,6 @@ Partial Class FormUserlist
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
         Me.ControlBox = False
-        Me.Controls.Add(Me.BunifuFlatButton4)
-        Me.Controls.Add(Me.BunifuFlatButton1)
-        Me.Controls.Add(Me.BunifuFlatButton3)
         Me.Controls.Add(Me.levelAdmin)
         Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.Label8)
@@ -549,10 +546,13 @@ Partial Class FormUserlist
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.BunifuFlatButton2)
-        Me.Controls.Add(Me.username)
-        Me.Controls.Add(Me.password)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.hapus)
+        Me.Controls.Add(Me.input)
+        Me.Controls.Add(Me.simpan)
+        Me.Controls.Add(Me.batal)
+        Me.Controls.Add(Me.password)
+        Me.Controls.Add(Me.username)
         Me.Controls.Add(Me.kodeAdmin)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -598,8 +598,8 @@ Partial Class FormUserlist
     Friend WithEvents username As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents password As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents kodeAdmin As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents BunifuFlatButton4 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents simpan As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents input As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents batal As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents hapus As Bunifu.Framework.UI.BunifuFlatButton
 End Class
