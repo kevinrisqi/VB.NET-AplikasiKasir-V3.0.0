@@ -27,6 +27,7 @@ Public Class MainForm
         btnPenjualan.Enabled = False
         btnLaporan.Enabled = False
         btnSetup.Enabled = False
+        lblLevel.Visible = False
     End Sub
 
 
@@ -60,5 +61,13 @@ Public Class MainForm
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
         switchPanel(FormUserlist)
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If Not btnLogin.Text = "Login" Then
+            Call nonAktif()
+        Else
+            B_FormLogin.Show()
+        End If
     End Sub
 End Class

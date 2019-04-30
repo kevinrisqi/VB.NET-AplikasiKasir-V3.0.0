@@ -47,6 +47,7 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblLevel = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -182,6 +183,7 @@ Partial Class MainForm
         '
         Me.sidebar.BackgroundImage = CType(resources.GetObject("sidebar.BackgroundImage"), System.Drawing.Image)
         Me.sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.sidebar.Controls.Add(Me.lblLevel)
         Me.sidebar.Controls.Add(Me.btnSetup)
         Me.sidebar.Controls.Add(Me.BunifuFlatButton11)
         Me.sidebar.Controls.Add(Me.btnLaporan)
@@ -214,7 +216,8 @@ Partial Class MainForm
         Me.btnSetup.BorderRadius = 0
         Me.btnSetup.ButtonText = "   Setup Toko"
         Me.btnSetup.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSetup.DisabledColor = System.Drawing.Color.Gray
+        Me.btnSetup.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnSetup.Enabled = False
         Me.btnSetup.Iconcolor = System.Drawing.Color.Transparent
         Me.btnSetup.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.phonelink_setup_64px
         Me.btnSetup.Iconimage_right = Nothing
@@ -282,7 +285,8 @@ Partial Class MainForm
         Me.btnLaporan.BorderRadius = 0
         Me.btnLaporan.ButtonText = "   Laporan Penjualan"
         Me.btnLaporan.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLaporan.DisabledColor = System.Drawing.Color.Gray
+        Me.btnLaporan.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnLaporan.Enabled = False
         Me.btnLaporan.Iconcolor = System.Drawing.Color.Transparent
         Me.btnLaporan.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.accounting_64px
         Me.btnLaporan.Iconimage_right = Nothing
@@ -350,7 +354,8 @@ Partial Class MainForm
         Me.btnPenjualan.BorderRadius = 0
         Me.btnPenjualan.ButtonText = "   Transaksi Penjualan"
         Me.btnPenjualan.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnPenjualan.DisabledColor = System.Drawing.Color.Gray
+        Me.btnPenjualan.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnPenjualan.Enabled = False
         Me.btnPenjualan.Iconcolor = System.Drawing.Color.Transparent
         Me.btnPenjualan.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.shopping_basket_2_100px
         Me.btnPenjualan.Iconimage_right = Nothing
@@ -418,7 +423,8 @@ Partial Class MainForm
         Me.btnDashboard.BorderRadius = 0
         Me.btnDashboard.ButtonText = "   Dashboard"
         Me.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnDashboard.DisabledColor = System.Drawing.Color.Gray
+        Me.btnDashboard.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnDashboard.Enabled = False
         Me.btnDashboard.Iconcolor = System.Drawing.Color.Transparent
         Me.btnDashboard.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.shop_48px
         Me.btnDashboard.Iconimage_right = Nothing
@@ -496,7 +502,8 @@ Partial Class MainForm
         Me.btnUser.BorderRadius = 0
         Me.btnUser.ButtonText = "   Master User"
         Me.btnUser.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnUser.DisabledColor = System.Drawing.Color.Gray
+        Me.btnUser.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnUser.Enabled = False
         Me.btnUser.Iconcolor = System.Drawing.Color.Transparent
         Me.btnUser.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.user_group_man_woman_64px
         Me.btnUser.Iconimage_right = Nothing
@@ -530,7 +537,8 @@ Partial Class MainForm
         Me.btnBarang.BorderRadius = 0
         Me.btnBarang.ButtonText = "   Master Barang"
         Me.btnBarang.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBarang.DisabledColor = System.Drawing.Color.Gray
+        Me.btnBarang.DisabledColor = System.Drawing.Color.Transparent
+        Me.btnBarang.Enabled = False
         Me.btnBarang.Iconcolor = System.Drawing.Color.Transparent
         Me.btnBarang.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.cardboard_box_64px
         Me.btnBarang.Iconimage_right = Nothing
@@ -602,6 +610,19 @@ Partial Class MainForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular"
         '
+        'lblLevel
+        '
+        Me.lblLevel.AutoSize = True
+        Me.lblLevel.BackColor = System.Drawing.Color.Transparent
+        Me.lblLevel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblLevel.Location = New System.Drawing.Point(123, 205)
+        Me.lblLevel.Name = "lblLevel"
+        Me.lblLevel.Size = New System.Drawing.Size(60, 21)
+        Me.lblLevel.TabIndex = 13
+        Me.lblLevel.Text = "blabla"
+        Me.lblLevel.Visible = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -651,4 +672,5 @@ Partial Class MainForm
     Friend WithEvents btnLogin As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents lblLevel As System.Windows.Forms.Label
 End Class
