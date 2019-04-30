@@ -36,8 +36,7 @@ Public Class MainForm
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
-        pnlDashboard.Show()
-        pnlBarang.Hide()
+        switchPanel(FormDashboard)
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
@@ -45,7 +44,7 @@ Public Class MainForm
         FormBarang.kondisiAwal()
     End Sub
 
-    Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs) Handles pnlBarang.Paint
+    Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs)
         FormBarang.Show()
         FormBarang.tampilBarang()
     End Sub

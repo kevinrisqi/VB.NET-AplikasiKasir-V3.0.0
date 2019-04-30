@@ -108,6 +108,12 @@
     <Compile Include="FormBarang.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormDashboard.Designer.vb">
+      <DependentUpon>FormDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormKategori.Designer.vb">
       <DependentUpon>FormKategori.vb</DependentUpon>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBarang.resx">
       <DependentUpon>FormBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDashboard.resx">
+      <DependentUpon>FormDashboard.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKategori.resx">
       <DependentUpon>FormKategori.vb</DependentUpon>
