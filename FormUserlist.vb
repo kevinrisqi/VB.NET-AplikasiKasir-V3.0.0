@@ -11,14 +11,18 @@ Public Class FormUserlist
         kodeAdmin.Text = ""
         username.Text = ""
         password.Text = ""
+        levelAdmin.Text = ""
+        input.Text = "Tambah"
 
         kodeAdmin.Enabled = False
         username.Enabled = False
         password.Enabled = False
+        levelAdmin.Enabled = False
+        simpan.Enabled = False
+        input.Enabled = True
+
         simpan.Enabled = False
         batal.Enabled = False
-        'hapus.Enabled = False
-        levelAdmin.Enabled = False
 
         Call koneksi()
         Da = New OdbcDataAdapter("SELECT * FROM admin", Conn)
@@ -34,57 +38,22 @@ Public Class FormUserlist
         username.Enabled = True
         password.Enabled = True
         levelAdmin.Enabled = True
+        levelAdmin.Text = ""
         simpan.Enabled = False
+        batal.Enabled = True
         BunifuCustomDataGrid1.Enabled = False
-        Button3.Enabled = False
-        Button5.Enabled = True
     End Sub
 
     Sub updateData()
-        TextBox1.Enabled = False
-        TextBox2.Enabled = True
-        TextBox3.Enabled = True
-        ComboBox1.Enabled = True
-        Button2.Enabled = True
-        Button3.Enabled = True
-        Button5.Enabled = True
-        DataGridView1.Enabled = True
-    End Sub
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Button1.Text = "Tambah" Then
-            Button1.Text = "Simpan"
-            'Button3.Text = "Batal"
-            Call isiData()
-            Call kodeOtomatis()
-        Else
-            If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
-                MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-            Else
-                Call koneksi()
-                Dim inputData As String = "INSERT INTO admin (id_admin,nama_admin,password_admin,level_admin) values ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & ComboBox1.Text & "')"
-                Cmd = New OdbcCommand(inputData, Conn)
-                Cmd.ExecuteNonQuery()
-                MsgBox("Data berhasil diinputkan")
-                Call kondisiAwal()
-            End If
-        End If
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'Call isiData()
-
-        If TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or ComboBox1.Text = "" Then
-            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-        Else
-            Call koneksi()
-            Dim updateData As String = "UPDATE admin set nama_admin = '" & TextBox2.Text & "', password_admin = '" & TextBox3.Text & "', level_admin = '" & ComboBox1.Text & "' WHERE id_admin = '" & TextBox1.Text & "'"
-            Cmd = New OdbcCommand(updateData, Conn)
-            Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil diubah")
-            Call kondisiAwal()
-        End If
+        kodeAdmin.Enabled = False
+        username.Enabled = True
+        password.Enabled = True
+        levelAdmin.Enabled = True
+        levelAdmin.Text = ""
+        input.Enabled = False
+        simpan.Enabled = True
+        batal.Enabled = True
+        BunifuCustomDataGrid1.Enabled = True
     End Sub
 
     Sub kodeOtomatis()
@@ -103,7 +72,7 @@ Public Class FormUserlist
     End Sub
 
     Private Sub BunifuCustomDataGrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellClick
-        'Call updateData()
+        Call updateData()
         'Call comboChecked()
         Dim i As Integer
         i = BunifuCustomDataGrid1.CurrentRow.Index
@@ -112,25 +81,6 @@ Public Class FormUserlist
         username.Text = BunifuCustomDataGrid1.Item(1, i).Value
         password.Text = BunifuCustomDataGrid1.Item(2, i).Value
         levelAdmin.Text = BunifuCustomDataGrid1.Item(3, i).Value
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
-
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Call kondisiAwal()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
-            Call koneksi()
-            Dim deleteData As String = "DELETE FROM admin WHERE id_admin = '" & TextBox1.Text & "'"
-            Cmd = New OdbcCommand(deleteData, Conn)
-            Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil dihapus")
-            Call kondisiAwal()
-        End If
     End Sub
 
     Private Sub search_OnTextChange(sender As Object, e As EventArgs) Handles search.OnTextChange
@@ -218,4 +168,31 @@ Public Class FormUserlist
         Else
         End If
     End Sub
+
+    Private Sub simpan_Click(sender As Object, e As EventArgs) Handles simpan.Click
+        'Call isiData()
+
+        If kodeAdmin.Text = "" Or username.Text = "" Or password.Text = "" Or levelAdmin.Text = "" Then
+            MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
+        Else
+            Call koneksi()
+            Dim updateData As String = "UPDATE admin set nama_admin = '" & username.Text & "', password_admin = '" & password.Text & "', level_admin = '" & levelAdmin.Text & "' WHERE id_admin = '" & kodeAdmin.Text & "'"
+            Cmd = New OdbcCommand(updateData, Conn)
+            Cmd.ExecuteNonQuery()
+            Call kondisiAwal()
+        End If
+    End Sub
+
+    Private Sub batal_Click(sender As Object, e As EventArgs) Handles batal.Click
+        Call kondisiAwal()
+    End Sub
+
+    Private Sub simpan_Click_1(sender As Object, e As EventArgs) Handles simpan.Click
+
+    End Sub
+
+    Private Sub levelAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles levelAdmin.KeyPress
+        
+    End Sub
+
 End Class
