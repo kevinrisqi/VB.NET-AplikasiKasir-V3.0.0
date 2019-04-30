@@ -44,7 +44,7 @@ Public Class FormUserlist
         BunifuCustomDataGrid1.Enabled = False
     End Sub
 
-    Sub updateData()
+    Sub updateValidation()
         kodeAdmin.Enabled = False
         username.Enabled = True
         password.Enabled = True
@@ -72,7 +72,7 @@ Public Class FormUserlist
     End Sub
 
     Private Sub BunifuCustomDataGrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellClick
-        Call updateData()
+        Call updateValidation()
         'Call comboChecked()
         Dim i As Integer
         i = BunifuCustomDataGrid1.CurrentRow.Index
@@ -136,6 +136,10 @@ Public Class FormUserlist
     End Sub
 
     Private Sub input_Click(sender As Object, e As EventArgs) Handles input.Click
+        Call inputData()
+    End Sub
+
+    Sub inputData()
         If input.Text = "Tambah" Then
             input.Text = "Simpan"
             'Button3.Text = "Batal"
@@ -155,6 +159,7 @@ Public Class FormUserlist
         End If
     End Sub
 
+
     Private Sub hapus_Click(sender As Object, e As EventArgs) Handles hapus.Click
         If kodeAdmin.Text = "" Then
             MsgBox("Pilih data yang akan dihapus !", vbInformation)
@@ -163,15 +168,17 @@ Public Class FormUserlist
             Dim deleteData As String = "DELETE FROM admin WHERE id_admin = '" & kodeAdmin.Text & "'"
             Cmd = New OdbcCommand(deleteData, Conn)
             Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil dihapus")
+            'MsgBox("Data berhasil dihapus")
             Call kondisiAwal()
         Else
         End If
     End Sub
 
     Private Sub simpan_Click(sender As Object, e As EventArgs) Handles simpan.Click
-        'Call isiData()
+        Call updateData()
+    End Sub
 
+    Sub updateData()
         If kodeAdmin.Text = "" Or username.Text = "" Or password.Text = "" Or levelAdmin.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         Else
@@ -183,6 +190,7 @@ Public Class FormUserlist
         End If
     End Sub
 
+
     Private Sub batal_Click(sender As Object, e As EventArgs) Handles batal.Click
         Call kondisiAwal()
     End Sub
@@ -192,7 +200,13 @@ Public Class FormUserlist
     End Sub
 
     Private Sub levelAdmin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles levelAdmin.KeyPress
-        
+        If e.KeyChar = Chr(13) Then
+            If input.Enabled = True Then
+                Call inputData()
+            Else
+                Call updateData()
+            End If
+        End If
     End Sub
 
 End Class
