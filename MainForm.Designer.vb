@@ -25,12 +25,14 @@ Partial Class MainForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.header = New System.Windows.Forms.Panel()
-        Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.footer = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.sidebar = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.btnSetup = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton11 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -45,15 +47,13 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.header.SuspendLayout()
+        Me.footer.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.footer.SuspendLayout()
         Me.sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'header
@@ -68,6 +68,52 @@ Partial Class MainForm
         Me.header.Size = New System.Drawing.Size(1060, 54)
         Me.header.TabIndex = 1
         '
+        'BunifuDragControl1
+        '
+        Me.BunifuDragControl1.Fixed = True
+        Me.BunifuDragControl1.Horizontal = True
+        Me.BunifuDragControl1.TargetControl = Me.header
+        Me.BunifuDragControl1.Vertical = True
+        '
+        'footer
+        '
+        Me.footer.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.footer.Controls.Add(Me.Label2)
+        Me.footer.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.footer.Location = New System.Drawing.Point(306, 700)
+        Me.footer.Name = "footer"
+        Me.footer.Size = New System.Drawing.Size(1060, 30)
+        Me.footer.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(395, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(189, 15)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Copyright ZenAI Software @ 2019"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(306, 54)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1060, 646)
+        Me.Panel1.TabIndex = 4
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(19, 20)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1018, 599)
+        Me.Panel2.TabIndex = 0
+        '
         'btnLogin
         '
         Me.btnLogin.Activecolor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(226, Byte), Integer))
@@ -78,7 +124,7 @@ Partial Class MainForm
         Me.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnLogin.DisabledColor = System.Drawing.Color.Gray
         Me.btnLogin.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnLogin.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.under_computer_48px
+        Me.btnLogin.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.gender_neutral_user_16px1
         Me.btnLogin.Iconimage_right = Nothing
         Me.btnLogin.Iconimage_right_Selected = Nothing
         Me.btnLogin.Iconimage_Selected = Nothing
@@ -87,7 +133,7 @@ Partial Class MainForm
         Me.btnLogin.IconRightVisible = True
         Me.btnLogin.IconRightZoom = 0.0R
         Me.btnLogin.IconVisible = True
-        Me.btnLogin.IconZoom = 90.0R
+        Me.btnLogin.IconZoom = 50.0R
         Me.btnLogin.IsTab = False
         Me.btnLogin.Location = New System.Drawing.Point(6, 17)
         Me.btnLogin.Name = "btnLogin"
@@ -95,10 +141,10 @@ Partial Class MainForm
         Me.btnLogin.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.btnLogin.OnHoverTextColor = System.Drawing.Color.White
         Me.btnLogin.selected = False
-        Me.btnLogin.Size = New System.Drawing.Size(156, 31)
+        Me.btnLogin.Size = New System.Drawing.Size(102, 31)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
-        Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.btnLogin.Textcolor = System.Drawing.Color.Black
         Me.btnLogin.TextFont = New System.Drawing.Font("News706 BT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
@@ -132,34 +178,6 @@ Partial Class MainForm
         Me.BunifuImageButton1.TabStop = False
         Me.BunifuImageButton1.Zoom = 10
         '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.header
-        Me.BunifuDragControl1.Vertical = True
-        '
-        'footer
-        '
-        Me.footer.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.footer.Controls.Add(Me.Label2)
-        Me.footer.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.footer.Location = New System.Drawing.Point(306, 690)
-        Me.footer.Name = "footer"
-        Me.footer.Size = New System.Drawing.Size(1060, 30)
-        Me.footer.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(395, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(189, 15)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Copyright ZenAI Software @ 2019"
-        '
         'sidebar
         '
         Me.sidebar.BackgroundImage = CType(resources.GetObject("sidebar.BackgroundImage"), System.Drawing.Image)
@@ -185,7 +203,7 @@ Partial Class MainForm
         Me.sidebar.Location = New System.Drawing.Point(0, 0)
         Me.sidebar.Name = "sidebar"
         Me.sidebar.Quality = 10
-        Me.sidebar.Size = New System.Drawing.Size(306, 720)
+        Me.sidebar.Size = New System.Drawing.Size(306, 730)
         Me.sidebar.TabIndex = 0
         '
         'btnSetup
@@ -584,30 +602,12 @@ Partial Class MainForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular"
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(306, 54)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1060, 636)
-        Me.Panel1.TabIndex = 4
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(19, 20)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1018, 599)
-        Me.Panel2.TabIndex = 0
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1366, 720)
+        Me.ClientSize = New System.Drawing.Size(1366, 730)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.footer)
         Me.Controls.Add(Me.header)
@@ -617,14 +617,14 @@ Partial Class MainForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainForm"
         Me.header.ResumeLayout(False)
-        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.footer.ResumeLayout(False)
         Me.footer.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sidebar.ResumeLayout(False)
         Me.sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

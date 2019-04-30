@@ -41,11 +41,11 @@ Partial Class FormAddBarang
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.namaKategori = New System.Windows.Forms.ComboBox()
         Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.tanggalInput = New System.Windows.Forms.TextBox()
         Me.tanggalUpdate = New System.Windows.Forms.TextBox()
         Me.namaAdmin = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -219,6 +219,7 @@ Partial Class FormAddBarang
         Me.id.Name = "id"
         Me.id.Size = New System.Drawing.Size(35, 26)
         Me.id.TabIndex = 10
+        Me.id.Visible = False
         '
         'kategoriID
         '
@@ -227,6 +228,7 @@ Partial Class FormAddBarang
         Me.kategoriID.Name = "kategoriID"
         Me.kategoriID.Size = New System.Drawing.Size(35, 26)
         Me.kategoriID.TabIndex = 11
+        Me.kategoriID.Visible = False
         '
         'BunifuElipse1
         '
@@ -338,6 +340,37 @@ Partial Class FormAddBarang
         Me.ppn.TabIndex = 8
         Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'tanggalInput
+        '
+        Me.tanggalInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalInput.Location = New System.Drawing.Point(828, 300)
+        Me.tanggalInput.Name = "tanggalInput"
+        Me.tanggalInput.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalInput.TabIndex = 19
+        Me.tanggalInput.Visible = False
+        '
+        'tanggalUpdate
+        '
+        Me.tanggalUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalUpdate.Location = New System.Drawing.Point(828, 332)
+        Me.tanggalUpdate.Name = "tanggalUpdate"
+        Me.tanggalUpdate.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalUpdate.TabIndex = 20
+        Me.tanggalUpdate.Visible = False
+        '
+        'namaAdmin
+        '
+        Me.namaAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.namaAdmin.Location = New System.Drawing.Point(828, 364)
+        Me.namaAdmin.Name = "namaAdmin"
+        Me.namaAdmin.Size = New System.Drawing.Size(154, 20)
+        Me.namaAdmin.TabIndex = 21
+        Me.namaAdmin.Visible = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
@@ -348,34 +381,6 @@ Partial Class FormAddBarang
         Me.PictureBox1.Size = New System.Drawing.Size(70, 69)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'tanggalInput
-        '
-        Me.tanggalInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tanggalInput.Location = New System.Drawing.Point(828, 300)
-        Me.tanggalInput.Name = "tanggalInput"
-        Me.tanggalInput.Size = New System.Drawing.Size(154, 20)
-        Me.tanggalInput.TabIndex = 19
-        '
-        'tanggalUpdate
-        '
-        Me.tanggalUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tanggalUpdate.Location = New System.Drawing.Point(828, 332)
-        Me.tanggalUpdate.Name = "tanggalUpdate"
-        Me.tanggalUpdate.Size = New System.Drawing.Size(154, 20)
-        Me.tanggalUpdate.TabIndex = 20
-        '
-        'namaAdmin
-        '
-        Me.namaAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namaAdmin.Location = New System.Drawing.Point(828, 364)
-        Me.namaAdmin.Name = "namaAdmin"
-        Me.namaAdmin.Size = New System.Drawing.Size(154, 20)
-        Me.namaAdmin.TabIndex = 21
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
         '
         'FormAddBarang
         '
