@@ -96,7 +96,7 @@ Public Class FormUserlist
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 
@@ -161,10 +161,6 @@ Public Class FormUserlist
         End If
     End Sub
 
-    Private Sub kodeBarang_OnValueChanged(sender As Object, e As EventArgs) Handles kodeBarang.OnValueChanged
-
-    End Sub
-
     Private Sub search_OnTextChange(sender As Object, e As EventArgs) Handles search.OnTextChange
         Call koneksi()
         Dim searchData As String = "select * from admin where nama_admin like '%" & search.text & "%'"
@@ -179,5 +175,9 @@ Public Class FormUserlist
             Da.Fill(Ds)
             BunifuCustomDataGrid1.DataSource = Ds.Tables(0)
         End If
+    End Sub
+
+    Private Sub password_OnValueChanged(sender As Object, e As EventArgs) Handles password.OnValueChanged
+        password.isPassword = True
     End Sub
 End Class

@@ -38,28 +38,30 @@ Partial Class FormUserlist
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.namaKategori = New System.Windows.Forms.ComboBox()
-        Me.namaBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.satuan = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.kodeBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.levelAdmin = New System.Windows.Forms.ComboBox()
+        Me.username = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.password = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.kodeAdmin = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -176,19 +178,10 @@ Partial Class FormUserlist
         Me.Button3.Text = "Hapus"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(417, 114)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(82, 37)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Keluar"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(326, 473)
+        Me.DataGridView1.Location = New System.Drawing.Point(411, 114)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(135, 63)
         Me.DataGridView1.TabIndex = 5
@@ -221,15 +214,6 @@ Partial Class FormUserlist
         Me.ShapeContainer1.Size = New System.Drawing.Size(1018, 599)
         Me.ShapeContainer1.TabIndex = 15
         Me.ShapeContainer1.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.user_group_man_woman_64px
-        Me.PictureBox1.Location = New System.Drawing.Point(94, 26)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(60, 60)
-        Me.PictureBox1.TabIndex = 16
-        Me.PictureBox1.TabStop = False
         '
         'Label9
         '
@@ -309,6 +293,185 @@ Partial Class FormUserlist
         Me.Column4.HeaderText = "Level Admin"
         Me.Column4.Name = "Column4"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(595, 153)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(147, 18)
+        Me.Label8.TabIndex = 39
+        Me.Label8.Text = "Pencarian Username"
+        '
+        'levelAdmin
+        '
+        Me.levelAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.levelAdmin.FormattingEnabled = True
+        Me.levelAdmin.Items.AddRange(New Object() {"ADMIN", "USER"})
+        Me.levelAdmin.Location = New System.Drawing.Point(51, 393)
+        Me.levelAdmin.Name = "levelAdmin"
+        Me.levelAdmin.Size = New System.Drawing.Size(205, 26)
+        Me.levelAdmin.TabIndex = 44
+        '
+        'username
+        '
+        Me.username.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.username.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.username.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.username.HintForeColor = System.Drawing.Color.Empty
+        Me.username.HintText = "Username"
+        Me.username.isPassword = False
+        Me.username.LineFocusedColor = System.Drawing.Color.Blue
+        Me.username.LineIdleColor = System.Drawing.Color.Gray
+        Me.username.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.username.LineThickness = 3
+        Me.username.Location = New System.Drawing.Point(51, 223)
+        Me.username.Margin = New System.Windows.Forms.Padding(4)
+        Me.username.Name = "username"
+        Me.username.Size = New System.Drawing.Size(353, 44)
+        Me.username.TabIndex = 42
+        Me.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'password
+        '
+        Me.password.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.password.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.password.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.password.HintForeColor = System.Drawing.Color.Empty
+        Me.password.HintText = "Password"
+        Me.password.isPassword = True
+        Me.password.LineFocusedColor = System.Drawing.Color.Blue
+        Me.password.LineIdleColor = System.Drawing.Color.Gray
+        Me.password.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.password.LineThickness = 3
+        Me.password.Location = New System.Drawing.Point(51, 295)
+        Me.password.Margin = New System.Windows.Forms.Padding(4)
+        Me.password.Name = "password"
+        Me.password.Size = New System.Drawing.Size(166, 44)
+        Me.password.TabIndex = 43
+        Me.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'kodeAdmin
+        '
+        Me.kodeAdmin.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.kodeAdmin.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.kodeAdmin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.kodeAdmin.HintForeColor = System.Drawing.Color.Empty
+        Me.kodeAdmin.HintText = "Kode Admin"
+        Me.kodeAdmin.isPassword = False
+        Me.kodeAdmin.LineFocusedColor = System.Drawing.Color.Blue
+        Me.kodeAdmin.LineIdleColor = System.Drawing.Color.Gray
+        Me.kodeAdmin.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.kodeAdmin.LineThickness = 3
+        Me.kodeAdmin.Location = New System.Drawing.Point(51, 153)
+        Me.kodeAdmin.Margin = New System.Windows.Forms.Padding(4)
+        Me.kodeAdmin.Name = "kodeAdmin"
+        Me.kodeAdmin.Size = New System.Drawing.Size(114, 44)
+        Me.kodeAdmin.TabIndex = 41
+        Me.kodeAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BunifuFlatButton3
+        '
+        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.BunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton3.BorderRadius = 0
+        Me.BunifuFlatButton3.ButtonText = "Batal"
+        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton3.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.cancel_subscription_48px
+        Me.BunifuFlatButton3.Iconimage_right = Nothing
+        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton3.IconMarginLeft = 0
+        Me.BunifuFlatButton3.IconMarginRight = 0
+        Me.BunifuFlatButton3.IconRightVisible = True
+        Me.BunifuFlatButton3.IconRightZoom = 0.0R
+        Me.BunifuFlatButton3.IconVisible = True
+        Me.BunifuFlatButton3.IconZoom = 59.0R
+        Me.BunifuFlatButton3.IsTab = False
+        Me.BunifuFlatButton3.Location = New System.Drawing.Point(271, 442)
+        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
+        Me.BunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(53, Byte), Integer))
+        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(44, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.selected = False
+        Me.BunifuFlatButton3.Size = New System.Drawing.Size(104, 48)
+        Me.BunifuFlatButton3.TabIndex = 47
+        Me.BunifuFlatButton3.Text = "Batal"
+        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuFlatButton1
+        '
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton1.BorderRadius = 0
+        Me.BunifuFlatButton1.ButtonText = "Simpan"
+        Me.BunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
+        Me.BunifuFlatButton1.Iconimage_right = Nothing
+        Me.BunifuFlatButton1.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton1.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton1.IconMarginLeft = 0
+        Me.BunifuFlatButton1.IconMarginRight = 0
+        Me.BunifuFlatButton1.IconRightVisible = True
+        Me.BunifuFlatButton1.IconRightZoom = 0.0R
+        Me.BunifuFlatButton1.IconVisible = True
+        Me.BunifuFlatButton1.IconZoom = 90.0R
+        Me.BunifuFlatButton1.IsTab = False
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(161, 442)
+        Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.selected = False
+        Me.BunifuFlatButton1.Size = New System.Drawing.Size(104, 48)
+        Me.BunifuFlatButton1.TabIndex = 45
+        Me.BunifuFlatButton1.Text = "Simpan"
+        Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuFlatButton2
+        '
+        Me.BunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton2.BorderRadius = 0
+        Me.BunifuFlatButton2.ButtonText = "Input"
+        Me.BunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton2.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.strategy_board_40px
+        Me.BunifuFlatButton2.Iconimage_right = Nothing
+        Me.BunifuFlatButton2.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton2.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton2.IconMarginLeft = 0
+        Me.BunifuFlatButton2.IconMarginRight = 0
+        Me.BunifuFlatButton2.IconRightVisible = True
+        Me.BunifuFlatButton2.IconRightZoom = 0.0R
+        Me.BunifuFlatButton2.IconVisible = True
+        Me.BunifuFlatButton2.IconZoom = 58.0R
+        Me.BunifuFlatButton2.IsTab = False
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(51, 442)
+        Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
+        Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(90, Byte), Integer))
+        Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(60, Byte), Integer))
+        Me.BunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.selected = False
+        Me.BunifuFlatButton2.Size = New System.Drawing.Size(104, 48)
+        Me.BunifuFlatButton2.TabIndex = 46
+        Me.BunifuFlatButton2.Text = "Input"
+        Me.BunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton2.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton2.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'search
         '
         Me.search.BackColor = System.Drawing.Color.White
@@ -322,82 +485,14 @@ Partial Class FormUserlist
         Me.search.TabIndex = 40
         Me.search.text = ""
         '
-        'Label8
+        'PictureBox1
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(595, 153)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(147, 18)
-        Me.Label8.TabIndex = 39
-        Me.Label8.Text = "Pencarian Username"
-        '
-        'namaKategori
-        '
-        Me.namaKategori.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namaKategori.FormattingEnabled = True
-        Me.namaKategori.Items.AddRange(New Object() {"ADMIN", "USER"})
-        Me.namaKategori.Location = New System.Drawing.Point(51, 393)
-        Me.namaKategori.Name = "namaKategori"
-        Me.namaKategori.Size = New System.Drawing.Size(205, 26)
-        Me.namaKategori.TabIndex = 44
-        '
-        'namaBarang
-        '
-        Me.namaBarang.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.namaBarang.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.namaBarang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.namaBarang.HintForeColor = System.Drawing.Color.Empty
-        Me.namaBarang.HintText = "Nama Barang"
-        Me.namaBarang.isPassword = False
-        Me.namaBarang.LineFocusedColor = System.Drawing.Color.Blue
-        Me.namaBarang.LineIdleColor = System.Drawing.Color.Gray
-        Me.namaBarang.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.namaBarang.LineThickness = 3
-        Me.namaBarang.Location = New System.Drawing.Point(51, 223)
-        Me.namaBarang.Margin = New System.Windows.Forms.Padding(4)
-        Me.namaBarang.Name = "namaBarang"
-        Me.namaBarang.Size = New System.Drawing.Size(353, 44)
-        Me.namaBarang.TabIndex = 42
-        Me.namaBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'satuan
-        '
-        Me.satuan.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.satuan.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.satuan.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.satuan.HintForeColor = System.Drawing.Color.Empty
-        Me.satuan.HintText = "Satuan"
-        Me.satuan.isPassword = False
-        Me.satuan.LineFocusedColor = System.Drawing.Color.Blue
-        Me.satuan.LineIdleColor = System.Drawing.Color.Gray
-        Me.satuan.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.satuan.LineThickness = 3
-        Me.satuan.Location = New System.Drawing.Point(51, 295)
-        Me.satuan.Margin = New System.Windows.Forms.Padding(4)
-        Me.satuan.Name = "satuan"
-        Me.satuan.Size = New System.Drawing.Size(166, 44)
-        Me.satuan.TabIndex = 43
-        Me.satuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'kodeBarang
-        '
-        Me.kodeBarang.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.kodeBarang.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.kodeBarang.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.kodeBarang.HintForeColor = System.Drawing.Color.Empty
-        Me.kodeBarang.HintText = "Kode Barang"
-        Me.kodeBarang.isPassword = False
-        Me.kodeBarang.LineFocusedColor = System.Drawing.Color.Blue
-        Me.kodeBarang.LineIdleColor = System.Drawing.Color.Gray
-        Me.kodeBarang.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.kodeBarang.LineThickness = 3
-        Me.kodeBarang.Location = New System.Drawing.Point(51, 153)
-        Me.kodeBarang.Margin = New System.Windows.Forms.Padding(4)
-        Me.kodeBarang.Name = "kodeBarang"
-        Me.kodeBarang.Size = New System.Drawing.Size(114, 44)
-        Me.kodeBarang.TabIndex = 41
-        Me.kodeBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.user_group_man_woman_64px
+        Me.PictureBox1.Location = New System.Drawing.Point(94, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox1.TabIndex = 16
+        Me.PictureBox1.TabStop = False
         '
         'FormUserlist
         '
@@ -406,7 +501,10 @@ Partial Class FormUserlist
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
         Me.ControlBox = False
-        Me.Controls.Add(Me.namaKategori)
+        Me.Controls.Add(Me.BunifuFlatButton3)
+        Me.Controls.Add(Me.BunifuFlatButton1)
+        Me.Controls.Add(Me.BunifuFlatButton2)
+        Me.Controls.Add(Me.levelAdmin)
         Me.Controls.Add(Me.search)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.BunifuCustomDataGrid1)
@@ -414,12 +512,11 @@ Partial Class FormUserlist
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.satuan)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.namaBarang)
-        Me.Controls.Add(Me.kodeBarang)
+        Me.Controls.Add(Me.password)
+        Me.Controls.Add(Me.username)
+        Me.Controls.Add(Me.kodeAdmin)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -430,8 +527,8 @@ Partial Class FormUserlist
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,7 +545,6 @@ Partial Class FormUserlist
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
@@ -462,8 +558,11 @@ Partial Class FormUserlist
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents search As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
-    Friend WithEvents namaBarang As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents satuan As Bunifu.Framework.UI.BunifuMaterialTextbox
-    Friend WithEvents kodeBarang As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents levelAdmin As System.Windows.Forms.ComboBox
+    Friend WithEvents username As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents password As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents kodeAdmin As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
 End Class
