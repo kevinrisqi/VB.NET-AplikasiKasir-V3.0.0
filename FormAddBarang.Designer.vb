@@ -26,7 +26,6 @@ Partial Class FormAddBarang
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.kodeBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.namaBarang = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.satuan = New Bunifu.Framework.UI.BunifuMaterialTextbox()
@@ -36,12 +35,17 @@ Partial Class FormAddBarang
         Me.keterangan = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.id = New System.Windows.Forms.TextBox()
         Me.kategoriID = New System.Windows.Forms.TextBox()
-        Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.submit = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.namaKategori = New System.Windows.Forms.ComboBox()
+        Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.tanggalInput = New System.Windows.Forms.TextBox()
+        Me.tanggalUpdate = New System.Windows.Forms.TextBox()
+        Me.namaAdmin = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -75,17 +79,6 @@ Partial Class FormAddBarang
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Form Barang"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(89, 27)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(70, 69)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'kodeBarang
         '
         Me.kodeBarang.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -102,7 +95,7 @@ Partial Class FormAddBarang
         Me.kodeBarang.Margin = New System.Windows.Forms.Padding(4)
         Me.kodeBarang.Name = "kodeBarang"
         Me.kodeBarang.Size = New System.Drawing.Size(114, 44)
-        Me.kodeBarang.TabIndex = 3
+        Me.kodeBarang.TabIndex = 1
         Me.kodeBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'namaBarang
@@ -121,7 +114,7 @@ Partial Class FormAddBarang
         Me.namaBarang.Margin = New System.Windows.Forms.Padding(4)
         Me.namaBarang.Name = "namaBarang"
         Me.namaBarang.Size = New System.Drawing.Size(353, 44)
-        Me.namaBarang.TabIndex = 4
+        Me.namaBarang.TabIndex = 2
         Me.namaBarang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'satuan
@@ -140,7 +133,7 @@ Partial Class FormAddBarang
         Me.satuan.Margin = New System.Windows.Forms.Padding(4)
         Me.satuan.Name = "satuan"
         Me.satuan.Size = New System.Drawing.Size(166, 44)
-        Me.satuan.TabIndex = 5
+        Me.satuan.TabIndex = 3
         Me.satuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'stok
@@ -159,7 +152,7 @@ Partial Class FormAddBarang
         Me.stok.Margin = New System.Windows.Forms.Padding(4)
         Me.stok.Name = "stok"
         Me.stok.Size = New System.Drawing.Size(79, 44)
-        Me.stok.TabIndex = 6
+        Me.stok.TabIndex = 5
         Me.stok.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'beli
@@ -178,7 +171,7 @@ Partial Class FormAddBarang
         Me.beli.Margin = New System.Windows.Forms.Padding(4)
         Me.beli.Name = "beli"
         Me.beli.Size = New System.Drawing.Size(209, 44)
-        Me.beli.TabIndex = 7
+        Me.beli.TabIndex = 6
         Me.beli.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'jual
@@ -197,7 +190,7 @@ Partial Class FormAddBarang
         Me.jual.Margin = New System.Windows.Forms.Padding(4)
         Me.jual.Name = "jual"
         Me.jual.Size = New System.Drawing.Size(209, 44)
-        Me.jual.TabIndex = 8
+        Me.jual.TabIndex = 7
         Me.jual.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'keterangan
@@ -221,37 +214,21 @@ Partial Class FormAddBarang
         '
         'id
         '
+        Me.id.Enabled = False
         Me.id.Location = New System.Drawing.Point(947, 187)
         Me.id.Name = "id"
         Me.id.Size = New System.Drawing.Size(35, 26)
         Me.id.TabIndex = 10
+        Me.id.Visible = False
         '
         'kategoriID
         '
+        Me.kategoriID.Enabled = False
         Me.kategoriID.Location = New System.Drawing.Point(947, 241)
         Me.kategoriID.Name = "kategoriID"
         Me.kategoriID.Size = New System.Drawing.Size(35, 26)
         Me.kategoriID.TabIndex = 11
-        '
-        'ppn
-        '
-        Me.ppn.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ppn.HintForeColor = System.Drawing.Color.Empty
-        Me.ppn.HintText = "Ppn"
-        Me.ppn.isPassword = False
-        Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
-        Me.ppn.LineIdleColor = System.Drawing.Color.Gray
-        Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.ppn.LineThickness = 3
-        Me.ppn.Location = New System.Drawing.Point(594, 386)
-        Me.ppn.Margin = New System.Windows.Forms.Padding(4)
-        Me.ppn.Name = "ppn"
-        Me.ppn.Size = New System.Drawing.Size(209, 44)
-        Me.ppn.TabIndex = 14
-        Me.ppn.Text = "PPN"
-        Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.kategoriID.Visible = False
         '
         'BunifuElipse1
         '
@@ -342,7 +319,68 @@ Partial Class FormAddBarang
         Me.namaKategori.Location = New System.Drawing.Point(82, 404)
         Me.namaKategori.Name = "namaKategori"
         Me.namaKategori.Size = New System.Drawing.Size(205, 26)
-        Me.namaKategori.TabIndex = 19
+        Me.namaKategori.TabIndex = 4
+        '
+        'ppn
+        '
+        Me.ppn.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
+        Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ppn.HintForeColor = System.Drawing.Color.Empty
+        Me.ppn.HintText = "PPN"
+        Me.ppn.isPassword = False
+        Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
+        Me.ppn.LineIdleColor = System.Drawing.Color.Gray
+        Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
+        Me.ppn.LineThickness = 3
+        Me.ppn.Location = New System.Drawing.Point(594, 386)
+        Me.ppn.Margin = New System.Windows.Forms.Padding(4)
+        Me.ppn.Name = "ppn"
+        Me.ppn.Size = New System.Drawing.Size(161, 44)
+        Me.ppn.TabIndex = 8
+        Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'tanggalInput
+        '
+        Me.tanggalInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalInput.Location = New System.Drawing.Point(828, 300)
+        Me.tanggalInput.Name = "tanggalInput"
+        Me.tanggalInput.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalInput.TabIndex = 19
+        Me.tanggalInput.Visible = False
+        '
+        'tanggalUpdate
+        '
+        Me.tanggalUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tanggalUpdate.Location = New System.Drawing.Point(828, 332)
+        Me.tanggalUpdate.Name = "tanggalUpdate"
+        Me.tanggalUpdate.Size = New System.Drawing.Size(154, 20)
+        Me.tanggalUpdate.TabIndex = 20
+        Me.tanggalUpdate.Visible = False
+        '
+        'namaAdmin
+        '
+        Me.namaAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.namaAdmin.Location = New System.Drawing.Point(828, 364)
+        Me.namaAdmin.Name = "namaAdmin"
+        Me.namaAdmin.Size = New System.Drawing.Size(154, 20)
+        Me.namaAdmin.TabIndex = 21
+        Me.namaAdmin.Visible = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.AplikasiPenjualan.My.Resources.Resources.box_edit_1_100px
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(89, 27)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(70, 69)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'FormAddBarang
         '
@@ -350,19 +388,22 @@ Partial Class FormAddBarang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
+        Me.Controls.Add(Me.namaAdmin)
+        Me.Controls.Add(Me.tanggalUpdate)
+        Me.Controls.Add(Me.tanggalInput)
         Me.Controls.Add(Me.namaKategori)
-        Me.Controls.Add(Me.cancel)
-        Me.Controls.Add(Me.submit)
         Me.Controls.Add(Me.kategoriID)
         Me.Controls.Add(Me.id)
-        Me.Controls.Add(Me.satuan)
+        Me.Controls.Add(Me.submit)
+        Me.Controls.Add(Me.cancel)
+        Me.Controls.Add(Me.beli)
         Me.Controls.Add(Me.namaBarang)
         Me.Controls.Add(Me.jual)
-        Me.Controls.Add(Me.beli)
+        Me.Controls.Add(Me.satuan)
         Me.Controls.Add(Me.kodeBarang)
         Me.Controls.Add(Me.keterangan)
-        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.stok)
+        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -389,10 +430,14 @@ Partial Class FormAddBarang
     Friend WithEvents keterangan As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents id As System.Windows.Forms.TextBox
     Friend WithEvents kategoriID As System.Windows.Forms.TextBox
-    Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
+    Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
+    Friend WithEvents tanggalInput As System.Windows.Forms.TextBox
+    Friend WithEvents tanggalUpdate As System.Windows.Forms.TextBox
+    Friend WithEvents namaAdmin As System.Windows.Forms.TextBox
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

@@ -23,47 +23,23 @@ Public Class B_FormLogin
     End Sub
 
     Sub adminActive()
-        FormMenuUtama.LoginToolStripMenuItem.Enabled = False
-        FormMenuUtama.LogoutToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterBarangToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterSupplierToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterUserlistToolStripMenuItem.Enabled = True
-        FormMenuUtama.SetupTokoToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiPembelianToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiPenjualanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanPenjualanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanPembelianToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListBarangToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListSupplierToolStripMenuItem.Enabled = True
-        FormMenuUtama.LoginToolStripMenuItem.Visible = False
-        FormMenuUtama.LogoutToolStripMenuItem.Visible = True
-        FormMenuUtama.LogoutToolStripMenuItem.Enabled = True
+        MainForm.btnBarang.Enabled = True
+        MainForm.btnUser.Enabled = True
+        MainForm.btnPenjualan.Enabled = True
+        MainForm.btnLaporan.Enabled = True
+        MainForm.btnSetup.Enabled = True
+        MainForm.btnDashboard.Enabled = True
+        MainForm.lblLevel.Visible = True
     End Sub
 
     Sub userActive()
-        FormMenuUtama.LoginToolStripMenuItem.Enabled = False
-        FormMenuUtama.LogoutToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterBarangToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterSupplierToolStripMenuItem.Enabled = True
-        FormMenuUtama.MasterUserlistToolStripMenuItem.Enabled = False
-        FormMenuUtama.SetupTokoToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiPembelianToolStripMenuItem.Enabled = True
-        FormMenuUtama.TransaksiPenjualanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanPenjualanToolStripMenuItem.Enabled = True
-        FormMenuUtama.LaporanPembelianToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListBarangToolStripMenuItem.Enabled = True
-        FormMenuUtama.ListSupplierToolStripMenuItem.Enabled = True
-        FormMenuUtama.LoginToolStripMenuItem.Visible = False
-        FormMenuUtama.LogoutToolStripMenuItem.Visible = True
-        FormMenuUtama.LogoutToolStripMenuItem.Enabled = True
+        MainForm.btnBarang.Enabled = True
+        MainForm.btnUser.Enabled = False
+        MainForm.btnPenjualan.Enabled = True
+        MainForm.btnLaporan.Enabled = True
+        MainForm.btnSetup.Enabled = True
+        MainForm.btnDashboard.Enabled = True
+        MainForm.lblLevel.Visible = True
     End Sub
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
@@ -85,11 +61,11 @@ Public Class B_FormLogin
             Rd = Cmd.ExecuteReader
             Rd.Read()
             If Rd.HasRows Then
-                FormMenuUtama.panel2.Text = "Nama User : " + Rd.Item("nama_admin")
-                FormMenuUtama.panel3.Text = "Level User : " + Rd.Item("level_admin")
+                MainForm.lblLevel.Text = Rd.Item("level_admin")
+                MainForm.btnLogin.Text = Rd.Item("nama_admin")
                 Me.Hide()
                 Call adminActive()
-                If FormMenuUtama.panel3.Text = "Level User : USER" Then
+                If MainForm.lblLevel.Text = "USER" Then
                     Call userActive()
                 End If
             Else

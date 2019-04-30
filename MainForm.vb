@@ -27,6 +27,7 @@ Public Class MainForm
         btnPenjualan.Enabled = False
         btnLaporan.Enabled = False
         btnSetup.Enabled = False
+        lblLevel.Visible = False
     End Sub
 
 
@@ -36,16 +37,17 @@ Public Class MainForm
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
-        pnlDashboard.Show()
-        pnlBarang.Hide()
+        switchPanel(FormDashboard)
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click
         switchPanel(FormBarang)
+        FormBarang.kondisiAwal()
     End Sub
 
-    Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs) Handles pnlBarang.Paint
+    Private Sub pnlBarang_Paint(sender As Object, e As PaintEventArgs)
         FormBarang.Show()
+        FormBarang.tampilBarang()
     End Sub
 
     
@@ -59,5 +61,13 @@ Public Class MainForm
 
     Private Sub btnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
         switchPanel(FormUserlist)
+    End Sub
+
+    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+        If Not btnLogin.Text = "Login" Then
+            Call nonAktif()
+        Else
+            B_FormLogin.Show()
+        End If
     End Sub
 End Class
