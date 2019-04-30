@@ -43,6 +43,8 @@ Public Class FormUserlist
         Ds = New DataSet
         Da.Fill(Ds, "admin")
         DataGridView1.DataSource = Ds.Tables("admin")
+        BunifuCustomDataGrid1.DataSource = Ds.Tables("admin")
+        BunifuCustomDataGrid1.ReadOnly = True
         DataGridView1.ReadOnly = True
         DataGridView1.Enabled = True
     End Sub
@@ -159,21 +161,23 @@ Public Class FormUserlist
         End If
     End Sub
 
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+    Private Sub kodeBarang_OnValueChanged(sender As Object, e As EventArgs) Handles kodeBarang.OnValueChanged
+
+    End Sub
+
+    Private Sub search_OnTextChange(sender As Object, e As EventArgs) Handles search.OnTextChange
         Call koneksi()
-        Dim searchData As String = "select * from admin where nama_admin like '%" & TextBox4.Text & "%'"
+        Dim searchData As String = "select * from admin where nama_admin like '%" & search.text & "%'"
         Cmd = New OdbcCommand(searchData, Conn)
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Rd.HasRows Then
             Call koneksi()
-            Dim query As String = "select * from admin where nama_admin like '%" & TextBox4.Text & "%'"
+            Dim query As String = "select * from admin where nama_admin like '%" & search.text & "%'"
             Da = New OdbcDataAdapter(query, Conn)
             Ds = New DataSet
             Da.Fill(Ds)
-            DataGridView1.DataSource = Ds.Tables(0)
+            BunifuCustomDataGrid1.DataSource = Ds.Tables(0)
         End If
     End Sub
-
-
 End Class
