@@ -32,6 +32,8 @@ Partial Class FormSetupToko
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class FormSetupToko
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(265, 259)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(446, 150)
         Me.GroupBox1.TabIndex = 0
@@ -127,16 +129,37 @@ Partial Class FormSetupToko
         Me.Button3.Text = "Keluar"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'LineShape1
+        '
+        Me.LineShape1.BorderColor = System.Drawing.Color.MidnightBlue
+        Me.LineShape1.BorderWidth = 3
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = -91
+        Me.LineShape1.X2 = 813
+        Me.LineShape1.Y1 = 210
+        Me.LineShape1.Y2 = 210
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1002, 560)
+        Me.ShapeContainer1.TabIndex = 4
+        Me.ShapeContainer1.TabStop = False
+        '
         'FormSetupToko
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(470, 220)
+        Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "FormSetupToko"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -156,4 +179,6 @@ Partial Class FormSetupToko
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
 End Class
