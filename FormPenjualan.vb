@@ -17,7 +17,7 @@ Public Class FormPenjualan
     End Sub
 
     Sub kodeOtomatis()
-        Cmd = New OdbcCommand("select * from penjualan where id_admin in (select max(id_admin) from admin)", Conn)
+        Cmd = New OdbcCommand("select * from penjualan where id_penjualan in (select max(id_penjualan) from penjualan)", Conn)
         Dim urutan As String
         Dim hitung As Long
         Rd = Cmd.ExecuteReader
@@ -44,7 +44,8 @@ Public Class FormPenjualan
         If Rd.HasRows Then
             namaBarang.Text = Rd.Item("nama_barang")
             hargaSatuan.Text = Rd.Item("harga_jual")
-            BunifuCustomDataGrid1.Rows.Add(New String() {kodeBarang.Text, namaBarang.Text, hargaSatuan.Text, qty.Text, hargaSatuan.Text * qty.Text})
+            BunifuCustomDataGrid1.Rows.Add(New String() {kodeBarang.Text, namaBarang.Text, hargaSatuan.Text, qty.Text, Val(hargaSatuan.Text * qty.Text)})
+            Call hitungSubTotal()
         Else
             MsgBox("Kode Barang tidak tersedia !", vbInformation)
         End If
@@ -54,8 +55,12 @@ Public Class FormPenjualan
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
     End Sub
 
-    Private Sub qty_TextChanged(sender As Object, e As EventArgs) Handles qty.TextChanged
-
+    Sub hitungSubTotal()
+        Dim hitung As Integer = 0
+        For i As Integer = 0 To BunifuCustomDataGrid1.Rows.Count - 1
+            hitung = hitung + BunifuCustomDataGrid1.Rows(i).Cells(4).Value
+            Total.Text = hitung
+        Next
     End Sub
 
 End Class

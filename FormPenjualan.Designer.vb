@@ -62,6 +62,7 @@ Partial Class FormPenjualan
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,7 +88,7 @@ Partial Class FormPenjualan
         'jam
         '
         Me.jam.Enabled = False
-        Me.jam.Location = New System.Drawing.Point(780, 157)
+        Me.jam.Location = New System.Drawing.Point(469, 160)
         Me.jam.Name = "jam"
         Me.jam.Size = New System.Drawing.Size(115, 20)
         Me.jam.TabIndex = 5
@@ -95,7 +96,7 @@ Partial Class FormPenjualan
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(699, 160)
+        Me.Label3.Location = New System.Drawing.Point(388, 163)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(26, 13)
         Me.Label3.TabIndex = 4
@@ -104,7 +105,7 @@ Partial Class FormPenjualan
         'tanggal
         '
         Me.tanggal.Enabled = False
-        Me.tanggal.Location = New System.Drawing.Point(780, 132)
+        Me.tanggal.Location = New System.Drawing.Point(469, 135)
         Me.tanggal.Name = "tanggal"
         Me.tanggal.Size = New System.Drawing.Size(115, 20)
         Me.tanggal.TabIndex = 3
@@ -112,7 +113,7 @@ Partial Class FormPenjualan
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(699, 131)
+        Me.Label2.Location = New System.Drawing.Point(388, 134)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(46, 13)
         Me.Label2.TabIndex = 2
@@ -158,6 +159,7 @@ Partial Class FormPenjualan
         Me.qty.Name = "qty"
         Me.qty.Size = New System.Drawing.Size(51, 20)
         Me.qty.TabIndex = 11
+        Me.qty.Text = "1"
         '
         'Label7
         '
@@ -394,13 +396,27 @@ Partial Class FormPenjualan
         Me.Column4.HeaderText = "Sub Total"
         Me.Column4.Name = "Column4"
         '
+        'Total
+        '
+        Me.Total.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Total.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Total.ForeColor = System.Drawing.Color.White
+        Me.Total.Location = New System.Drawing.Point(657, 121)
+        Me.Total.Name = "Total"
+        Me.Total.Size = New System.Drawing.Size(291, 56)
+        Me.Total.TabIndex = 41
+        Me.Total.Text = "Rp 250.000"
+        Me.Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'FormPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Total)
         Me.Controls.Add(Me.hargaSatuan)
         Me.Controls.Add(Me.namaBarang)
         Me.Controls.Add(Me.namaKasir)
@@ -473,4 +489,5 @@ Partial Class FormPenjualan
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Total As System.Windows.Forms.Label
 End Class
