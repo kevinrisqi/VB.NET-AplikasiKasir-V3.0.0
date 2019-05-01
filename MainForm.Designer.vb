@@ -34,6 +34,7 @@ Partial Class MainForm
         Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.sidebar = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.lblLevel = New System.Windows.Forms.Label()
         Me.btnSetup = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton11 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnLaporan = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -47,7 +48,6 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblLevel = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -207,6 +207,19 @@ Partial Class MainForm
         Me.sidebar.Quality = 10
         Me.sidebar.Size = New System.Drawing.Size(306, 730)
         Me.sidebar.TabIndex = 0
+        '
+        'lblLevel
+        '
+        Me.lblLevel.AutoSize = True
+        Me.lblLevel.BackColor = System.Drawing.Color.Transparent
+        Me.lblLevel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblLevel.Location = New System.Drawing.Point(122, 205)
+        Me.lblLevel.Name = "lblLevel"
+        Me.lblLevel.Size = New System.Drawing.Size(60, 21)
+        Me.lblLevel.TabIndex = 13
+        Me.lblLevel.Text = "blabla"
+        Me.lblLevel.Visible = False
         '
         'btnSetup
         '
@@ -609,19 +622,6 @@ Partial Class MainForm
         Me.Label1.Size = New System.Drawing.Size(126, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular"
-        '
-        'lblLevel
-        '
-        Me.lblLevel.AutoSize = True
-        Me.lblLevel.BackColor = System.Drawing.Color.Transparent
-        Me.lblLevel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblLevel.Location = New System.Drawing.Point(122, 205)
-        Me.lblLevel.Name = "lblLevel"
-        Me.lblLevel.Size = New System.Drawing.Size(60, 21)
-        Me.lblLevel.TabIndex = 13
-        Me.lblLevel.Text = "blabla"
-        Me.lblLevel.Visible = False
         '
         'MainForm
         '

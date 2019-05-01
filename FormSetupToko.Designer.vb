@@ -34,7 +34,10 @@ Partial Class FormSetupToko
         Me.Button3 = New System.Windows.Forms.Button()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -134,10 +137,10 @@ Partial Class FormSetupToko
         Me.LineShape1.BorderColor = System.Drawing.Color.MidnightBlue
         Me.LineShape1.BorderWidth = 3
         Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = -91
-        Me.LineShape1.X2 = 813
-        Me.LineShape1.Y1 = 210
-        Me.LineShape1.Y2 = 210
+        Me.LineShape1.X1 = 51
+        Me.LineShape1.X2 = 955
+        Me.LineShape1.Y1 = 100
+        Me.LineShape1.Y2 = 100
         '
         'ShapeContainer1
         '
@@ -149,24 +152,50 @@ Partial Class FormSetupToko
         Me.ShapeContainer1.TabIndex = 4
         Me.ShapeContainer1.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
+        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.phonelink_setup_64px
+        Me.PictureBox1.Location = New System.Drawing.Point(89, 29)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 5
+        Me.PictureBox1.TabStop = False
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(177, 56)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(101, 20)
+        Me.Label9.TabIndex = 26
+        Me.Label9.Text = "Setup Toko"
+        '
         'FormSetupToko
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ShapeContainer1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "FormSetupToko"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form Setup Toko"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -181,4 +210,6 @@ Partial Class FormSetupToko
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

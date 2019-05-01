@@ -76,4 +76,8 @@ Public Class MainForm
     Private Sub btnPenjualan_Click(sender As Object, e As EventArgs) Handles btnPenjualan.Click
         Call switchPanel(FormPenjualan)
     End Sub
+
+    Private Sub btnSetup_Click(sender As Object, e As EventArgs) Handles btnSetup.Click
+        Call switchPanel(FormSetupToko)
+    End Sub
 End Class
