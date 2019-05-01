@@ -17,10 +17,10 @@ Public Class FormPenjualan
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Not Rd.HasRows Then
-            urutan = "TR" + "001" + DateTime.Now.ToString("yyyyMMdd")
+            urutan = "T" + Format(Now, "yyyyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
-            urutan = "TR" + Microsoft.VisualBasic.Right("000" & hitung, 3)
+            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 9) + 1
+            urutan = "T" + Format(Now, "yyyyMMdd") + Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         noTransaksi.Text = urutan
     End Sub
