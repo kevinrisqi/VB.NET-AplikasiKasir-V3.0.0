@@ -139,12 +139,6 @@
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPembelian.Designer.vb">
-      <DependentUpon>FormPembelian.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormPembelian.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormPenjualan.Designer.vb">
       <DependentUpon>FormPenjualan.vb</DependentUpon>
     </Compile>
@@ -216,9 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuUtama.resx">
       <DependentUpon>FormMenuUtama.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPembelian.resx">
-      <DependentUpon>FormPembelian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPenjualan.resx">
       <DependentUpon>FormPenjualan.vb</DependentUpon>

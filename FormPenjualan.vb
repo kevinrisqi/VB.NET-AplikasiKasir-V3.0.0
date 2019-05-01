@@ -2,13 +2,11 @@
 Public Class FormPenjualan
 
     Private Sub FormPenjualan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = Chr(Keys.Escape) Then
-            Me.Close()
-        End If
+        
     End Sub
 
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Call kodeOtomatis()
     End Sub
 
     Sub kodeOtomatis()
@@ -18,11 +16,16 @@ Public Class FormPenjualan
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Not Rd.HasRows Then
-            urutan = "ADM" + "001"
+            urutan = "TR" + "001"
         Else
             hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
             urutan = "ADM" + Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
-        TextBox1.Text = urutan
+        noTransaksi.Text = urutan
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        jam.Text = DateTime.Now.ToString("hh:mm:ss")
+        tanggal.Text = DateTime.Now.ToString("yyyy-MM-dd")
     End Sub
 End Class

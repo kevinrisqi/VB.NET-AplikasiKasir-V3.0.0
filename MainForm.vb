@@ -72,4 +72,8 @@ Public Class MainForm
             B_FormLogin.Show()
         End If
     End Sub
+
+    Private Sub btnPenjualan_Click(sender As Object, e As EventArgs) Handles btnPenjualan.Click
+        Call switchPanel(FormPenjualan)
+    End Sub
 End Class
