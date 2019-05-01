@@ -186,4 +186,8 @@ Public Class FormAddBarang
         tanggalInput.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
         tanggalUpdate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
+
+    Private Sub beli_OnValueChanged(sender As Object, e As EventArgs) Handles beli.OnValueChanged
+
+    End Sub
 End Class
