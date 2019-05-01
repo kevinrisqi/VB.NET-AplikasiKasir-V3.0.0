@@ -7,6 +7,7 @@ Public Class FormPenjualan
 
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kodeOtomatis()
+        namaKasir.Text = MainForm.btnLogin.Text
     End Sub
 
     Sub kodeOtomatis()
@@ -16,10 +17,10 @@ Public Class FormPenjualan
         Rd = Cmd.ExecuteReader
         Rd.Read()
         If Not Rd.HasRows Then
-            urutan = "TR" + "001"
+            urutan = "TR" + "001" + DateTime.Now.ToString("yyyyMMdd")
         Else
             hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 3) + 1
-            urutan = "ADM" + Microsoft.VisualBasic.Right("000" & hitung, 3)
+            urutan = "TR" + Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         noTransaksi.Text = urutan
     End Sub
