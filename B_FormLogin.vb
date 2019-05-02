@@ -19,6 +19,7 @@ Public Class B_FormLogin
     End Sub
 
     Private Sub B_FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtusername.Focus()
         Call reset()
     End Sub
 
@@ -47,9 +48,9 @@ Public Class B_FormLogin
     End Sub
 
     Sub reset()
+        txtusername.Focus()
         txtusername.Text = ""
         txtpassword.Text = ""
-        txtusername.Focus()
     End Sub
 
     Sub login()

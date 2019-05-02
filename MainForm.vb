@@ -28,12 +28,14 @@ Public Class MainForm
         btnLaporan.Enabled = False
         btnSetup.Enabled = False
         lblLevel.Visible = False
+        Me.Controls.Clear() 'removes all the controls on the form
+        InitializeComponent() 'load all the controls again
+        'MainForm_Load(e, e)
     End Sub
 
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call nonAktif()
-        'Call tampilBarang()
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
@@ -69,5 +71,13 @@ Public Class MainForm
         Else
             B_FormLogin.Show()
         End If
+    End Sub
+
+    Private Sub btnPenjualan_Click(sender As Object, e As EventArgs) Handles btnPenjualan.Click
+        Call switchPanel(FormPenjualan)
+    End Sub
+
+    Private Sub btnSetup_Click(sender As Object, e As EventArgs) Handles btnSetup.Click
+        Call switchPanel(FormSetupToko)
     End Sub
 End Class

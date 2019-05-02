@@ -34,6 +34,7 @@ Partial Class MainForm
         Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.sidebar = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.lblLevel = New System.Windows.Forms.Label()
         Me.btnSetup = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton11 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.btnLaporan = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -47,7 +48,6 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblLevel = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -91,7 +91,7 @@ Partial Class MainForm
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(395, 6)
+        Me.Label2.Location = New System.Drawing.Point(416, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(189, 15)
         Me.Label2.TabIndex = 0
@@ -208,6 +208,19 @@ Partial Class MainForm
         Me.sidebar.Size = New System.Drawing.Size(306, 730)
         Me.sidebar.TabIndex = 0
         '
+        'lblLevel
+        '
+        Me.lblLevel.AutoSize = True
+        Me.lblLevel.BackColor = System.Drawing.Color.Transparent
+        Me.lblLevel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lblLevel.Location = New System.Drawing.Point(122, 205)
+        Me.lblLevel.Name = "lblLevel"
+        Me.lblLevel.Size = New System.Drawing.Size(60, 21)
+        Me.lblLevel.TabIndex = 13
+        Me.lblLevel.Text = "blabla"
+        Me.lblLevel.Visible = False
+        '
         'btnSetup
         '
         Me.btnSetup.Activecolor = System.Drawing.Color.Transparent
@@ -245,7 +258,7 @@ Partial Class MainForm
         '
         'BunifuFlatButton11
         '
-        Me.BunifuFlatButton11.Activecolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton11.Activecolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton11.BackColor = System.Drawing.Color.Navy
         Me.BunifuFlatButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton11.BorderRadius = 0
@@ -267,7 +280,7 @@ Partial Class MainForm
         Me.BunifuFlatButton11.Location = New System.Drawing.Point(0, 622)
         Me.BunifuFlatButton11.Name = "BunifuFlatButton11"
         Me.BunifuFlatButton11.Normalcolor = System.Drawing.Color.Navy
-        Me.BunifuFlatButton11.OnHovercolor = System.Drawing.Color.Blue
+        Me.BunifuFlatButton11.OnHovercolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton11.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton11.selected = False
         Me.BunifuFlatButton11.Size = New System.Drawing.Size(306, 27)
@@ -314,7 +327,7 @@ Partial Class MainForm
         '
         'BunifuFlatButton9
         '
-        Me.BunifuFlatButton9.Activecolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton9.Activecolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton9.BackColor = System.Drawing.Color.Navy
         Me.BunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton9.BorderRadius = 0
@@ -336,7 +349,7 @@ Partial Class MainForm
         Me.BunifuFlatButton9.Location = New System.Drawing.Point(0, 545)
         Me.BunifuFlatButton9.Name = "BunifuFlatButton9"
         Me.BunifuFlatButton9.Normalcolor = System.Drawing.Color.Navy
-        Me.BunifuFlatButton9.OnHovercolor = System.Drawing.Color.Blue
+        Me.BunifuFlatButton9.OnHovercolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton9.selected = False
         Me.BunifuFlatButton9.Size = New System.Drawing.Size(306, 27)
@@ -383,7 +396,7 @@ Partial Class MainForm
         '
         'BunifuFlatButton8
         '
-        Me.BunifuFlatButton8.Activecolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton8.Activecolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton8.BackColor = System.Drawing.Color.Navy
         Me.BunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton8.BorderRadius = 0
@@ -405,7 +418,7 @@ Partial Class MainForm
         Me.BunifuFlatButton8.Location = New System.Drawing.Point(0, 467)
         Me.BunifuFlatButton8.Name = "BunifuFlatButton8"
         Me.BunifuFlatButton8.Normalcolor = System.Drawing.Color.Navy
-        Me.BunifuFlatButton8.OnHovercolor = System.Drawing.Color.Blue
+        Me.BunifuFlatButton8.OnHovercolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton8.selected = False
         Me.BunifuFlatButton8.Size = New System.Drawing.Size(306, 27)
@@ -452,7 +465,7 @@ Partial Class MainForm
         '
         'BunifuFlatButton5
         '
-        Me.BunifuFlatButton5.Activecolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton5.Activecolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton5.BackColor = System.Drawing.Color.Navy
         Me.BunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton5.BorderRadius = 0
@@ -474,7 +487,7 @@ Partial Class MainForm
         Me.BunifuFlatButton5.Location = New System.Drawing.Point(0, 257)
         Me.BunifuFlatButton5.Name = "BunifuFlatButton5"
         Me.BunifuFlatButton5.Normalcolor = System.Drawing.Color.Navy
-        Me.BunifuFlatButton5.OnHovercolor = System.Drawing.Color.Blue
+        Me.BunifuFlatButton5.OnHovercolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton5.selected = False
         Me.BunifuFlatButton5.Size = New System.Drawing.Size(306, 27)
@@ -566,7 +579,7 @@ Partial Class MainForm
         '
         'BunifuFlatButton1
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton1.BackColor = System.Drawing.Color.Navy
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
@@ -588,7 +601,7 @@ Partial Class MainForm
         Me.BunifuFlatButton1.Location = New System.Drawing.Point(0, 335)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.Navy
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Blue
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.Navy
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton1.selected = False
         Me.BunifuFlatButton1.Size = New System.Drawing.Size(306, 27)
@@ -609,19 +622,6 @@ Partial Class MainForm
         Me.Label1.Size = New System.Drawing.Size(126, 22)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular"
-        '
-        'lblLevel
-        '
-        Me.lblLevel.AutoSize = True
-        Me.lblLevel.BackColor = System.Drawing.Color.Transparent
-        Me.lblLevel.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLevel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.lblLevel.Location = New System.Drawing.Point(123, 205)
-        Me.lblLevel.Name = "lblLevel"
-        Me.lblLevel.Size = New System.Drawing.Size(60, 21)
-        Me.lblLevel.TabIndex = 13
-        Me.lblLevel.Text = "blabla"
-        Me.lblLevel.Visible = False
         '
         'MainForm
         '

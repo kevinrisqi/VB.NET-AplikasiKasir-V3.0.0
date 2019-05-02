@@ -155,7 +155,7 @@ Public Class FormAddBarang
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
-            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "')"
+            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
             Cmd = New OdbcCommand(inputData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
@@ -172,7 +172,7 @@ Public Class FormAddBarang
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
-            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "' WHERE id = '" & id.Text & "' "
+            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "', nama_admin='" & MainForm.btnLogin.Text & "' WHERE id = '" & id.Text & "' "
             Cmd = New OdbcCommand(updateData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
@@ -185,5 +185,9 @@ Public Class FormAddBarang
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         tanggalInput.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
         tanggalUpdate.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+    End Sub
+
+    Private Sub beli_OnValueChanged(sender As Object, e As EventArgs) Handles beli.OnValueChanged
+
     End Sub
 End Class

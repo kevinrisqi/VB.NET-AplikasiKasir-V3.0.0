@@ -28,19 +28,19 @@ Partial Class FormDashboard
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuTileButton4 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblIncome = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.BunifuTileButton3 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblSales = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuTileButton2 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.BunifuTileButton1 = New Bunifu.Framework.UI.BunifuTileButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblProduct = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox4.SuspendLayout()
@@ -110,7 +110,7 @@ Partial Class FormDashboard
         '
         'GroupBox4
         '
-        Me.GroupBox4.Controls.Add(Me.Label10)
+        Me.GroupBox4.Controls.Add(Me.lblIncome)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Location = New System.Drawing.Point(746, 153)
         Me.GroupBox4.Name = "GroupBox4"
@@ -118,15 +118,15 @@ Partial Class FormDashboard
         Me.GroupBox4.TabIndex = 35
         Me.GroupBox4.TabStop = False
         '
-        'Label10
+        'lblIncome
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(110, 50)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(96, 16)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Rp 2.300.000"
+        Me.lblIncome.AutoSize = True
+        Me.lblIncome.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIncome.Location = New System.Drawing.Point(110, 50)
+        Me.lblIncome.Name = "lblIncome"
+        Me.lblIncome.Size = New System.Drawing.Size(96, 16)
+        Me.lblIncome.TabIndex = 1
+        Me.lblIncome.Text = "Rp 2.300.000"
         '
         'Label11
         '
@@ -159,7 +159,7 @@ Partial Class FormDashboard
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.lblSales)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Location = New System.Drawing.Point(514, 153)
         Me.GroupBox3.Name = "GroupBox3"
@@ -167,15 +167,15 @@ Partial Class FormDashboard
         Me.GroupBox3.TabIndex = 33
         Me.GroupBox3.TabStop = False
         '
-        'Label8
+        'lblSales
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(110, 50)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(24, 16)
-        Me.Label8.TabIndex = 1
-        Me.Label8.Text = "78"
+        Me.lblSales.AutoSize = True
+        Me.lblSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSales.Location = New System.Drawing.Point(110, 50)
+        Me.lblSales.Name = "lblSales"
+        Me.lblSales.Size = New System.Drawing.Size(24, 16)
+        Me.lblSales.TabIndex = 1
+        Me.lblSales.Text = "78"
         '
         'Label1
         '
@@ -208,7 +208,7 @@ Partial Class FormDashboard
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.lblUser)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Location = New System.Drawing.Point(283, 153)
         Me.GroupBox2.Name = "GroupBox2"
@@ -216,15 +216,15 @@ Partial Class FormDashboard
         Me.GroupBox2.TabIndex = 31
         Me.GroupBox2.TabStop = False
         '
-        'Label6
+        'lblUser
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(110, 50)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(16, 16)
-        Me.Label6.TabIndex = 1
-        Me.Label6.Text = "4"
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUser.Location = New System.Drawing.Point(110, 50)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(16, 16)
+        Me.lblUser.TabIndex = 1
+        Me.lblUser.Text = "4"
         '
         'Label7
         '
@@ -257,7 +257,7 @@ Partial Class FormDashboard
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.lblProduct)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Location = New System.Drawing.Point(51, 153)
         Me.GroupBox1.Name = "GroupBox1"
@@ -265,15 +265,15 @@ Partial Class FormDashboard
         Me.GroupBox1.TabIndex = 29
         Me.GroupBox1.TabStop = False
         '
-        'Label5
+        'lblProduct
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(110, 50)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(24, 16)
-        Me.Label5.TabIndex = 1
-        Me.Label5.Text = "25"
+        Me.lblProduct.AutoSize = True
+        Me.lblProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProduct.Location = New System.Drawing.Point(110, 50)
+        Me.lblProduct.Name = "lblProduct"
+        Me.lblProduct.Size = New System.Drawing.Size(24, 16)
+        Me.lblProduct.TabIndex = 1
+        Me.lblProduct.Text = "25"
         '
         'Label4
         '
@@ -324,18 +324,18 @@ Partial Class FormDashboard
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents BunifuTileButton4 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents lblIncome As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents BunifuTileButton3 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents lblSales As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BunifuTileButton2 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents lblUser As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents BunifuTileButton1 As Bunifu.Framework.UI.BunifuTileButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents lblProduct As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

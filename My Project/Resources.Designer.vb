@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property available_updates_40px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("available_updates_40px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property BG() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BG", resourceCulture)
@@ -286,6 +296,16 @@ Namespace My.Resources
         Friend ReadOnly Property phonelink_setup_64px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("phonelink_setup_64px", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property save_64px() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("save_64px", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
