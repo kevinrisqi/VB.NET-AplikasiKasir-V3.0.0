@@ -54,8 +54,9 @@ Public Class DetailBarang
         Dim i As Integer
         i = BunifuCustomDataGrid1.CurrentRow.Index
 
-        FormPenjualan.kodeBarang.Text = BunifuCustomDataGrid1.Item("id", i).Value
-        FormPenjualan.namaBarang.Text = BunifuCustomDataGrid1.Item("nama_barang", i).Value
-        FormPenjualan.kodeBarang.Text = BunifuCustomDataGrid1.Item("harga_jual", i).Value
+        FormPenjualan.kodeBarang.Text = BunifuCustomDataGrid1.Item(1, i).Value
+        FormPenjualan.namaBarang.Text = BunifuCustomDataGrid1.Item(2, i).Value
+        FormPenjualan.hargaSatuan.Text = BunifuCustomDataGrid1.Item(4, i).Value
+        Me.Dispose()
     End Sub
 End Class
