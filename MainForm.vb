@@ -36,6 +36,7 @@ Public Class MainForm
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Call nonAktif()
+        Call titleToko()
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
@@ -79,5 +80,15 @@ Public Class MainForm
 
     Private Sub btnSetup_Click(sender As Object, e As EventArgs) Handles btnSetup.Click
         Call switchPanel(FormSetupToko)
+    End Sub
+
+    Sub titleToko()
+        Call koneksi()
+        Cmd = New OdbcCommand("SELECT * FROM setup_toko", Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Rd.HasRows Then
+            Label1.Text = Rd.Item("nama_toko")
+        End If
     End Sub
 End Class

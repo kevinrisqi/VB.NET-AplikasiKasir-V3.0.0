@@ -64,7 +64,7 @@ Public Class B_FormLogin
             If Rd.HasRows Then
                 MainForm.lblLevel.Text = Rd.Item("level_admin")
                 MainForm.btnLogin.Text = Rd.Item("nama_admin")
-                Me.Hide()
+                Me.Dispose()
                 Call adminActive()
                 If MainForm.lblLevel.Text = "USER" Then
                     Call userActive()

@@ -619,9 +619,9 @@ Partial Class MainForm
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(50, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 22)
+        Me.Label1.Size = New System.Drawing.Size(142, 22)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Citra Cellular"
+        Me.Label1.Text = "Citra Cellular 2"
         '
         'MainForm
         '

@@ -63,4 +63,13 @@ Public Class FormPenjualan
         Next
     End Sub
 
+    Sub hitungKembalian()
+        Dim kembalian As Integer
+        kembalian = Val(bayar.Text - Total.Text)
+        kembali.Text = kembalian
+    End Sub
+
+    Private Sub bayar_TextChanged(sender As Object, e As EventArgs) Handles bayar.TextChanged
+        Call hitungKembalian()
+    End Sub
 End Class
