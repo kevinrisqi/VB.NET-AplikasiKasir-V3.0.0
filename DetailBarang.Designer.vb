@@ -44,9 +44,10 @@ Partial Class DetailBarang
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
+        Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -209,19 +210,6 @@ Partial Class DetailBarang
         Me.RadioButton1.Text = "Kode Barang"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'search
-        '
-        Me.search.BackColor = System.Drawing.Color.White
-        Me.search.BackgroundImage = CType(resources.GetObject("search.BackgroundImage"), System.Drawing.Image)
-        Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.search.ForeColor = System.Drawing.Color.Black
-        Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
-        Me.search.Location = New System.Drawing.Point(172, 19)
-        Me.search.Name = "search"
-        Me.search.Size = New System.Drawing.Size(201, 32)
-        Me.search.TabIndex = 42
-        Me.search.text = ""
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -237,11 +225,31 @@ Partial Class DetailBarang
         Me.BunifuElipse1.ElipseRadius = 7
         Me.BunifuElipse1.TargetControl = Me.BunifuCustomDataGrid1
         '
+        'search
+        '
+        Me.search.BackColor = System.Drawing.Color.White
+        Me.search.BackgroundImage = CType(resources.GetObject("search.BackgroundImage"), System.Drawing.Image)
+        Me.search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.search.ForeColor = System.Drawing.Color.Black
+        Me.search.Icon = CType(resources.GetObject("search.Icon"), System.Drawing.Image)
+        Me.search.Location = New System.Drawing.Point(172, 19)
+        Me.search.Name = "search"
+        Me.search.Size = New System.Drawing.Size(201, 32)
+        Me.search.TabIndex = 42
+        Me.search.text = ""
+        '
+        'BunifuDragControl1
+        '
+        Me.BunifuDragControl1.Fixed = True
+        Me.BunifuDragControl1.Horizontal = True
+        Me.BunifuDragControl1.TargetControl = Me
+        Me.BunifuDragControl1.Vertical = True
+        '
         'DetailBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(587, 300)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
@@ -277,4 +285,5 @@ Partial Class DetailBarang
     Friend WithEvents search As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
+    Friend WithEvents BunifuDragControl1 As Bunifu.Framework.UI.BunifuDragControl
 End Class

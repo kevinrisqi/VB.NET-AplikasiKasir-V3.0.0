@@ -48,6 +48,16 @@ Partial Class MainForm
         Me.btnBarang = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PenjualanToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DashboardToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.header.SuspendLayout()
         Me.footer.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -55,6 +65,7 @@ Partial Class MainForm
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'header
@@ -197,6 +208,7 @@ Partial Class MainForm
         Me.sidebar.Controls.Add(Me.btnBarang)
         Me.sidebar.Controls.Add(Me.BunifuFlatButton1)
         Me.sidebar.Controls.Add(Me.Label1)
+        Me.sidebar.Controls.Add(Me.MenuStrip1)
         Me.sidebar.Dock = System.Windows.Forms.DockStyle.Left
         Me.sidebar.GradientBottomLeft = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.sidebar.GradientBottomRight = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(220, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -623,6 +635,79 @@ Partial Class MainForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Citra Cellular 2"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DashboardToolStripMenuItem, Me.BarangToolStripMenuItem, Me.UserToolStripMenuItem, Me.PenjualanToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(306, 24)
+        Me.MenuStrip1.TabIndex = 14
+        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip1.Visible = False
+        '
+        'DashboardToolStripMenuItem
+        '
+        Me.DashboardToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PenjualanToolStripMenuItem1, Me.DashboardToolStripMenuItem1})
+        Me.DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.DashboardToolStripMenuItem.Text = "Dashboard"
+        '
+        'BarangToolStripMenuItem
+        '
+        Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
+        Me.BarangToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
+        Me.BarangToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.BarangToolStripMenuItem.Text = "Barang"
+        '
+        'UserToolStripMenuItem
+        '
+        Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
+        Me.UserToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.U), System.Windows.Forms.Keys)
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
+        Me.UserToolStripMenuItem.Text = "User"
+        '
+        'PenjualanToolStripMenuItem
+        '
+        Me.PenjualanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaporanToolStripMenuItem, Me.SetupToolStripMenuItem, Me.LoginToolStripMenuItem})
+        Me.PenjualanToolStripMenuItem.Name = "PenjualanToolStripMenuItem"
+        Me.PenjualanToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.PenjualanToolStripMenuItem.Text = "Penjualan"
+        '
+        'LaporanToolStripMenuItem
+        '
+        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
+        Me.LaporanToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P), System.Windows.Forms.Keys)
+        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.LaporanToolStripMenuItem.Text = "Laporan"
+        '
+        'SetupToolStripMenuItem
+        '
+        Me.SetupToolStripMenuItem.Name = "SetupToolStripMenuItem"
+        Me.SetupToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.T), System.Windows.Forms.Keys)
+        Me.SetupToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.SetupToolStripMenuItem.Text = "Setup"
+        '
+        'LoginToolStripMenuItem
+        '
+        Me.LoginToolStripMenuItem.Name = "LoginToolStripMenuItem"
+        Me.LoginToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
+        Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
+        Me.LoginToolStripMenuItem.Text = "Login "
+        '
+        'PenjualanToolStripMenuItem1
+        '
+        Me.PenjualanToolStripMenuItem1.Name = "PenjualanToolStripMenuItem1"
+        Me.PenjualanToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.PenjualanToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
+        Me.PenjualanToolStripMenuItem1.Text = "Penjualan "
+        '
+        'DashboardToolStripMenuItem1
+        '
+        Me.DashboardToolStripMenuItem1.Name = "DashboardToolStripMenuItem1"
+        Me.DashboardToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DashboardToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
+        Me.DashboardToolStripMenuItem1.Text = "Dashboard"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -634,6 +719,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.header)
         Me.Controls.Add(Me.sidebar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainForm"
@@ -646,6 +732,8 @@ Partial Class MainForm
         Me.sidebar.ResumeLayout(False)
         Me.sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -673,4 +761,14 @@ Partial Class MainForm
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents lblLevel As System.Windows.Forms.Label
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents DashboardToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BarangToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UserToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PenjualanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LaporanToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SetupToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PenjualanToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DashboardToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

@@ -72,4 +72,8 @@ Public Class FormPenjualan
     Private Sub bayar_TextChanged(sender As Object, e As EventArgs) Handles bayar.TextChanged
         Call hitungKembalian()
     End Sub
+
+    Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
+        DetailBarang.Show()
+    End Sub
 End Class
