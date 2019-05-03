@@ -22,9 +22,10 @@ Partial Class DetailBarang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DetailBarang))
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -45,37 +46,38 @@ Partial Class DetailBarang
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.search = New Bunifu.Framework.UI.BunifuTextbox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuCustomDataGrid1
         '
         Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White
         Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 41
         Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column10, Me.Column11, Me.Column12, Me.Column13, Me.Column9, Me.Column14})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.BunifuCustomDataGrid1.DoubleBuffered = True
         Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
         Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -88,7 +90,7 @@ Partial Class DetailBarang
         Me.BunifuCustomDataGrid1.RowTemplate.Height = 30
         Me.BunifuCustomDataGrid1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.BunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(563, 205)
+        Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(563, 231)
         Me.BunifuCustomDataGrid1.TabIndex = 40
         '
         'Column1
@@ -97,21 +99,18 @@ Partial Class DetailBarang
         Me.Column1.HeaderText = "ID"
         Me.Column1.Name = "Column1"
         Me.Column1.Visible = False
-        Me.Column1.Width = 47
         '
         'Column2
         '
         Me.Column2.DataPropertyName = "id_barang"
         Me.Column2.HeaderText = "Kode Barang"
         Me.Column2.Name = "Column2"
-        Me.Column2.Width = 120
         '
         'Column3
         '
         Me.Column3.DataPropertyName = "nama_barang"
         Me.Column3.HeaderText = "Nama Barang"
         Me.Column3.Name = "Column3"
-        Me.Column3.Width = 126
         '
         'Column4
         '
@@ -119,21 +118,18 @@ Partial Class DetailBarang
         Me.Column4.HeaderText = "Harga Beli"
         Me.Column4.Name = "Column4"
         Me.Column4.Visible = False
-        Me.Column4.Width = 103
         '
         'Column5
         '
         Me.Column5.DataPropertyName = "harga_jual"
         Me.Column5.HeaderText = "Harga Satuan"
         Me.Column5.Name = "Column5"
-        Me.Column5.Width = 125
         '
         'Column6
         '
         Me.Column6.DataPropertyName = "stok"
         Me.Column6.HeaderText = "Stok"
         Me.Column6.Name = "Column6"
-        Me.Column6.Width = 62
         '
         'Column7
         '
@@ -141,7 +137,6 @@ Partial Class DetailBarang
         Me.Column7.HeaderText = "Satuan"
         Me.Column7.Name = "Column7"
         Me.Column7.Visible = False
-        Me.Column7.Width = 79
         '
         'Column8
         '
@@ -149,7 +144,6 @@ Partial Class DetailBarang
         Me.Column8.HeaderText = "Keterangan"
         Me.Column8.Name = "Column8"
         Me.Column8.Visible = False
-        Me.Column8.Width = 111
         '
         'Column10
         '
@@ -157,7 +151,6 @@ Partial Class DetailBarang
         Me.Column10.HeaderText = "Tanggal Input"
         Me.Column10.Name = "Column10"
         Me.Column10.Visible = False
-        Me.Column10.Width = 126
         '
         'Column11
         '
@@ -165,7 +158,6 @@ Partial Class DetailBarang
         Me.Column11.HeaderText = "Tanggal Update"
         Me.Column11.Name = "Column11"
         Me.Column11.Visible = False
-        Me.Column11.Width = 140
         '
         'Column12
         '
@@ -173,7 +165,6 @@ Partial Class DetailBarang
         Me.Column12.HeaderText = "Nama Admin"
         Me.Column12.Name = "Column12"
         Me.Column12.Visible = False
-        Me.Column12.Width = 122
         '
         'Column13
         '
@@ -181,7 +172,6 @@ Partial Class DetailBarang
         Me.Column13.HeaderText = "Kategori"
         Me.Column13.Name = "Column13"
         Me.Column13.Visible = False
-        Me.Column13.Width = 90
         '
         'Column9
         '
@@ -189,7 +179,6 @@ Partial Class DetailBarang
         Me.Column9.HeaderText = "ID Kategori"
         Me.Column9.Name = "Column9"
         Me.Column9.Visible = False
-        Me.Column9.Width = 109
         '
         'Column14
         '
@@ -197,7 +186,6 @@ Partial Class DetailBarang
         Me.Column14.HeaderText = "ID Kategori 1"
         Me.Column14.Name = "Column14"
         Me.Column14.Visible = False
-        Me.Column14.Width = 119
         '
         'RadioButton2
         '
@@ -244,11 +232,16 @@ Partial Class DetailBarang
         Me.Label1.TabIndex = 41
         Me.Label1.Text = "Pencarian Barang"
         '
+        'BunifuElipse1
+        '
+        Me.BunifuElipse1.ElipseRadius = 7
+        Me.BunifuElipse1.TargetControl = Me.BunifuCustomDataGrid1
+        '
         'DetailBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(587, 300)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
@@ -283,4 +276,5 @@ Partial Class DetailBarang
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents search As Bunifu.Framework.UI.BunifuTextbox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
 End Class
