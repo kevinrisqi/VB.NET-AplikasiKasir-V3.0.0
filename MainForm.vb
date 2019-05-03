@@ -68,7 +68,9 @@ Public Class MainForm
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If Not btnLogin.Text = "Login" Then
-            Call nonAktif()
+            If MsgBox("Apakah Anda yakin ingin Logout ?", vbInformation + vbYesNo) = vbYes Then
+                Call nonAktif()
+            End If
         Else
             B_FormLogin.Show()
         End If

@@ -26,27 +26,27 @@ Partial Class B_FormLogin
         Me.txtusername = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.txtpassword = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtusername
         '
         Me.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtusername.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtusername.ForeColor = System.Drawing.Color.White
-        Me.txtusername.HintForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtusername.ForeColor = System.Drawing.Color.Black
+        Me.txtusername.HintForeColor = System.Drawing.Color.Gray
         Me.txtusername.HintText = "Masukkan Username"
         Me.txtusername.isPassword = False
         Me.txtusername.LineFocusedColor = System.Drawing.Color.Lavender
-        Me.txtusername.LineIdleColor = System.Drawing.Color.DarkRed
+        Me.txtusername.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.txtusername.LineMouseHoverColor = System.Drawing.Color.Lavender
-        Me.txtusername.LineThickness = 3
+        Me.txtusername.LineThickness = 1
         Me.txtusername.Location = New System.Drawing.Point(175, 107)
         Me.txtusername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtusername.Name = "txtusername"
@@ -58,14 +58,14 @@ Partial Class B_FormLogin
         '
         Me.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtpassword.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.txtpassword.ForeColor = System.Drawing.Color.White
-        Me.txtpassword.HintForeColor = System.Drawing.Color.WhiteSmoke
+        Me.txtpassword.ForeColor = System.Drawing.Color.Black
+        Me.txtpassword.HintForeColor = System.Drawing.Color.Gray
         Me.txtpassword.HintText = "Masukkan Password"
         Me.txtpassword.isPassword = True
         Me.txtpassword.LineFocusedColor = System.Drawing.Color.Lavender
-        Me.txtpassword.LineIdleColor = System.Drawing.Color.DarkRed
+        Me.txtpassword.LineIdleColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.txtpassword.LineMouseHoverColor = System.Drawing.Color.Lavender
-        Me.txtpassword.LineThickness = 3
+        Me.txtpassword.LineThickness = 1
         Me.txtpassword.Location = New System.Drawing.Point(175, 159)
         Me.txtpassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtpassword.Name = "txtpassword"
@@ -75,8 +75,8 @@ Partial Class B_FormLogin
         '
         'BunifuFlatButton1
         '
-        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.Red
-        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.Red
+        Me.BunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.BunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.BunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuFlatButton1.BorderRadius = 0
         Me.BunifuFlatButton1.ButtonText = "Login"
@@ -97,8 +97,8 @@ Partial Class B_FormLogin
         Me.BunifuFlatButton1.IsTab = False
         Me.BunifuFlatButton1.Location = New System.Drawing.Point(175, 246)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
-        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.Red
-        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.BunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White
         Me.BunifuFlatButton1.selected = False
         Me.BunifuFlatButton1.Size = New System.Drawing.Size(271, 48)
@@ -108,19 +108,9 @@ Partial Class B_FormLogin
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.Snow
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Segoe UI Historic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.User_icon
-        Me.PictureBox1.Location = New System.Drawing.Point(24, 112)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(133, 130)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(201, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -150,11 +140,21 @@ Partial Class B_FormLogin
         Me.BunifuElipse2.ElipseRadius = 15
         Me.BunifuElipse2.TargetControl = Me.BunifuFlatButton1
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.AplikasiPenjualan.My.Resources.Resources.User_icon
+        Me.PictureBox1.Location = New System.Drawing.Point(24, 112)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(133, 130)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
         'B_FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(32, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(488, 336)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
@@ -166,9 +166,9 @@ Partial Class B_FormLogin
         Me.Name = "B_FormLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "B_FormLogin"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
