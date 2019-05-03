@@ -57,6 +57,7 @@ Public Class DetailBarang
         FormPenjualan.kodeBarang.Text = BunifuCustomDataGrid1.Item(1, i).Value
         FormPenjualan.namaBarang.Text = BunifuCustomDataGrid1.Item(2, i).Value
         FormPenjualan.hargaSatuan.Text = BunifuCustomDataGrid1.Item(4, i).Value
+        FormPenjualan.kodeBarang.Focus()
         Me.Dispose()
     End Sub
 End Class

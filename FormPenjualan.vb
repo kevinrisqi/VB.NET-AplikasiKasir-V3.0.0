@@ -46,6 +46,7 @@ Public Class FormPenjualan
             hargaSatuan.Text = Rd.Item("harga_jual")
             BunifuCustomDataGrid1.Rows.Add(New String() {kodeBarang.Text, namaBarang.Text, hargaSatuan.Text, qty.Text, Val(hargaSatuan.Text * qty.Text)})
             Call hitungSubTotal()
+            Call totalQty()
         Else
             MsgBox("Kode Barang tidak tersedia !", vbInformation)
         End If
@@ -75,5 +76,21 @@ Public Class FormPenjualan
 
     Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
         DetailBarang.Show()
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            diskon.Enabled = True
+        Else
+            diskon.Enabled = False
+        End If
+    End Sub
+
+    Sub totalQty()
+        Dim totalQty As Integer
+        For i As Integer = 0 To BunifuCustomDataGrid1.Rows.Count - 1
+            totalQty = totalQty + BunifuCustomDataGrid1.Rows(i).Cells(3).Value
+            qtyTotal.Text = totalQty
+        Next
     End Sub
 End Class

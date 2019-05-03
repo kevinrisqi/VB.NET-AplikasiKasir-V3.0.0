@@ -66,6 +66,8 @@ Partial Class FormPenjualan
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.qtyTotal = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -217,6 +219,7 @@ Partial Class FormPenjualan
         '
         'diskon
         '
+        Me.diskon.Enabled = False
         Me.diskon.Location = New System.Drawing.Point(140, 26)
         Me.diskon.Name = "diskon"
         Me.diskon.Size = New System.Drawing.Size(153, 20)
@@ -369,16 +372,16 @@ Partial Class FormPenjualan
         '
         'namaBarang
         '
-        Me.namaBarang.Location = New System.Drawing.Point(334, 502)
+        Me.namaBarang.Location = New System.Drawing.Point(311, 502)
         Me.namaBarang.Name = "namaBarang"
-        Me.namaBarang.Size = New System.Drawing.Size(106, 20)
+        Me.namaBarang.Size = New System.Drawing.Size(87, 20)
         Me.namaBarang.TabIndex = 39
         '
         'hargaSatuan
         '
-        Me.hargaSatuan.Location = New System.Drawing.Point(459, 502)
+        Me.hargaSatuan.Location = New System.Drawing.Point(404, 502)
         Me.hargaSatuan.Name = "hargaSatuan"
-        Me.hargaSatuan.Size = New System.Drawing.Size(106, 20)
+        Me.hargaSatuan.Size = New System.Drawing.Size(71, 20)
         Me.hargaSatuan.TabIndex = 40
         '
         'Total
@@ -386,12 +389,12 @@ Partial Class FormPenjualan
         Me.Total.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Total.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Total.ForeColor = System.Drawing.Color.White
-        Me.Total.Location = New System.Drawing.Point(657, 121)
+        Me.Total.Location = New System.Drawing.Point(717, 121)
         Me.Total.Name = "Total"
-        Me.Total.Size = New System.Drawing.Size(291, 56)
+        Me.Total.Size = New System.Drawing.Size(237, 56)
         Me.Total.TabIndex = 41
-        Me.Total.Text = "Rp 0"
-        Me.Total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Total.Text = "0"
+        Me.Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'BunifuElipse1
         '
@@ -489,6 +492,25 @@ Partial Class FormPenjualan
         Me.BunifuImageButton1.TabStop = False
         Me.BunifuImageButton1.Zoom = 1
         '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.White
+        Me.Label13.Location = New System.Drawing.Point(629, 121)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(104, 56)
+        Me.Label13.TabIndex = 46
+        Me.Label13.Text = "Rp. "
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'qtyTotal
+        '
+        Me.qtyTotal.Location = New System.Drawing.Point(481, 502)
+        Me.qtyTotal.Name = "qtyTotal"
+        Me.qtyTotal.Size = New System.Drawing.Size(84, 20)
+        Me.qtyTotal.TabIndex = 47
+        '
         'FormPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -497,10 +519,12 @@ Partial Class FormPenjualan
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
+        Me.Controls.Add(Me.qtyTotal)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.BunifuImageButton1)
+        Me.Controls.Add(Me.Total)
         Me.Controls.Add(Me.BunifuFlatButton1)
         Me.Controls.Add(Me.BunifuFlatButton2)
-        Me.Controls.Add(Me.Total)
         Me.Controls.Add(Me.hargaSatuan)
         Me.Controls.Add(Me.namaBarang)
         Me.Controls.Add(Me.namaKasir)
@@ -576,4 +600,6 @@ Partial Class FormPenjualan
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents qtyTotal As System.Windows.Forms.TextBox
 End Class
