@@ -66,6 +66,7 @@ Public Class B_FormLogin
                 MainForm.btnLogin.Text = Rd.Item("nama_admin")
                 Me.Dispose()
                 Call adminActive()
+                MainForm.switchPanel(FormDashboard)
                 If MainForm.lblLevel.Text = "USER" Then
                     Call userActive()
                 End If
