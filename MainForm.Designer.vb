@@ -25,14 +25,14 @@ Partial Class MainForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.header = New System.Windows.Forms.Panel()
+        Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
         Me.footer = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.sidebar = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.lblLevel = New System.Windows.Forms.Label()
         Me.btnSetup = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -50,19 +50,20 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.DashboardToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PenjualanToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DashboardToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarangToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PenjualanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PenjualanToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DashboardToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lblIdAdmin = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
-        Me.footer.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.footer.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.sidebar.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -71,6 +72,7 @@ Partial Class MainForm
         'header
         '
         Me.header.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.header.Controls.Add(Me.lblIdAdmin)
         Me.header.Controls.Add(Me.btnLogin)
         Me.header.Controls.Add(Me.BunifuImageButton3)
         Me.header.Controls.Add(Me.BunifuImageButton1)
@@ -79,52 +81,6 @@ Partial Class MainForm
         Me.header.Name = "header"
         Me.header.Size = New System.Drawing.Size(1060, 54)
         Me.header.TabIndex = 1
-        '
-        'BunifuDragControl1
-        '
-        Me.BunifuDragControl1.Fixed = True
-        Me.BunifuDragControl1.Horizontal = True
-        Me.BunifuDragControl1.TargetControl = Me.header
-        Me.BunifuDragControl1.Vertical = True
-        '
-        'footer
-        '
-        Me.footer.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
-        Me.footer.Controls.Add(Me.Label2)
-        Me.footer.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.footer.Location = New System.Drawing.Point(306, 700)
-        Me.footer.Name = "footer"
-        Me.footer.Size = New System.Drawing.Size(1060, 30)
-        Me.footer.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(416, 6)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(189, 15)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Copyright ZenAI Software @ 2019"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(306, 54)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1060, 646)
-        Me.Panel1.TabIndex = 4
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.Location = New System.Drawing.Point(19, 20)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1018, 599)
-        Me.Panel2.TabIndex = 0
         '
         'btnLogin
         '
@@ -189,6 +145,52 @@ Partial Class MainForm
         Me.BunifuImageButton1.TabIndex = 2
         Me.BunifuImageButton1.TabStop = False
         Me.BunifuImageButton1.Zoom = 10
+        '
+        'BunifuDragControl1
+        '
+        Me.BunifuDragControl1.Fixed = True
+        Me.BunifuDragControl1.Horizontal = True
+        Me.BunifuDragControl1.TargetControl = Me.header
+        Me.BunifuDragControl1.Vertical = True
+        '
+        'footer
+        '
+        Me.footer.BackColor = System.Drawing.Color.FromArgb(CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer), CType(CType(77, Byte), Integer))
+        Me.footer.Controls.Add(Me.Label2)
+        Me.footer.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.footer.Location = New System.Drawing.Point(306, 700)
+        Me.footer.Name = "footer"
+        Me.footer.Size = New System.Drawing.Size(1060, 30)
+        Me.footer.TabIndex = 2
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(416, 6)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(189, 15)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Copyright ZenAI Software @ 2019"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(306, 54)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1060, 646)
+        Me.Panel1.TabIndex = 4
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Location = New System.Drawing.Point(19, 20)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1018, 599)
+        Me.Panel2.TabIndex = 0
         '
         'sidebar
         '
@@ -652,6 +654,20 @@ Partial Class MainForm
         Me.DashboardToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
         Me.DashboardToolStripMenuItem.Text = "Dashboard"
         '
+        'PenjualanToolStripMenuItem1
+        '
+        Me.PenjualanToolStripMenuItem1.Name = "PenjualanToolStripMenuItem1"
+        Me.PenjualanToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.PenjualanToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
+        Me.PenjualanToolStripMenuItem1.Text = "Penjualan "
+        '
+        'DashboardToolStripMenuItem1
+        '
+        Me.DashboardToolStripMenuItem1.Name = "DashboardToolStripMenuItem1"
+        Me.DashboardToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
+        Me.DashboardToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
+        Me.DashboardToolStripMenuItem1.Text = "Dashboard"
+        '
         'BarangToolStripMenuItem
         '
         Me.BarangToolStripMenuItem.Name = "BarangToolStripMenuItem"
@@ -694,19 +710,14 @@ Partial Class MainForm
         Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.LoginToolStripMenuItem.Text = "Login "
         '
-        'PenjualanToolStripMenuItem1
+        'lblIdAdmin
         '
-        Me.PenjualanToolStripMenuItem1.Name = "PenjualanToolStripMenuItem1"
-        Me.PenjualanToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.PenjualanToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
-        Me.PenjualanToolStripMenuItem1.Text = "Penjualan "
-        '
-        'DashboardToolStripMenuItem1
-        '
-        Me.DashboardToolStripMenuItem1.Name = "DashboardToolStripMenuItem1"
-        Me.DashboardToolStripMenuItem1.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.D), System.Windows.Forms.Keys)
-        Me.DashboardToolStripMenuItem1.Size = New System.Drawing.Size(173, 22)
-        Me.DashboardToolStripMenuItem1.Text = "Dashboard"
+        Me.lblIdAdmin.AutoSize = True
+        Me.lblIdAdmin.Location = New System.Drawing.Point(173, 30)
+        Me.lblIdAdmin.Name = "lblIdAdmin"
+        Me.lblIdAdmin.Size = New System.Drawing.Size(39, 13)
+        Me.lblIdAdmin.TabIndex = 6
+        Me.lblIdAdmin.Text = "Label3"
         '
         'MainForm
         '
@@ -724,11 +735,12 @@ Partial Class MainForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainForm"
         Me.header.ResumeLayout(False)
+        Me.header.PerformLayout()
+        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.footer.ResumeLayout(False)
         Me.footer.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sidebar.ResumeLayout(False)
         Me.sidebar.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -771,4 +783,5 @@ Partial Class MainForm
     Friend WithEvents LoginToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PenjualanToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DashboardToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents lblIdAdmin As System.Windows.Forms.Label
 End Class

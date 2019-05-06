@@ -13,7 +13,9 @@ Public Class FormPenjualan
 
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kodeOtomatis()
+        txtIdAdmin.Text = MainForm.lblIdAdmin.Text
         namaKasir.Text = MainForm.btnLogin.Text
+        Call loadDetail()
     End Sub
 
     Sub kodeOtomatis()
@@ -45,7 +47,7 @@ Public Class FormPenjualan
             namaBarang.Text = Rd.Item("nama_barang")
             hargaSatuan.Text = Rd.Item("harga_jual")
             Call hitungSubTotal()
-            Call totalQty()
+            'Call totalQty()
             Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_satuan,qty,subtotal) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "')", Conn)
             Cmd.ExecuteNonQuery()
             Call loadDetail()
@@ -81,20 +83,11 @@ Public Class FormPenjualan
         DetailBarang.Show()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
-            diskon.Enabled = True
-        Else
-            diskon.Enabled = False
-        End If
-    End Sub
-
     Sub totalQty()
-        Dim totalQty As Integer
-        For i As Integer = 0 To BunifuCustomDataGrid1.Rows.Count - 1
-            totalQty = totalQty + BunifuCustomDataGrid1.Rows(i).Cells(3).Value
-            qtyTotal.Text = totalQty
-        Next
+        Call koneksi()
+        Cmd = New OdbcCommand("SELECT SUM(qty) FROM detail_penjualan", Conn)
+        Dim count As Integer = Cmd.ExecuteScalar
+        qtyTotal.Text = count
     End Sub
 
     Sub loadDetail()
@@ -104,7 +97,21 @@ Public Class FormPenjualan
         Da.Fill(Ds, "detail")
         BunifuCustomDataGrid1.DataSource = Ds.Tables("detail")
         BunifuCustomDataGrid1.ReadOnly = True
+        Call totalQty()
     End Sub
 
 
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        If (bayar.Text = "" Or Total.Text = "" Or kembali.Text = "") Then
+            MsgBox("Silahkan lakukan transaksi !", vbInformation)
+        Else
+            Call koneksi()
+            Cmd = New OdbcCommand("INSERT INTO penjualan (id_penjualan,tanggal,jam,item_jual,total_jual,total_dibayar,kembali,id_admin) VALUES ('" & noTransaksi.Text & "', '" & tanggal.Text & "','" & jam.Text & "','" & qtyTotal.Text & "','" & Total.Text & "','" & bayar.Text & "','" & kembali.Text & "','" & txtIdAdmin.Text & "')", Conn)
+            Cmd.ExecuteNonQuery()
+        End If
+    End Sub
+
+    Private Sub namaKasir_TextChanged(sender As Object, e As EventArgs) Handles namaKasir.TextChanged
+
+    End Sub
 End Class
