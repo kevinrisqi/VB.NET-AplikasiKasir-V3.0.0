@@ -52,11 +52,6 @@ Partial Class FormPenjualan
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.namaBarang = New System.Windows.Forms.TextBox()
         Me.hargaSatuan = New System.Windows.Forms.TextBox()
@@ -68,6 +63,12 @@ Partial Class FormPenjualan
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.qtyTotal = New System.Windows.Forms.TextBox()
+        Me.detailTrans = New System.Windows.Forms.TextBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -317,7 +318,7 @@ Partial Class FormPenjualan
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 41
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column4})
+        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -340,31 +341,6 @@ Partial Class FormPenjualan
         Me.BunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(903, 220)
         Me.BunifuCustomDataGrid1.TabIndex = 38
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Kode Barang"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nama Barang"
-        Me.Column2.Name = "Column2"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Harga Satuan"
-        Me.Column5.Name = "Column5"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Qty"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Sub Total"
-        Me.Column4.Name = "Column4"
         '
         'Timer1
         '
@@ -511,6 +487,43 @@ Partial Class FormPenjualan
         Me.qtyTotal.Size = New System.Drawing.Size(84, 20)
         Me.qtyTotal.TabIndex = 47
         '
+        'detailTrans
+        '
+        Me.detailTrans.Location = New System.Drawing.Point(311, 528)
+        Me.detailTrans.Name = "detailTrans"
+        Me.detailTrans.Size = New System.Drawing.Size(71, 20)
+        Me.detailTrans.TabIndex = 48
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "id_barang"
+        Me.Column1.HeaderText = "Kode Barang"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "nama_barang"
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "harga_satuan"
+        Me.Column3.HeaderText = "Harga Satuan"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "qty"
+        Me.Column4.HeaderText = "Qty"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "SubTotal"
+        Me.Column5.HeaderText = "Sub Total"
+        Me.Column5.Name = "Column5"
+        '
         'FormPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -519,6 +532,7 @@ Partial Class FormPenjualan
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
+        Me.Controls.Add(Me.detailTrans)
         Me.Controls.Add(Me.qtyTotal)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.BunifuImageButton1)
@@ -589,11 +603,6 @@ Partial Class FormPenjualan
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents namaBarang As System.Windows.Forms.TextBox
     Friend WithEvents hargaSatuan As System.Windows.Forms.TextBox
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Total As System.Windows.Forms.Label
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
@@ -602,4 +611,10 @@ Partial Class FormPenjualan
     Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents qtyTotal As System.Windows.Forms.TextBox
+    Friend WithEvents detailTrans As System.Windows.Forms.TextBox
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

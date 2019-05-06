@@ -44,13 +44,16 @@ Public Class FormPenjualan
         If Rd.HasRows Then
             namaBarang.Text = Rd.Item("nama_barang")
             hargaSatuan.Text = Rd.Item("harga_jual")
-            BunifuCustomDataGrid1.Rows.Add(New String() {kodeBarang.Text, namaBarang.Text, hargaSatuan.Text, qty.Text, Val(hargaSatuan.Text * qty.Text)})
             Call hitungSubTotal()
             Call totalQty()
+            Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_satuan,qty,subtotal) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "')", Conn)
+            Cmd.ExecuteNonQuery()
+            Call loadDetail()
         Else
             MsgBox("Kode Barang tidak tersedia !", vbInformation)
         End If
     End Sub
+
 
     Private Sub qty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles qty.KeyPress
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
@@ -93,4 +96,15 @@ Public Class FormPenjualan
             qtyTotal.Text = totalQty
         Next
     End Sub
+
+    Sub loadDetail()
+        Call koneksi()
+        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_satuan,SUM(qty) AS qty,SUM(subtotal) AS SubTotal FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "' GROUP BY id_barang", Conn)
+        Ds = New DataSet
+        Da.Fill(Ds, "detail")
+        BunifuCustomDataGrid1.DataSource = Ds.Tables("detail")
+        BunifuCustomDataGrid1.ReadOnly = True
+    End Sub
+
+
 End Class
