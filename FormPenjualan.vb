@@ -12,11 +12,21 @@ Public Class FormPenjualan
     End Sub
 
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call kondisiAwal()
+        Call loadDetail()
+        'Call hitungSubTotal()
+    End Sub
+
+    Sub kondisiAwal()
         Call kodeOtomatis()
         txtIdAdmin.Text = MainForm.lblIdAdmin.Text
         namaKasir.Text = MainForm.btnLogin.Text
-        Call loadDetail()
+        kodeBarang.Text = ""
+        qty.Text = "1"
+        kembali.Text = ""
+        bayar.Text = ""
     End Sub
+
 
     Sub kodeOtomatis()
         Cmd = New OdbcCommand("select * from penjualan where id_penjualan in (select max(id_penjualan) from penjualan)", Conn)
@@ -46,11 +56,11 @@ Public Class FormPenjualan
         If Rd.HasRows Then
             namaBarang.Text = Rd.Item("nama_barang")
             hargaSatuan.Text = Rd.Item("harga_jual")
-            Call hitungSubTotal()
-            'Call totalQty()
             Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_satuan,qty,subtotal) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "')", Conn)
             Cmd.ExecuteNonQuery()
             Call loadDetail()
+            Call hitungSubTotal()
+            Call totalQty()
         Else
             MsgBox("Kode Barang tidak tersedia !", vbInformation)
         End If
@@ -62,11 +72,11 @@ Public Class FormPenjualan
     End Sub
 
     Sub hitungSubTotal()
-        Dim hitung As Integer = 0
-        For i As Integer = 0 To BunifuCustomDataGrid1.Rows.Count - 1
-            hitung = hitung + BunifuCustomDataGrid1.Rows(i).Cells(4).Value
-            Total.Text = hitung
-        Next
+        Dim count As Integer = 0
+        Call koneksi()
+        Cmd = New OdbcCommand("SELECT SUM(subtotal) FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "'", Conn)
+        count = Cmd.ExecuteScalar
+        Total.Text = count
     End Sub
 
     Sub hitungKembalian()
@@ -85,7 +95,7 @@ Public Class FormPenjualan
 
     Sub totalQty()
         Call koneksi()
-        Cmd = New OdbcCommand("SELECT SUM(qty) FROM detail_penjualan", Conn)
+        Cmd = New OdbcCommand("SELECT SUM(qty) FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "'", Conn)
         Dim count As Integer = Cmd.ExecuteScalar
         qtyTotal.Text = count
     End Sub
@@ -97,7 +107,6 @@ Public Class FormPenjualan
         Da.Fill(Ds, "detail")
         BunifuCustomDataGrid1.DataSource = Ds.Tables("detail")
         BunifuCustomDataGrid1.ReadOnly = True
-        Call totalQty()
     End Sub
 
 
@@ -111,7 +120,4 @@ Public Class FormPenjualan
         End If
     End Sub
 
-    Private Sub namaKasir_TextChanged(sender As Object, e As EventArgs) Handles namaKasir.TextChanged
-
-    End Sub
 End Class
