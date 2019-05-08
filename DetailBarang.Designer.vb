@@ -257,9 +257,11 @@ Partial Class DetailBarang
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BunifuCustomDataGrid1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Name = "DetailBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "DetailBarang"
+        Me.TopMost = True
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

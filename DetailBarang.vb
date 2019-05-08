@@ -10,6 +10,12 @@ Public Class DetailBarang
         BunifuCustomDataGrid1.ReadOnly = True
     End Sub
 
+    Private Sub DetailBarang_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Dispose()
+        End If
+    End Sub
+
     Private Sub DetailBarang_Load(sender As Object, e As EventArgs) Handles Me.Load
         Call tampilBarang()
     End Sub
