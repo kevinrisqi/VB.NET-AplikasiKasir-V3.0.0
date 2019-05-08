@@ -1,8 +1,19 @@
 ﻿Imports System.Data.Odbc
 Public Class FormAddBarang
 
+    Private Sub FormAddBarang_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If (e.KeyCode = Keys.Enter) Then
+            If id.Text = "" Then
+                Call insertData()
+            Else
+                Call updateData()
+            End If
+        End If
+    End Sub
+
     Private Sub FormAddBarang_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call combobox()
+        KeyPreview = True
     End Sub
 
     Sub combobox()
@@ -107,26 +118,7 @@ Public Class FormAddBarang
     End Sub
 
     Private Sub keteranganSubmit_KeyPress(sender As Object, e As KeyPressEventArgs) Handles keterangan.KeyPress
-        If (e.KeyChar = Chr(13)) Then
-            If id.Text = "" Then
-                Call insertData()
-            Else
-                Call updateData()
-            End If
-        End If
-    End Sub
 
-    Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
-        If id.Text = "" Then
-            Call insertData()
-        Else
-            Call updateData()
-        End If
-    End Sub
-
-    Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
-        switchPanel(FormBarang)
-        Call kondisiAwal()
     End Sub
 
     Sub switchPanel(ByVal panel As Form)
@@ -153,16 +145,16 @@ Public Class FormAddBarang
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         ElseIf Val(beli.Text) > Val(jual.Text) Then
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
-            Else
-                Call koneksi()
-                Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
-                Cmd = New OdbcCommand(inputData, Conn)
-                Cmd.ExecuteNonQuery()
-                Call FormBarang.tampilBarang()
-                Call kondisiAwal()
-                Call FormBarang.kondisiAwal()
-                switchPanel(FormBarang)
-            End If
+        Else
+            Call koneksi()
+            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
+            Cmd = New OdbcCommand(inputData, Conn)
+            Cmd.ExecuteNonQuery()
+            Call FormBarang.tampilBarang()
+            Call kondisiAwal()
+            Call FormBarang.kondisiAwal()
+            switchPanel(FormBarang)
+        End If
     End Sub
 
     Sub updateData()
@@ -189,5 +181,26 @@ Public Class FormAddBarang
 
     Private Sub beli_OnValueChanged(sender As Object, e As EventArgs) Handles beli.OnValueChanged
 
+    End Sub
+
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
+        If id.Text = "" Then
+            Call insertData()
+        Else
+            Call updateData()
+        End If
+    End Sub
+
+    Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
+        switchPanel(FormBarang)
+        Call kondisiAwal()
     End Sub
 End Class
