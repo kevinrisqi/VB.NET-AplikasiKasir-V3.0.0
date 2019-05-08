@@ -25,6 +25,7 @@ Partial Class MainForm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.header = New System.Windows.Forms.Panel()
+        Me.lblIdAdmin = New System.Windows.Forms.Label()
         Me.btnLogin = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuImageButton3 = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuImageButton1 = New Bunifu.Framework.UI.BunifuImageButton()
@@ -58,7 +59,6 @@ Partial Class MainForm
         Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LoginToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblIdAdmin = New System.Windows.Forms.Label()
         Me.header.SuspendLayout()
         CType(Me.BunifuImageButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuImageButton1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +81,16 @@ Partial Class MainForm
         Me.header.Name = "header"
         Me.header.Size = New System.Drawing.Size(1060, 54)
         Me.header.TabIndex = 1
+        '
+        'lblIdAdmin
+        '
+        Me.lblIdAdmin.AutoSize = True
+        Me.lblIdAdmin.Location = New System.Drawing.Point(173, 30)
+        Me.lblIdAdmin.Name = "lblIdAdmin"
+        Me.lblIdAdmin.Size = New System.Drawing.Size(39, 13)
+        Me.lblIdAdmin.TabIndex = 6
+        Me.lblIdAdmin.Text = "Label3"
+        Me.lblIdAdmin.Visible = False
         '
         'btnLogin
         '
@@ -709,15 +719,6 @@ Partial Class MainForm
         Me.LoginToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.L), System.Windows.Forms.Keys)
         Me.LoginToolStripMenuItem.Size = New System.Drawing.Size(158, 22)
         Me.LoginToolStripMenuItem.Text = "Login "
-        '
-        'lblIdAdmin
-        '
-        Me.lblIdAdmin.AutoSize = True
-        Me.lblIdAdmin.Location = New System.Drawing.Point(173, 30)
-        Me.lblIdAdmin.Name = "lblIdAdmin"
-        Me.lblIdAdmin.Size = New System.Drawing.Size(39, 13)
-        Me.lblIdAdmin.TabIndex = 6
-        Me.lblIdAdmin.Text = "Label3"
         '
         'MainForm
         '

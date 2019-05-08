@@ -23,3 +23,4 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.MainForm.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormAddBarang.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormDashboard.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.DetailBarang.resources
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbprojResolveAssemblyReference.cache

@@ -151,24 +151,24 @@ Public Class FormAddBarang
     Sub insertData()
         If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-        ElseIf beli.Text > jual.Text Then
+        ElseIf Val(beli.Text) > Val(jual.Text) Then
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
-        Else
-            Call koneksi()
-            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
-            Cmd = New OdbcCommand(inputData, Conn)
-            Cmd.ExecuteNonQuery()
-            Call FormBarang.tampilBarang()
-            Call kondisiAwal()
-            Call FormBarang.kondisiAwal()
-            switchPanel(FormBarang)
-        End If
+            Else
+                Call koneksi()
+                Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
+                Cmd = New OdbcCommand(inputData, Conn)
+                Cmd.ExecuteNonQuery()
+                Call FormBarang.tampilBarang()
+                Call kondisiAwal()
+                Call FormBarang.kondisiAwal()
+                switchPanel(FormBarang)
+            End If
     End Sub
 
     Sub updateData()
         If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
-        ElseIf beli.Text > jual.Text Then
+        ElseIf Val(beli.Text) > Val(jual.Text) Then
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()

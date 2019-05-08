@@ -25,6 +25,7 @@ Public Class FormPenjualan
         qty.Text = "1"
         kembali.Text = ""
         bayar.Text = ""
+        Total.Text = "0"
     End Sub
 
 
@@ -81,8 +82,12 @@ Public Class FormPenjualan
 
     Sub hitungKembalian()
         Dim kembalian As Integer
-        kembalian = Val(bayar.Text - Total.Text)
-        kembali.Text = kembalian
+        If bayar.Text = "" Then
+            kembali.Text = "0"
+        Else
+            kembalian = Val(bayar.Text) - Val(Total.Text)
+            kembali.Text = kembalian
+        End If
     End Sub
 
     Private Sub bayar_TextChanged(sender As Object, e As EventArgs) Handles bayar.TextChanged
@@ -113,10 +118,15 @@ Public Class FormPenjualan
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         If (bayar.Text = "" Or Total.Text = "" Or kembali.Text = "") Then
             MsgBox("Silahkan lakukan transaksi !", vbInformation)
+        ElseIf Val(kembali.Text) < 0 Then
+            MsgBox("Pembayaran kurang !", vbInformation)
         Else
             Call koneksi()
             Cmd = New OdbcCommand("INSERT INTO penjualan (id_penjualan,tanggal,jam,item_jual,total_jual,total_dibayar,kembali,id_admin) VALUES ('" & noTransaksi.Text & "', '" & tanggal.Text & "','" & jam.Text & "','" & qtyTotal.Text & "','" & Total.Text & "','" & bayar.Text & "','" & kembali.Text & "','" & txtIdAdmin.Text & "')", Conn)
             Cmd.ExecuteNonQuery()
+            MsgBox("Data berhasil di inputkan !", vbInformation)
+            Call kondisiAwal()
+            Call loadDetail()
         End If
     End Sub
 
