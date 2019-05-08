@@ -90,6 +90,10 @@ Public Class FormPenjualan
         End If
     End Sub
 
+    Private Sub bayar_KeyPress(sender As Object, e As KeyPressEventArgs) Handles bayar.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
     Private Sub bayar_TextChanged(sender As Object, e As EventArgs) Handles bayar.TextChanged
         Call hitungKembalian()
     End Sub
@@ -130,4 +134,7 @@ Public Class FormPenjualan
         End If
     End Sub
 
+    Private Sub qty_TextChanged(sender As Object, e As EventArgs) Handles qty.TextChanged
+
+    End Sub
 End Class
