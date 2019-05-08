@@ -1,6 +1,15 @@
 ﻿Imports System.Data.Odbc
 Public Class FormPenjualan
 
+    Private Sub FormPenjualan_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyCode = Keys.F5 Then
+            DetailBarang.Show()
+        End If
+        If e.Control AndAlso e.KeyCode = Keys.S Then
+            Call saveData()
+        End If
+    End Sub
+
     Private Sub FormPenjualan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(13) Then
             If qty.Text = "" Or 0 Then
@@ -123,6 +132,10 @@ Public Class FormPenjualan
 
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Call saveData()
+    End Sub
+
+    Sub saveData()
         If (bayar.Text = "" Or Total.Text = "" Or kembali.Text = "") Then
             MsgBox("Silahkan lakukan transaksi !", vbInformation)
         ElseIf Val(kembali.Text) < 0 Then
