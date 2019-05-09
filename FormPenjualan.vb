@@ -27,6 +27,7 @@ Public Class FormPenjualan
         kembali.Text = ""
         bayar.Text = ""
         Total.Text = "0"
+        Diskon.Text = "0"
     End Sub
 
 
@@ -152,11 +153,7 @@ Public Class FormPenjualan
 
     Private Sub kodeBarang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles kodeBarang.KeyPress
         If e.KeyChar = Chr(13) Then
-            If qty.Text = "" Or 0 Then
-                MsgBox("Mohon untuk mengisi qty !", vbInformation)
-            Else
-                Call inputBarang()
-            End If
+            Call inputBarang()
         End If
     End Sub
 
@@ -177,6 +174,22 @@ Public Class FormPenjualan
     Private Sub Diskon_Leave(sender As Object, e As EventArgs) Handles Diskon.Leave
         If Diskon.Text = "" Then
             Diskon.Text = "0"
+        End If
+    End Sub
+
+    Private Sub Diskon_KeyDown(sender As Object, e As KeyEventArgs) Handles Diskon.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Call inputBarang()
+        End If
+    End Sub
+
+    Private Sub qty_TextChanged(sender As Object, e As EventArgs) Handles qty.TextChanged
+
+    End Sub
+
+    Private Sub qty_Leave(sender As Object, e As EventArgs) Handles qty.Leave
+        If qty.Text = "" Then
+            qty.Text = "1"
         End If
     End Sub
 End Class

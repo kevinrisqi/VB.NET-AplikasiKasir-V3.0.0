@@ -49,6 +49,15 @@ Partial Class FormPenjualan
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.namaBarang = New System.Windows.Forms.TextBox()
         Me.hargaSatuan = New System.Windows.Forms.TextBox()
@@ -63,15 +72,6 @@ Partial Class FormPenjualan
         Me.txtIdAdmin = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Diskon = New System.Windows.Forms.TextBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -319,6 +319,60 @@ Partial Class FormPenjualan
         Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(903, 220)
         Me.BunifuCustomDataGrid1.TabIndex = 38
         '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "id_barang"
+        Me.Column1.HeaderText = "Kode Barang"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "nama_barang"
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "harga_pokok"
+        Me.Column8.HeaderText = "Harga Pokok"
+        Me.Column8.Name = "Column8"
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "harga_satuan"
+        Me.Column3.HeaderText = "Harga Satuan"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "qty"
+        Me.Column4.HeaderText = "Qty"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "SubTotal"
+        Me.Column5.HeaderText = "Brutto"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "diskon"
+        Me.Column6.HeaderText = "Voucher"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "netto"
+        Me.Column7.HeaderText = "Netto"
+        Me.Column7.Name = "Column7"
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "total_pokok"
+        Me.Column9.HeaderText = "Total H.Pokok"
+        Me.Column9.Name = "Column9"
+        '
         'Timer1
         '
         Me.Timer1.Enabled = True
@@ -492,60 +546,6 @@ Partial Class FormPenjualan
         Me.Diskon.Size = New System.Drawing.Size(87, 20)
         Me.Diskon.TabIndex = 51
         Me.Diskon.Text = "0"
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "id_barang"
-        Me.Column1.HeaderText = "Kode Barang"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "nama_barang"
-        Me.Column2.HeaderText = "Nama Barang"
-        Me.Column2.Name = "Column2"
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "harga_pokok"
-        Me.Column8.HeaderText = "Harga Pokok"
-        Me.Column8.Name = "Column8"
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "harga_satuan"
-        Me.Column3.HeaderText = "Harga Satuan"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "qty"
-        Me.Column4.HeaderText = "Qty"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "SubTotal"
-        Me.Column5.HeaderText = "Brutto"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "diskon"
-        Me.Column6.HeaderText = "Voucher"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "netto"
-        Me.Column7.HeaderText = "Netto"
-        Me.Column7.Name = "Column7"
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "total_pokok"
-        Me.Column9.HeaderText = "Total H.Pokok"
-        Me.Column9.Name = "Column9"
         '
         'FormPenjualan
         '
