@@ -15,7 +15,9 @@ Public Class FormPenjualan
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call kondisiAwal()
         Call loadDetail()
-        'Call hitungSubTotal()
+        If Not BunifuCustomDataGrid1.Rows.Count = 0 Then
+            Call hitungSubTotal()
+        End If
     End Sub
 
     Sub kondisiAwal()
@@ -63,6 +65,7 @@ Public Class FormPenjualan
             harga_pokok = Rd.Item("harga_beli")
             Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_pokok,harga_satuan,qty,subtotal,diskon,netto,total_pokok) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & harga_pokok & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "','" & Diskon.Text & "','" & (Val(hargaSatuan.Text) * Val(qty.Text)) - Diskon.Text & "','" & Val(harga_pokok) * Val(qty.Text) & "')", Conn)
             Cmd.ExecuteNonQuery()
+            Call penguranganStok()
             Call loadDetail()
             Call hitungSubTotal()
             Call totalQty()
@@ -79,7 +82,7 @@ Public Class FormPenjualan
     Sub hitungSubTotal()
         Dim count As Integer = 0
         Call koneksi()
-        Cmd = New OdbcCommand("SELECT SUM(subtotal) FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "'", Conn)
+        Cmd = New OdbcCommand("SELECT SUM(netto) FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "'", Conn)
         count = Cmd.ExecuteScalar
         Total.Text = count
     End Sub
@@ -183,13 +186,15 @@ Public Class FormPenjualan
         End If
     End Sub
 
-    Private Sub qty_TextChanged(sender As Object, e As EventArgs) Handles qty.TextChanged
-
-    End Sub
-
     Private Sub qty_Leave(sender As Object, e As EventArgs) Handles qty.Leave
         If qty.Text = "" Then
             qty.Text = "1"
+        End If
+    End Sub
+
+    Private Sub qty_KeyDown(sender As Object, e As KeyEventArgs) Handles qty.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Call inputBarang()
         End If
     End Sub
 End Class
