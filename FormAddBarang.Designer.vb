@@ -37,8 +37,8 @@ Partial Class FormAddBarang
         Me.kategoriID = New System.Windows.Forms.TextBox()
         Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.submit = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.namaKategori = New System.Windows.Forms.ComboBox()
         Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.tanggalInput = New System.Windows.Forms.TextBox()
@@ -257,7 +257,7 @@ Partial Class FormAddBarang
         Me.submit.IconVisible = True
         Me.submit.IconZoom = 90.0R
         Me.submit.IsTab = False
-        Me.submit.Location = New System.Drawing.Point(137, 525)
+        Me.submit.Location = New System.Drawing.Point(112, 529)
         Me.submit.Margin = New System.Windows.Forms.Padding(5)
         Me.submit.Name = "submit"
         Me.submit.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(188, Byte), Integer))
@@ -270,6 +270,11 @@ Partial Class FormAddBarang
         Me.submit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.submit.Textcolor = System.Drawing.Color.White
         Me.submit.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'BunifuElipse2
+        '
+        Me.BunifuElipse2.ElipseRadius = 5
+        Me.BunifuElipse2.TargetControl = Me.cancel
         '
         'cancel
         '
@@ -293,7 +298,7 @@ Partial Class FormAddBarang
         Me.cancel.IconVisible = True
         Me.cancel.IconZoom = 90.0R
         Me.cancel.IsTab = False
-        Me.cancel.Location = New System.Drawing.Point(238, 525)
+        Me.cancel.Location = New System.Drawing.Point(213, 529)
         Me.cancel.Margin = New System.Windows.Forms.Padding(5)
         Me.cancel.Name = "cancel"
         Me.cancel.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
@@ -307,16 +312,11 @@ Partial Class FormAddBarang
         Me.cancel.Textcolor = System.Drawing.Color.White
         Me.cancel.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'BunifuElipse2
-        '
-        Me.BunifuElipse2.ElipseRadius = 5
-        Me.BunifuElipse2.TargetControl = Me.cancel
-        '
         'namaKategori
         '
         Me.namaKategori.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.namaKategori.FormattingEnabled = True
-        Me.namaKategori.Location = New System.Drawing.Point(82, 404)
+        Me.namaKategori.Location = New System.Drawing.Point(81, 404)
         Me.namaKategori.Name = "namaKategori"
         Me.namaKategori.Size = New System.Drawing.Size(205, 26)
         Me.namaKategori.TabIndex = 4
@@ -333,7 +333,7 @@ Partial Class FormAddBarang
         Me.ppn.LineIdleColor = System.Drawing.Color.Gray
         Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
         Me.ppn.LineThickness = 3
-        Me.ppn.Location = New System.Drawing.Point(594, 386)
+        Me.ppn.Location = New System.Drawing.Point(594, 387)
         Me.ppn.Margin = New System.Windows.Forms.Padding(4)
         Me.ppn.Name = "ppn"
         Me.ppn.Size = New System.Drawing.Size(161, 44)
@@ -343,7 +343,7 @@ Partial Class FormAddBarang
         'tanggalInput
         '
         Me.tanggalInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tanggalInput.Location = New System.Drawing.Point(828, 300)
+        Me.tanggalInput.Location = New System.Drawing.Point(829, 300)
         Me.tanggalInput.Name = "tanggalInput"
         Me.tanggalInput.Size = New System.Drawing.Size(154, 20)
         Me.tanggalInput.TabIndex = 19
@@ -352,7 +352,7 @@ Partial Class FormAddBarang
         'tanggalUpdate
         '
         Me.tanggalUpdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tanggalUpdate.Location = New System.Drawing.Point(828, 332)
+        Me.tanggalUpdate.Location = New System.Drawing.Point(829, 332)
         Me.tanggalUpdate.Name = "tanggalUpdate"
         Me.tanggalUpdate.Size = New System.Drawing.Size(154, 20)
         Me.tanggalUpdate.TabIndex = 20
@@ -361,7 +361,7 @@ Partial Class FormAddBarang
         'namaAdmin
         '
         Me.namaAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.namaAdmin.Location = New System.Drawing.Point(828, 364)
+        Me.namaAdmin.Location = New System.Drawing.Point(829, 364)
         Me.namaAdmin.Name = "namaAdmin"
         Me.namaAdmin.Size = New System.Drawing.Size(154, 20)
         Me.namaAdmin.TabIndex = 21
@@ -388,6 +388,7 @@ Partial Class FormAddBarang
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
+        Me.Controls.Add(Me.cancel)
         Me.Controls.Add(Me.namaAdmin)
         Me.Controls.Add(Me.tanggalUpdate)
         Me.Controls.Add(Me.tanggalInput)
@@ -395,7 +396,6 @@ Partial Class FormAddBarang
         Me.Controls.Add(Me.kategoriID)
         Me.Controls.Add(Me.id)
         Me.Controls.Add(Me.submit)
-        Me.Controls.Add(Me.cancel)
         Me.Controls.Add(Me.beli)
         Me.Controls.Add(Me.namaBarang)
         Me.Controls.Add(Me.jual)
@@ -409,6 +409,7 @@ Partial Class FormAddBarang
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormAddBarang"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -431,8 +432,6 @@ Partial Class FormAddBarang
     Friend WithEvents id As System.Windows.Forms.TextBox
     Friend WithEvents kategoriID As System.Windows.Forms.TextBox
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
-    Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
     Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
@@ -440,4 +439,6 @@ Partial Class FormAddBarang
     Friend WithEvents tanggalUpdate As System.Windows.Forms.TextBox
     Friend WithEvents namaAdmin As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
 End Class

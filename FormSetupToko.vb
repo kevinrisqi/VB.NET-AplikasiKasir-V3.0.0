@@ -39,7 +39,7 @@ Public Class FormSetupToko
     End Sub
 
     Private Sub namaToko_KeyPress(sender As Object, e As KeyPressEventArgs) Handles namaToko.KeyPress
-        If namaToko.Text.Length >= 15 Then
+        If namaToko.Text.Length >= 16 Then
             If e.KeyChar <> ControlChars.Back Then
                 e.Handled = True
             End If
@@ -70,7 +70,7 @@ Public Class FormSetupToko
             Dim updateData As String = "UPDATE setup_toko SET nama_toko = '" & namaToko.Text & "', alamat_toko = '" & alamatToko.Text & "', telepon = '" & telepon.Text & "' WHERE id = '1'"
             Cmd = New OdbcCommand(updateData, Conn)
             Cmd.ExecuteNonQuery()
-            MsgBox("Data berhasil diubah !")
+            MsgBox("Data berhasil diubah !", vbInformation)
             tampilData()
         End If
     End Sub

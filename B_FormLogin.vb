@@ -62,10 +62,12 @@ Public Class B_FormLogin
             Rd = Cmd.ExecuteReader
             Rd.Read()
             If Rd.HasRows Then
+                MainForm.lblIdAdmin.Text = Rd.Item("id_admin")
                 MainForm.lblLevel.Text = Rd.Item("level_admin")
                 MainForm.btnLogin.Text = Rd.Item("nama_admin")
-                Me.Hide()
+                Me.Dispose()
                 Call adminActive()
+                MainForm.switchPanel(FormDashboard)
                 If MainForm.lblLevel.Text = "USER" Then
                     Call userActive()
                 End If
