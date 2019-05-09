@@ -66,6 +66,8 @@ Partial Class FormPenjualan
         Me.Label13 = New System.Windows.Forms.Label()
         Me.qtyTotal = New System.Windows.Forms.TextBox()
         Me.txtIdAdmin = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Diskon = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,9 +238,9 @@ Partial Class FormPenjualan
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(90, 522)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(199, 13)
+        Me.Label11.Size = New System.Drawing.Size(205, 13)
         Me.Label11.TabIndex = 19
-        Me.Label11.Text = "Enter - Tambahkan Barang ke Transaksi"
+        Me.Label11.Text = "Space - Tambahkan Barang ke Transaksi"
         '
         'LineShape1
         '
@@ -349,7 +351,7 @@ Partial Class FormPenjualan
         '
         'namaBarang
         '
-        Me.namaBarang.Location = New System.Drawing.Point(311, 502)
+        Me.namaBarang.Location = New System.Drawing.Point(368, 502)
         Me.namaBarang.Name = "namaBarang"
         Me.namaBarang.Size = New System.Drawing.Size(87, 20)
         Me.namaBarang.TabIndex = 39
@@ -357,7 +359,7 @@ Partial Class FormPenjualan
         '
         'hargaSatuan
         '
-        Me.hargaSatuan.Location = New System.Drawing.Point(404, 502)
+        Me.hargaSatuan.Location = New System.Drawing.Point(461, 502)
         Me.hargaSatuan.Name = "hargaSatuan"
         Me.hargaSatuan.Size = New System.Drawing.Size(71, 20)
         Me.hargaSatuan.TabIndex = 40
@@ -397,11 +399,11 @@ Partial Class FormPenjualan
         Me.BunifuFlatButton2.IconMarginLeft = 0
         Me.BunifuFlatButton2.IconMarginRight = 0
         Me.BunifuFlatButton2.IconRightVisible = True
-        Me.BunifuFlatButton2.IconRightZoom = 0.0R
+        Me.BunifuFlatButton2.IconRightZoom = 0R
         Me.BunifuFlatButton2.IconVisible = True
         Me.BunifuFlatButton2.IconZoom = 60.0R
         Me.BunifuFlatButton2.IsTab = False
-        Me.BunifuFlatButton2.Location = New System.Drawing.Point(442, 446)
+        Me.BunifuFlatButton2.Location = New System.Drawing.Point(497, 446)
         Me.BunifuFlatButton2.Name = "BunifuFlatButton2"
         Me.BunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.BunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(195, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(53, Byte), Integer))
@@ -431,11 +433,11 @@ Partial Class FormPenjualan
         Me.BunifuFlatButton1.IconMarginLeft = 0
         Me.BunifuFlatButton1.IconMarginRight = 0
         Me.BunifuFlatButton1.IconRightVisible = True
-        Me.BunifuFlatButton1.IconRightZoom = 0.0R
+        Me.BunifuFlatButton1.IconRightZoom = 0R
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 70.0R
         Me.BunifuFlatButton1.IsTab = False
-        Me.BunifuFlatButton1.Location = New System.Drawing.Point(311, 446)
+        Me.BunifuFlatButton1.Location = New System.Drawing.Point(366, 446)
         Me.BunifuFlatButton1.Name = "BunifuFlatButton1"
         Me.BunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(60, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(188, Byte), Integer))
         Me.BunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -485,7 +487,7 @@ Partial Class FormPenjualan
         '
         'qtyTotal
         '
-        Me.qtyTotal.Location = New System.Drawing.Point(481, 502)
+        Me.qtyTotal.Location = New System.Drawing.Point(538, 502)
         Me.qtyTotal.Name = "qtyTotal"
         Me.qtyTotal.Size = New System.Drawing.Size(84, 20)
         Me.qtyTotal.TabIndex = 47
@@ -499,6 +501,23 @@ Partial Class FormPenjualan
         Me.txtIdAdmin.TabIndex = 49
         Me.txtIdAdmin.Visible = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(259, 431)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(40, 13)
+        Me.Label6.TabIndex = 50
+        Me.Label6.Text = "Diskon"
+        '
+        'Diskon
+        '
+        Me.Diskon.Location = New System.Drawing.Point(262, 458)
+        Me.Diskon.Name = "Diskon"
+        Me.Diskon.Size = New System.Drawing.Size(87, 20)
+        Me.Diskon.TabIndex = 51
+        Me.Diskon.Visible = False
+        '
         'FormPenjualan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -507,6 +526,8 @@ Partial Class FormPenjualan
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1002, 560)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Diskon)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtIdAdmin)
         Me.Controls.Add(Me.qtyTotal)
         Me.Controls.Add(Me.Label13)
@@ -568,8 +589,6 @@ Partial Class FormPenjualan
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents BunifuCustomDataGrid1 As Bunifu.Framework.UI.BunifuCustomDataGrid
@@ -589,4 +608,8 @@ Partial Class FormPenjualan
     Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtIdAdmin As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Diskon As TextBox
+    Private WithEvents LineShape1 As PowerPacks.LineShape
+    Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
 End Class

@@ -11,13 +11,7 @@ Public Class FormPenjualan
     End Sub
 
     Private Sub FormPenjualan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        If e.KeyChar = Chr(13) Then
-            If qty.Text = "" Or 0 Then
-                MsgBox("Mohon untuk mengisi qty !", vbInformation)
-            Else
-                Call inputBarang()
-            End If
-        End If
+
     End Sub
 
     Private Sub FormPenjualan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -130,6 +124,12 @@ Public Class FormPenjualan
         BunifuCustomDataGrid1.ReadOnly = True
     End Sub
 
+    Sub penguranganStok()
+        Call koneksi()
+        Cmd = New OdbcCommand("UPDATE barang SET stok = stok - '" & qty.Text & "' WHERE id_barang = '" & kodeBarang.Text & "'", Conn)
+        Cmd.ExecuteNonQuery()
+    End Sub
+
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         Call saveData()
@@ -150,7 +150,13 @@ Public Class FormPenjualan
         End If
     End Sub
 
-    Private Sub qty_TextChanged(sender As Object, e As EventArgs) Handles qty.TextChanged
-
+    Private Sub kodeBarang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles kodeBarang.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If qty.Text = "" Or 0 Then
+                MsgBox("Mohon untuk mengisi qty !", vbInformation)
+            Else
+                Call inputBarang()
+            End If
+        End If
     End Sub
 End Class
