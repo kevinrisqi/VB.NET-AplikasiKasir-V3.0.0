@@ -16,8 +16,8 @@ Public Class FormPenjualan
         Call kondisiAwal()
         Call loadDetail()
         If Not BunifuCustomDataGrid1.Rows.Count = 0 Then
-            Call hitungSubTotal()
             Call totalQty()
+            Call hitungSubTotal()
         End If
     End Sub
 
@@ -145,9 +145,6 @@ Public Class FormPenjualan
         BunifuCustomDataGrid1.ReadOnly = True
     End Sub
 
-
-
-
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         Call saveData()
     End Sub
@@ -164,6 +161,11 @@ Public Class FormPenjualan
             MsgBox("Data berhasil di inputkan !", vbInformation)
             Call kondisiAwal()
             Call loadDetail()
+            If BunifuCustomDataGrid1.Rows.Count = 0 Then
+                qtyTotal.Text = "0"
+            Else
+                Call totalQty()
+            End If
         End If
     End Sub
 
