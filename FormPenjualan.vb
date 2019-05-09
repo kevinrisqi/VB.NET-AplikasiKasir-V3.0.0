@@ -17,6 +17,7 @@ Public Class FormPenjualan
         Call loadDetail()
         If Not BunifuCustomDataGrid1.Rows.Count = 0 Then
             Call hitungSubTotal()
+            Call totalQty()
         End If
     End Sub
 
@@ -72,26 +73,21 @@ Public Class FormPenjualan
         Cmd = New OdbcCommand("SELECT * FROM barang WHERE id_barang='" & kodeBarang.Text & "'", Conn)
         Rd = Cmd.ExecuteReader
         Rd.Read()
-        If Rd.Item("stok") < 0 Or Rd.Item("stok") < qty.Text Then
+        If Not Rd.HasRows Then
+            MsgBox("Kode Barang tidak tersedia !", vbInformation)
+        ElseIf Rd.Item("stok") < 0 Or Rd.Item("stok") < qty.Text Then
             MsgBox("Stok tidak tersedia !", vbInformation)
         Else
             Cmd = New OdbcCommand("UPDATE barang SET stok = stok - '" & qty.Text & "' WHERE id_barang = '" & kodeBarang.Text & "'", Conn)
             Cmd.ExecuteNonQuery()
-            Cmd = New OdbcCommand("SELECT * FROM barang WHERE id_barang = '" & kodeBarang.Text & "'", Conn)
-            Rd = Cmd.ExecuteReader
-            Rd.Read()
-            If Rd.HasRows Then
-                namaBarang.Text = Rd.Item("nama_barang")
-                hargaSatuan.Text = Rd.Item("harga_jual")
-                harga_pokok = Rd.Item("harga_beli")
-                Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_pokok,harga_satuan,qty,subtotal,diskon,netto,total_pokok) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & harga_pokok & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "','" & Diskon.Text & "','" & (Val(hargaSatuan.Text) * Val(qty.Text)) - Diskon.Text & "','" & Val(harga_pokok) * Val(qty.Text) & "')", Conn)
-                Cmd.ExecuteNonQuery()
-                Call loadDetail()
-                Call hitungSubTotal()
-                Call totalQty()
-            Else
-                MsgBox("Kode Barang tidak tersedia !", vbInformation)
-            End If
+            namaBarang.Text = Rd.Item("nama_barang")
+            hargaSatuan.Text = Rd.Item("harga_jual")
+            harga_pokok = Rd.Item("harga_beli")
+            Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_pokok,harga_satuan,qty,subtotal,diskon,netto,total_pokok) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & harga_pokok & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "','" & Diskon.Text & "','" & (Val(hargaSatuan.Text) * Val(qty.Text)) - Diskon.Text & "','" & Val(harga_pokok) * Val(qty.Text) & "')", Conn)
+            Cmd.ExecuteNonQuery()
+            Call loadDetail()
+            Call hitungSubTotal()
+            Call totalQty()
         End If
     End Sub
 
@@ -212,6 +208,35 @@ Public Class FormPenjualan
     Private Sub qty_KeyDown(sender As Object, e As KeyEventArgs) Handles qty.KeyDown
         If e.KeyCode = Keys.Enter Then
             Call inputBarang()
+        End If
+    End Sub
+
+    Private Sub BunifuCustomDataGrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellContentClick
+
+    End Sub
+
+    Private Sub BunifuCustomDataGrid1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellDoubleClick
+        Dim i As Integer
+        Dim idBarang As String
+        Dim quantity As Integer
+        i = BunifuCustomDataGrid1.CurrentRow.Index
+
+        idBarang = BunifuCustomDataGrid1.Item(0, i).Value
+        quantity = BunifuCustomDataGrid1.Item(4, i).Value
+        If MsgBox("Apakah Anda ingin menghapusnya ?", vbInformation + vbYesNo) = vbYes Then
+            Call koneksi()
+            Cmd = New OdbcCommand("UPDATE barang set stok = stok + '" & quantity & "' WHERE id_barang = '" & idBarang & "'", Conn)
+            Cmd.ExecuteNonQuery()
+            Cmd = New OdbcCommand("DELETE FROM detail_penjualan WHERE id_penjualan = '" & noTransaksi.Text & "' AND id_barang='" & idBarang & "'", Conn)
+            Cmd.ExecuteNonQuery()
+            Call loadDetail()
+            If BunifuCustomDataGrid1.Rows.Count = 0 Then
+                Total.Text = "0"
+                qtyTotal.Text = "0"
+            Else
+                Call hitungSubTotal()
+                Call totalQty()
+            End If
         End If
     End Sub
 End Class
