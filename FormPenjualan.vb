@@ -51,6 +51,7 @@ Public Class FormPenjualan
     End Sub
 
     Sub inputBarang()
+        Dim harga_pokok As Integer
         Call koneksi()
         Cmd = New OdbcCommand("SELECT * FROM barang WHERE id_barang = '" & kodeBarang.Text & "'", Conn)
         Rd = Cmd.ExecuteReader
@@ -58,7 +59,8 @@ Public Class FormPenjualan
         If Rd.HasRows Then
             namaBarang.Text = Rd.Item("nama_barang")
             hargaSatuan.Text = Rd.Item("harga_jual")
-            Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_satuan,qty,subtotal) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "')", Conn)
+            harga_pokok = Rd.Item("harga_beli")
+            Cmd = New OdbcCommand("INSERT INTO detail_penjualan (id_penjualan,id_barang,nama_barang,harga_pokok,harga_satuan,qty,subtotal,diskon,netto,total_pokok) VALUES ('" & noTransaksi.Text & "', '" & kodeBarang.Text & "','" & namaBarang.Text & "','" & harga_pokok & "','" & hargaSatuan.Text & "','" & qty.Text & "','" & Val(hargaSatuan.Text) * Val(qty.Text) & "','" & Diskon.Text & "','" & (Val(hargaSatuan.Text) * Val(qty.Text)) - Diskon.Text & "','" & Val(harga_pokok) * Val(qty.Text) & "')", Conn)
             Cmd.ExecuteNonQuery()
             Call loadDetail()
             Call hitungSubTotal()
@@ -115,7 +117,7 @@ Public Class FormPenjualan
 
     Sub loadDetail()
         Call koneksi()
-        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_pokok,harga_satuan,SUM(qty) AS qty,SUM(subtotal) AS SubTotal,diskon,netto,total_pokok FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "' GROUP BY id_barang", Conn)
+        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_pokok,harga_satuan,SUM(qty) AS qty,SUM(subtotal) AS SubTotal,SUM(diskon) as diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "' GROUP BY id_barang", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "detail")
         BunifuCustomDataGrid1.DataSource = Ds.Tables("detail")
