@@ -5,9 +5,7 @@ Public Class FormPenjualan
         If e.KeyCode = Keys.F5 Then
             DetailBarang.Show()
         End If
-        If e.Control AndAlso e.KeyCode = Keys.S Then
-            Call saveData()
-        End If
+
     End Sub
 
     Private Sub FormPenjualan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
@@ -117,7 +115,7 @@ Public Class FormPenjualan
 
     Sub loadDetail()
         Call koneksi()
-        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_satuan,SUM(qty) AS qty,SUM(subtotal) AS SubTotal FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "' GROUP BY id_barang", Conn)
+        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_pokok,harga_satuan,SUM(qty) AS qty,SUM(subtotal) AS SubTotal,diskon,netto,total_pokok FROM detail_penjualan WHERE id_penjualan='" & noTransaksi.Text & "' GROUP BY id_barang", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "detail")
         BunifuCustomDataGrid1.DataSource = Ds.Tables("detail")
@@ -157,6 +155,26 @@ Public Class FormPenjualan
             Else
                 Call inputBarang()
             End If
+        End If
+    End Sub
+
+    Private Sub bayar_KeyDown(sender As Object, e As KeyEventArgs) Handles bayar.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Call saveData()
+        End If
+    End Sub
+
+    Private Sub Diskon_TextChanged(sender As Object, e As EventArgs) Handles Diskon.TextChanged
+
+    End Sub
+
+    Private Sub Diskon_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Diskon.KeyPress
+        If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
+    End Sub
+
+    Private Sub Diskon_Leave(sender As Object, e As EventArgs) Handles Diskon.Leave
+        If Diskon.Text = "" Then
+            Diskon.Text = "0"
         End If
     End Sub
 End Class

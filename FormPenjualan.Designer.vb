@@ -23,9 +23,9 @@ Partial Class FormPenjualan
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.namaKasir = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.jam = New System.Windows.Forms.TextBox()
@@ -49,11 +49,6 @@ Partial Class FormPenjualan
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.namaBarang = New System.Windows.Forms.TextBox()
         Me.hargaSatuan = New System.Windows.Forms.TextBox()
@@ -68,6 +63,15 @@ Partial Class FormPenjualan
         Me.txtIdAdmin = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Diskon = New System.Windows.Forms.TextBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox2.SuspendLayout()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,7 +214,7 @@ Partial Class FormPenjualan
         'bayar
         '
         Me.bayar.Location = New System.Drawing.Point(140, 26)
-        Me.bayar.MaxLength = 15
+        Me.bayar.MaxLength = 7
         Me.bayar.Name = "bayar"
         Me.bayar.Size = New System.Drawing.Size(175, 20)
         Me.bayar.TabIndex = 18
@@ -238,9 +242,9 @@ Partial Class FormPenjualan
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(90, 522)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(205, 13)
+        Me.Label11.Size = New System.Drawing.Size(199, 13)
         Me.Label11.TabIndex = 19
-        Me.Label11.Text = "Space - Tambahkan Barang ke Transaksi"
+        Me.Label11.Text = "Enter - Tambahkan Barang ke Transaksi"
         '
         'LineShape1
         '
@@ -275,31 +279,31 @@ Partial Class FormPenjualan
         'BunifuCustomDataGrid1
         '
         Me.BunifuCustomDataGrid1.AllowUserToAddRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
-        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomDataGrid1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.BunifuCustomDataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.BunifuCustomDataGrid1.BackgroundColor = System.Drawing.Color.White
         Me.BunifuCustomDataGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BunifuCustomDataGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.BunifuCustomDataGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.BunifuCustomDataGrid1.ColumnHeadersHeight = 41
-        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle6
+        Me.BunifuCustomDataGrid1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column8, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column9})
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(244, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BunifuCustomDataGrid1.DefaultCellStyle = DataGridViewCellStyle3
         Me.BunifuCustomDataGrid1.DoubleBuffered = True
         Me.BunifuCustomDataGrid1.EnableHeadersVisualStyles = False
         Me.BunifuCustomDataGrid1.HeaderBgColor = System.Drawing.Color.FromArgb(CType(CType(109, Byte), Integer), CType(CType(122, Byte), Integer), CType(CType(224, Byte), Integer))
@@ -315,43 +319,13 @@ Partial Class FormPenjualan
         Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(903, 220)
         Me.BunifuCustomDataGrid1.TabIndex = 38
         '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "id_barang"
-        Me.Column1.HeaderText = "Kode Barang"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "nama_barang"
-        Me.Column2.HeaderText = "Nama Barang"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "harga_satuan"
-        Me.Column3.HeaderText = "Harga Satuan"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "qty"
-        Me.Column4.HeaderText = "Qty"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "SubTotal"
-        Me.Column5.HeaderText = "Sub Total"
-        Me.Column5.Name = "Column5"
-        '
         'Timer1
         '
         Me.Timer1.Enabled = True
         '
         'namaBarang
         '
-        Me.namaBarang.Location = New System.Drawing.Point(368, 502)
+        Me.namaBarang.Location = New System.Drawing.Point(366, 502)
         Me.namaBarang.Name = "namaBarang"
         Me.namaBarang.Size = New System.Drawing.Size(87, 20)
         Me.namaBarang.TabIndex = 39
@@ -359,7 +333,7 @@ Partial Class FormPenjualan
         '
         'hargaSatuan
         '
-        Me.hargaSatuan.Location = New System.Drawing.Point(461, 502)
+        Me.hargaSatuan.Location = New System.Drawing.Point(459, 502)
         Me.hargaSatuan.Name = "hargaSatuan"
         Me.hargaSatuan.Size = New System.Drawing.Size(71, 20)
         Me.hargaSatuan.TabIndex = 40
@@ -487,7 +461,7 @@ Partial Class FormPenjualan
         '
         'qtyTotal
         '
-        Me.qtyTotal.Location = New System.Drawing.Point(538, 502)
+        Me.qtyTotal.Location = New System.Drawing.Point(536, 502)
         Me.qtyTotal.Name = "qtyTotal"
         Me.qtyTotal.Size = New System.Drawing.Size(84, 20)
         Me.qtyTotal.TabIndex = 47
@@ -513,10 +487,65 @@ Partial Class FormPenjualan
         'Diskon
         '
         Me.Diskon.Location = New System.Drawing.Point(262, 458)
+        Me.Diskon.MaxLength = 7
         Me.Diskon.Name = "Diskon"
         Me.Diskon.Size = New System.Drawing.Size(87, 20)
         Me.Diskon.TabIndex = 51
-        Me.Diskon.Visible = False
+        Me.Diskon.Text = "0"
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "id_barang"
+        Me.Column1.HeaderText = "Kode Barang"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "nama_barang"
+        Me.Column2.HeaderText = "Nama Barang"
+        Me.Column2.Name = "Column2"
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "harga_pokok"
+        Me.Column8.HeaderText = "Harga Pokok"
+        Me.Column8.Name = "Column8"
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "harga_satuan"
+        Me.Column3.HeaderText = "Harga Satuan"
+        Me.Column3.Name = "Column3"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "qty"
+        Me.Column4.HeaderText = "Qty"
+        Me.Column4.Name = "Column4"
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "SubTotal"
+        Me.Column5.HeaderText = "Brutto"
+        Me.Column5.Name = "Column5"
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "diskon"
+        Me.Column6.HeaderText = "Voucher"
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "netto"
+        Me.Column7.HeaderText = "Netto"
+        Me.Column7.Name = "Column7"
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "total_pokok"
+        Me.Column9.HeaderText = "Total H.Pokok"
+        Me.Column9.Name = "Column9"
         '
         'FormPenjualan
         '
@@ -602,14 +631,18 @@ Partial Class FormPenjualan
     Friend WithEvents BunifuImageButton1 As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents qtyTotal As System.Windows.Forms.TextBox
-    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents txtIdAdmin As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Diskon As TextBox
     Private WithEvents LineShape1 As PowerPacks.LineShape
     Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Column9 As DataGridViewTextBoxColumn
 End Class
