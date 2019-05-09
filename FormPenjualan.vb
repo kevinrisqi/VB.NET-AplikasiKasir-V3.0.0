@@ -126,7 +126,7 @@ Public Class FormPenjualan
     End Sub
 
     Private Sub BunifuImageButton1_Click(sender As Object, e As EventArgs) Handles BunifuImageButton1.Click
-        DetailBarang.Show()
+        DetailBarang.ShowDialog()
     End Sub
 
     Sub totalQty()
