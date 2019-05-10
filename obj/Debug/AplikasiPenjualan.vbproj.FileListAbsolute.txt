@@ -47,3 +47,4 @@ G:\Project\AplikasiPenjualan\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.xml
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbprojAssemblyReference.cache
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbproj.CoreCompileInputs.cache
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbproj.CopyComplete
+G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormKategoriBarang.resources

@@ -35,12 +35,6 @@ Partial Class FormBarang
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.BunifuCustomDataGrid1 = New Bunifu.Framework.UI.BunifuCustomDataGrid()
-        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
-        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,6 +50,12 @@ Partial Class FormBarang
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column14 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BunifuElipse1 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
+        Me.search = New Bunifu.Framework.UI.BunifuTextbox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         CType(Me.BunifuCustomDataGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -174,6 +174,116 @@ Partial Class FormBarang
         Me.BunifuCustomDataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.BunifuCustomDataGrid1.Size = New System.Drawing.Size(905, 337)
         Me.BunifuCustomDataGrid1.TabIndex = 37
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "id"
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Visible = False
+        Me.Column1.Width = 47
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "id_barang"
+        Me.Column2.HeaderText = "Kode Barang"
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 120
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "nama_barang"
+        Me.Column3.HeaderText = "Nama Barang"
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 126
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "harga_beli"
+        Me.Column4.HeaderText = "Harga Beli"
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 103
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "harga_jual"
+        Me.Column5.HeaderText = "Harga Jual"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 105
+        '
+        'Column6
+        '
+        Me.Column6.DataPropertyName = "stok"
+        Me.Column6.HeaderText = "Stok"
+        Me.Column6.Name = "Column6"
+        Me.Column6.Width = 62
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "satuan"
+        Me.Column7.HeaderText = "Satuan"
+        Me.Column7.Name = "Column7"
+        Me.Column7.Visible = False
+        Me.Column7.Width = 79
+        '
+        'Column8
+        '
+        Me.Column8.DataPropertyName = "keterangan"
+        Me.Column8.HeaderText = "Keterangan"
+        Me.Column8.Name = "Column8"
+        Me.Column8.Visible = False
+        Me.Column8.Width = 111
+        '
+        'Column10
+        '
+        Me.Column10.DataPropertyName = "tanggal_input"
+        Me.Column10.HeaderText = "Tanggal Input"
+        Me.Column10.Name = "Column10"
+        Me.Column10.Width = 126
+        '
+        'Column11
+        '
+        Me.Column11.DataPropertyName = "tanggal_update"
+        Me.Column11.HeaderText = "Tanggal Update"
+        Me.Column11.Name = "Column11"
+        Me.Column11.Width = 140
+        '
+        'Column12
+        '
+        Me.Column12.DataPropertyName = "nama_admin"
+        Me.Column12.HeaderText = "Nama Admin"
+        Me.Column12.Name = "Column12"
+        Me.Column12.Width = 122
+        '
+        'Column13
+        '
+        Me.Column13.DataPropertyName = "nama_kategori"
+        Me.Column13.HeaderText = "Kategori"
+        Me.Column13.Name = "Column13"
+        Me.Column13.Width = 90
+        '
+        'Column9
+        '
+        Me.Column9.DataPropertyName = "id_kategori"
+        Me.Column9.HeaderText = "ID Kategori"
+        Me.Column9.Name = "Column9"
+        Me.Column9.Visible = False
+        Me.Column9.Width = 109
+        '
+        'Column14
+        '
+        Me.Column14.DataPropertyName = "id_kategori1"
+        Me.Column14.HeaderText = "ID Kategori 1"
+        Me.Column14.Name = "Column14"
+        Me.Column14.Visible = False
+        Me.Column14.Width = 119
+        '
+        'Column15
+        '
+        Me.Column15.DataPropertyName = "ppn"
+        Me.Column15.HeaderText = "PPN"
+        Me.Column15.Name = "Column15"
+        Me.Column15.Width = 62
         '
         'BunifuElipse1
         '
@@ -303,116 +413,6 @@ Partial Class FormBarang
         Me.BunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuFlatButton1.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton1.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "id"
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Visible = False
-        Me.Column1.Width = 47
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "id_barang"
-        Me.Column2.HeaderText = "Kode Barang"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 120
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "nama_barang"
-        Me.Column3.HeaderText = "Nama Barang"
-        Me.Column3.Name = "Column3"
-        Me.Column3.Width = 126
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "harga_beli"
-        Me.Column4.HeaderText = "Harga Beli"
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 103
-        '
-        'Column5
-        '
-        Me.Column5.DataPropertyName = "harga_jual"
-        Me.Column5.HeaderText = "Harga Jual"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 105
-        '
-        'Column6
-        '
-        Me.Column6.DataPropertyName = "stok"
-        Me.Column6.HeaderText = "Stok"
-        Me.Column6.Name = "Column6"
-        Me.Column6.Width = 62
-        '
-        'Column7
-        '
-        Me.Column7.DataPropertyName = "satuan"
-        Me.Column7.HeaderText = "Satuan"
-        Me.Column7.Name = "Column7"
-        Me.Column7.Visible = False
-        Me.Column7.Width = 79
-        '
-        'Column8
-        '
-        Me.Column8.DataPropertyName = "keterangan"
-        Me.Column8.HeaderText = "Keterangan"
-        Me.Column8.Name = "Column8"
-        Me.Column8.Visible = False
-        Me.Column8.Width = 111
-        '
-        'Column10
-        '
-        Me.Column10.DataPropertyName = "tanggal_input"
-        Me.Column10.HeaderText = "Tanggal Input"
-        Me.Column10.Name = "Column10"
-        Me.Column10.Width = 126
-        '
-        'Column11
-        '
-        Me.Column11.DataPropertyName = "tanggal_update"
-        Me.Column11.HeaderText = "Tanggal Update"
-        Me.Column11.Name = "Column11"
-        Me.Column11.Width = 140
-        '
-        'Column12
-        '
-        Me.Column12.DataPropertyName = "nama_admin"
-        Me.Column12.HeaderText = "Nama Admin"
-        Me.Column12.Name = "Column12"
-        Me.Column12.Width = 122
-        '
-        'Column13
-        '
-        Me.Column13.DataPropertyName = "nama_kategori"
-        Me.Column13.HeaderText = "Kategori"
-        Me.Column13.Name = "Column13"
-        Me.Column13.Width = 90
-        '
-        'Column9
-        '
-        Me.Column9.DataPropertyName = "id_kategori"
-        Me.Column9.HeaderText = "ID Kategori"
-        Me.Column9.Name = "Column9"
-        Me.Column9.Visible = False
-        Me.Column9.Width = 109
-        '
-        'Column14
-        '
-        Me.Column14.DataPropertyName = "id_kategori1"
-        Me.Column14.HeaderText = "ID Kategori 1"
-        Me.Column14.Name = "Column14"
-        Me.Column14.Visible = False
-        Me.Column14.Width = 119
-        '
-        'Column15
-        '
-        Me.Column15.DataPropertyName = "ppn"
-        Me.Column15.HeaderText = "PPN"
-        Me.Column15.Name = "Column15"
-        Me.Column15.Width = 62
         '
         'FormBarang
         '

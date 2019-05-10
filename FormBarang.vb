@@ -129,4 +129,8 @@ Public Class FormBarang
         Else
         End If
     End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+        FormKategoriBarang.ShowDialog()
+    End Sub
 End Class
