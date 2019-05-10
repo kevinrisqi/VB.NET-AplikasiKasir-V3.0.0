@@ -40,12 +40,14 @@ Partial Class FormAddBarang
         Me.BunifuElipse2 = New Bunifu.Framework.UI.BunifuElipse(Me.components)
         Me.cancel = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.namaKategori = New System.Windows.Forms.ComboBox()
-        Me.ppn = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.tanggalInput = New System.Windows.Forms.TextBox()
         Me.tanggalUpdate = New System.Windows.Forms.TextBox()
         Me.namaAdmin = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ppn = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -253,7 +255,7 @@ Partial Class FormAddBarang
         Me.submit.IconMarginLeft = 0
         Me.submit.IconMarginRight = 0
         Me.submit.IconRightVisible = True
-        Me.submit.IconRightZoom = 0.0R
+        Me.submit.IconRightZoom = 0R
         Me.submit.IconVisible = True
         Me.submit.IconZoom = 90.0R
         Me.submit.IsTab = False
@@ -294,7 +296,7 @@ Partial Class FormAddBarang
         Me.cancel.IconMarginLeft = 0
         Me.cancel.IconMarginRight = 0
         Me.cancel.IconRightVisible = True
-        Me.cancel.IconRightZoom = 0.0R
+        Me.cancel.IconRightZoom = 0R
         Me.cancel.IconVisible = True
         Me.cancel.IconZoom = 90.0R
         Me.cancel.IsTab = False
@@ -320,25 +322,6 @@ Partial Class FormAddBarang
         Me.namaKategori.Name = "namaKategori"
         Me.namaKategori.Size = New System.Drawing.Size(205, 26)
         Me.namaKategori.TabIndex = 4
-        '
-        'ppn
-        '
-        Me.ppn.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.ppn.Font = New System.Drawing.Font("Century Gothic", 9.75!)
-        Me.ppn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ppn.HintForeColor = System.Drawing.Color.Empty
-        Me.ppn.HintText = "PPN"
-        Me.ppn.isPassword = False
-        Me.ppn.LineFocusedColor = System.Drawing.Color.Blue
-        Me.ppn.LineIdleColor = System.Drawing.Color.Gray
-        Me.ppn.LineMouseHoverColor = System.Drawing.Color.Blue
-        Me.ppn.LineThickness = 3
-        Me.ppn.Location = New System.Drawing.Point(594, 387)
-        Me.ppn.Margin = New System.Windows.Forms.Padding(4)
-        Me.ppn.Name = "ppn"
-        Me.ppn.Size = New System.Drawing.Size(161, 44)
-        Me.ppn.TabIndex = 8
-        Me.ppn.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'tanggalInput
         '
@@ -382,12 +365,45 @@ Partial Class FormAddBarang
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'ppn
+        '
+        Me.ppn.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ppn.FormattingEnabled = True
+        Me.ppn.Items.AddRange(New Object() {"Ya", "Tidak"})
+        Me.ppn.Location = New System.Drawing.Point(594, 404)
+        Me.ppn.Name = "ppn"
+        Me.ppn.Size = New System.Drawing.Size(93, 26)
+        Me.ppn.TabIndex = 22
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(93, 381)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(66, 20)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Kategori"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(599, 381)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(36, 20)
+        Me.Label3.TabIndex = 24
+        Me.Label3.Text = "PPN"
+        '
         'FormAddBarang
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1019, 599)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.cancel)
         Me.Controls.Add(Me.namaAdmin)
         Me.Controls.Add(Me.tanggalUpdate)
@@ -403,7 +419,6 @@ Partial Class FormAddBarang
         Me.Controls.Add(Me.kodeBarang)
         Me.Controls.Add(Me.keterangan)
         Me.Controls.Add(Me.stok)
-        Me.Controls.Add(Me.ppn)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ShapeContainer1)
@@ -418,8 +433,6 @@ Partial Class FormAddBarang
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents kodeBarang As Bunifu.Framework.UI.BunifuMaterialTextbox
@@ -434,11 +447,15 @@ Partial Class FormAddBarang
     Friend WithEvents BunifuElipse1 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents BunifuElipse2 As Bunifu.Framework.UI.BunifuElipse
     Friend WithEvents namaKategori As System.Windows.Forms.ComboBox
-    Friend WithEvents ppn As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents tanggalInput As System.Windows.Forms.TextBox
     Friend WithEvents tanggalUpdate As System.Windows.Forms.TextBox
     Friend WithEvents namaAdmin As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents submit As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents cancel As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents ppn As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Private WithEvents LineShape1 As PowerPacks.LineShape
+    Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
 End Class

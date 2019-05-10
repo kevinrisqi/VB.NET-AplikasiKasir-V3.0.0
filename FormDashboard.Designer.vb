@@ -318,8 +318,6 @@ Partial Class FormDashboard
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents LineShape1 As Microsoft.VisualBasic.PowerPacks.LineShape
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents BunifuTileButton4 As Bunifu.Framework.UI.BunifuTileButton
@@ -338,4 +336,6 @@ Partial Class FormDashboard
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents lblProduct As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Private WithEvents LineShape1 As PowerPacks.LineShape
+    Private WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
 End Class

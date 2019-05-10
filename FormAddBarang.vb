@@ -93,14 +93,6 @@ Public Class FormAddBarang
         If Not ((e.KeyChar >= "0" And e.KeyChar <= "9") Or e.KeyChar = vbBack) Then e.Handled = True
     End Sub
 
-    Private Sub ppn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles ppn.KeyPress
-        If ppn.Text.Length >= 9 Then
-            If e.KeyChar <> ControlChars.Back Then
-                e.Handled = True
-            End If
-        End If
-    End Sub
-
     Private Sub satuan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles satuan.KeyPress
         If satuan.Text.Length >= 15 Then
             If e.KeyChar <> ControlChars.Back Then
@@ -141,13 +133,13 @@ Public Class FormAddBarang
     End Sub
 
     Sub insertData()
-        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Then
+        If kodeBarang.Text = "" Or namaBarang.Text = "" Or satuan.Text = "" Or stok.Text = "" Or beli.Text = "" Or jual.Text = "" Or kategoriID.Text = "" Or keterangan.Text = "" Or namaKategori.Text = "" Or ppn.Text = "" Then
             MsgBox("Silahkan isi data dengan lengkap !", vbInformation)
         ElseIf Val(beli.Text) > Val(jual.Text) Then
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
-            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "')"
+            Dim inputData As String = "INSERT INTO barang (id_barang,nama_barang,harga_beli,harga_jual,stok,satuan,keterangan,id_kategori,tanggal_input,nama_admin,ppn) values ('" & kodeBarang.Text & "', '" & namaBarang.Text & "', '" & beli.Text & "', '" & jual.Text & "', '" & stok.Text & "', '" & satuan.Text & "', '" & keterangan.Text & "', '" & kategoriID.Text & "', '" & tanggalInput.Text & "','" & MainForm.btnLogin.Text & "','" & ppn.Text & "')"
             Cmd = New OdbcCommand(inputData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
@@ -164,7 +156,7 @@ Public Class FormAddBarang
             MsgBox("Harga beli harus lebih kecil dari harga jual !", vbInformation)
         Else
             Call koneksi()
-            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "', nama_admin='" & MainForm.btnLogin.Text & "' WHERE id = '" & id.Text & "' "
+            Dim updateData As String = "UPDATE barang SET id_barang = '" & kodeBarang.Text & "',nama_barang = '" & namaBarang.Text & "', harga_beli = '" & beli.Text & "', harga_jual = '" & jual.Text & "',stok = '" & stok.Text & "', satuan = '" & satuan.Text & "', keterangan = '" & keterangan.Text & "',id_kategori = '" & kategoriID.Text & "', tanggal_update = '" & tanggalUpdate.Text & "', nama_admin='" & MainForm.btnLogin.Text & "',ppn = '" & ppn.Text & "' WHERE id = '" & id.Text & "' "
             Cmd = New OdbcCommand(updateData, Conn)
             Cmd.ExecuteNonQuery()
             Call FormBarang.tampilBarang()
