@@ -162,7 +162,7 @@ Partial Class FormPenjualan
         Me.kodeBarang.MaxLength = 13
         Me.kodeBarang.Name = "kodeBarang"
         Me.kodeBarang.Size = New System.Drawing.Size(106, 20)
-        Me.kodeBarang.TabIndex = 8
+        Me.kodeBarang.TabIndex = 1
         '
         'qty
         '
@@ -170,7 +170,7 @@ Partial Class FormPenjualan
         Me.qty.MaxLength = 3
         Me.qty.Name = "qty"
         Me.qty.Size = New System.Drawing.Size(51, 20)
-        Me.qty.TabIndex = 11
+        Me.qty.TabIndex = 2
         Me.qty.Text = "1"
         '
         'Label7
@@ -197,7 +197,7 @@ Partial Class FormPenjualan
         Me.bayar.MaxLength = 9
         Me.bayar.Name = "bayar"
         Me.bayar.Size = New System.Drawing.Size(89, 20)
-        Me.bayar.TabIndex = 18
+        Me.bayar.TabIndex = 4
         '
         'Label9
         '
@@ -410,7 +410,7 @@ Partial Class FormPenjualan
         Me.BunifuFlatButton1.IconMarginLeft = 0
         Me.BunifuFlatButton1.IconMarginRight = 0
         Me.BunifuFlatButton1.IconRightVisible = True
-        Me.BunifuFlatButton1.IconRightZoom = 0R
+        Me.BunifuFlatButton1.IconRightZoom = 0.0R
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 70.0R
         Me.BunifuFlatButton1.IsTab = False
@@ -493,7 +493,7 @@ Partial Class FormPenjualan
         Me.Diskon.MaxLength = 7
         Me.Diskon.Name = "Diskon"
         Me.Diskon.Size = New System.Drawing.Size(87, 20)
-        Me.Diskon.TabIndex = 51
+        Me.Diskon.TabIndex = 3
         Me.Diskon.Text = "0"
         '
         'kembali
