@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -103,6 +103,12 @@
     <Compile Include="B_FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CrystalReport3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DetailBarang.Designer.vb">
       <DependentUpon>DetailBarang.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,12 @@
       <DependentUpon>FormKategoriBarang.vb</DependentUpon>
     </Compile>
     <Compile Include="FormKategoriBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLapPenjualanV1.Designer.vb">
+      <DependentUpon>FormLapPenjualanV1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLapPenjualanV1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.vb">
@@ -182,6 +194,12 @@
     <Compile Include="FormUtama.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LaporanPenjualan.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanPenjualan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -204,16 +222,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Report.Designer.vb">
-      <DependentUpon>Report.vb</DependentUpon>
+    <Compile Include="ReportPenjualan.Designer.vb">
+      <DependentUpon>ReportPenjualan.vb</DependentUpon>
     </Compile>
-    <Compile Include="Report.vb">
+    <Compile Include="ReportPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="B_FormLogin.resx">
       <DependentUpon>B_FormLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailBarang.resx">
       <DependentUpon>DetailBarang.vb</DependentUpon>
@@ -232,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKategoriBarang.resx">
       <DependentUpon>FormKategoriBarang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLapPenjualanV1.resx">
+      <DependentUpon>FormLapPenjualanV1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.vb</DependentUpon>
@@ -254,6 +279,10 @@
     <EmbeddedResource Include="FormUtama.resx">
       <DependentUpon>FormUtama.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LaporanPenjualan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanPenjualan.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -263,8 +292,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report.resx">
-      <DependentUpon>Report.vb</DependentUpon>
+    <EmbeddedResource Include="ReportPenjualan.resx">
+      <DependentUpon>ReportPenjualan.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
