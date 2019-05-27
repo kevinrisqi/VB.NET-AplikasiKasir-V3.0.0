@@ -13,6 +13,14 @@ Public Class FormLapPenjualanV1
         'CrystalReportViewer1.ReportSource = cryRpt
         'CrystalReportViewer1.Refresh()
 
+        Call loadReport()
+    End Sub
+
+    Private Sub FormLapPenjualanV1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Sub loadReport()
         Call koneksi()
         Dim rpt As New ReportDocument
         Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_satuan, SUM(qty) AS qty, SUM(SubTotal) AS subtotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok FROM detail_penjualan GROUP BY id_barang", Conn)
@@ -25,7 +33,4 @@ Public Class FormLapPenjualanV1
         CrystalReportViewer1.Refresh()
     End Sub
 
-    Private Sub FormLapPenjualanV1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
