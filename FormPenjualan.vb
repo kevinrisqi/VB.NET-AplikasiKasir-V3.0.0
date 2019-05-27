@@ -33,8 +33,8 @@ Public Class FormPenjualan
         Diskon.Text = "0"
     End Sub
 
-
     Sub kodeOtomatis()
+        Call koneksi()
         Cmd = New OdbcCommand("select * from penjualan where id_penjualan in (select max(id_penjualan) from penjualan)", Conn)
         Dim urutan As String
         Dim hitung As Long
@@ -43,8 +43,12 @@ Public Class FormPenjualan
         If Not Rd.HasRows Then
             urutan = "T" + Format(Now, "yyyyMMdd") + "001"
         Else
-            hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 9) + 1
-            urutan = "T" + Format(Now, "yyyyMMdd") + Microsoft.VisualBasic.Right("000" & hitung, 3)
+            If Microsoft.VisualBasic.Left(Rd.Item("id_penjualan"), 9) <> "T" + Format(Now, "yyyyMMdd") Then
+                urutan = "T" + Format(Now, "yyyyMMdd") + "001"
+            Else
+                hitung = Microsoft.VisualBasic.Right(Rd.GetString(0), 9) + 1
+                urutan = "T" + Format(Now, "yyyyMMdd") + Microsoft.VisualBasic.Right("000" & hitung, 3)
+            End If
         End If
         noTransaksi.Text = urutan
     End Sub
@@ -152,6 +156,7 @@ Public Class FormPenjualan
     Sub saveData()
         If (bayar.Text = "" Or Total.Text = "" Or kembali.Text = "") Then
             MsgBox("Silahkan lakukan transaksi !", vbInformation)
+            kodeBarang.Focus()
         ElseIf Val(kembali.Text) < 0 Then
             MsgBox("Pembayaran kurang !", vbInformation)
         Else
@@ -166,6 +171,7 @@ Public Class FormPenjualan
             Else
                 Call totalQty()
             End If
+            kodeBarang.Focus()
         End If
     End Sub
 

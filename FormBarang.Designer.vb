@@ -329,7 +329,7 @@ Partial Class FormBarang
         Me.BunifuFlatButton4.IconMarginLeft = 0
         Me.BunifuFlatButton4.IconMarginRight = 0
         Me.BunifuFlatButton4.IconRightVisible = True
-        Me.BunifuFlatButton4.IconRightZoom = 0R
+        Me.BunifuFlatButton4.IconRightZoom = 0.0R
         Me.BunifuFlatButton4.IconVisible = True
         Me.BunifuFlatButton4.IconZoom = 59.0R
         Me.BunifuFlatButton4.IsTab = False
@@ -363,7 +363,7 @@ Partial Class FormBarang
         Me.BunifuFlatButton2.IconMarginLeft = 0
         Me.BunifuFlatButton2.IconMarginRight = 0
         Me.BunifuFlatButton2.IconRightVisible = True
-        Me.BunifuFlatButton2.IconRightZoom = 0R
+        Me.BunifuFlatButton2.IconRightZoom = 0.0R
         Me.BunifuFlatButton2.IconVisible = True
         Me.BunifuFlatButton2.IconZoom = 55.0R
         Me.BunifuFlatButton2.IsTab = False
@@ -397,7 +397,7 @@ Partial Class FormBarang
         Me.BunifuFlatButton1.IconMarginLeft = 0
         Me.BunifuFlatButton1.IconMarginRight = 0
         Me.BunifuFlatButton1.IconRightVisible = True
-        Me.BunifuFlatButton1.IconRightZoom = 0R
+        Me.BunifuFlatButton1.IconRightZoom = 0.0R
         Me.BunifuFlatButton1.IconVisible = True
         Me.BunifuFlatButton1.IconZoom = 90.0R
         Me.BunifuFlatButton1.IsTab = False

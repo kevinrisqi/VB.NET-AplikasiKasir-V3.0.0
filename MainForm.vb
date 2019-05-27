@@ -128,5 +128,13 @@ Public Class MainForm
 
     Private Sub DashboardToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles DashboardToolStripMenuItem1.Click
         switchPanel(FormDashboard)
+        Call FormDashboard.totalUser()
+        Call FormDashboard.totalProduct()
+        Call FormDashboard.totalSales()
+        Call FormDashboard.totalIncome()
+    End Sub
+
+    Private Sub btnLaporan_Click(sender As Object, e As EventArgs) Handles btnLaporan.Click
+        switchPanel(FormLapPenjualanV1)
     End Sub
 End Class

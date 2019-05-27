@@ -25,3 +25,31 @@ G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormDashboard.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.DetailBarang.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.FormKategoriBarang.resources
 G:\Project\AplikasiPenjualan\obj\Debug\AplikasiPenjualan.vbprojResolveAssemblyReference.cache
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.exe.config
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.exe
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.xml
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.pdb
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.exe
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.pdb
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.xml
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\Bunifu_UI_v1.52.dll
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.vbprojResolveAssemblyReference.cache
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.B_FormLogin.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.DetailBarang.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormAddBarang.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormBarang.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormDashboard.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormKategori.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormKategoriBarang.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormLogin.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormMain.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormMenuUtama.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormPenjualan.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormSetupToko.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormUserlist.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormUtama.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.MainForm.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.Resources.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.vbproj.GenerateResource.Cache
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.ReportPenjualan.resources
+G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.FormLapPenjualanV1.resources
