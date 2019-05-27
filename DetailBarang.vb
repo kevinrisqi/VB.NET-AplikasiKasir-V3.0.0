@@ -52,22 +52,23 @@ Public Class DetailBarang
         End If
     End Sub
 
-    Private Sub BunifuCustomDataGrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellContentClick
+    Private Sub BunifuCustomDataGrid1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellClick
 
     End Sub
 
-    Private Sub BunifuCustomDataGrid1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellDoubleClick
+    Private Sub BunifuCustomDataGrid1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellContentClick
         
     End Sub
 
-    Private Sub BunifuCustomDataGrid1_CellEnter(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellEnter
+    Private Sub BunifuCustomDataGrid1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles BunifuCustomDataGrid1.CellDoubleClick
         Dim i As Integer
         i = BunifuCustomDataGrid1.CurrentRow.Index
 
         FormPenjualan.kodeBarang.Text = BunifuCustomDataGrid1.Item(1, i).Value
         FormPenjualan.namaBarang.Text = BunifuCustomDataGrid1.Item(2, i).Value
         FormPenjualan.hargaSatuan.Text = BunifuCustomDataGrid1.Item(4, i).Value
-        FormPenjualan.kodeBarang.Focus()
         Me.Dispose()
+        FormPenjualan.kodeBarang.Focus()
     End Sub
+
 End Class

@@ -156,6 +156,7 @@ Public Class FormPenjualan
     Sub saveData()
         If (bayar.Text = "" Or Total.Text = "" Or kembali.Text = "") Then
             MsgBox("Silahkan lakukan transaksi !", vbInformation)
+            kodeBarang.Focus()
         ElseIf Val(kembali.Text) < 0 Then
             MsgBox("Pembayaran kurang !", vbInformation)
         Else
@@ -170,6 +171,7 @@ Public Class FormPenjualan
             Else
                 Call totalQty()
             End If
+            kodeBarang.Focus()
         End If
     End Sub
 
