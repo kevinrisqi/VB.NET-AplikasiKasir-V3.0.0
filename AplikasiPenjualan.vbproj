@@ -228,6 +228,12 @@
     <Compile Include="ReportPenjualan.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\LaporanHarian.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanHarian.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="B_FormLogin.resx">
@@ -294,6 +300,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReportPenjualan.resx">
       <DependentUpon>ReportPenjualan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LaporanHarian.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanHarian.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

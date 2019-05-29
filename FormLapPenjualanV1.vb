@@ -33,7 +33,7 @@ Public Class FormLapPenjualanV1
         Ds = New DataSet
         Da.Fill(Ds, "DetailTransaksi")
         DataGridView1.DataSource = Ds.Tables(0)
-        rpt.Load(strPath + "CrystalReport3.rpt")
+        rpt.Load(strPath + "\Reports\LaporanHarian.rpt")
         rpt.SetDataSource(Ds.Tables(0))
         CrystalReportViewer1.ReportSource = rpt
         CrystalReportViewer1.Refresh()
