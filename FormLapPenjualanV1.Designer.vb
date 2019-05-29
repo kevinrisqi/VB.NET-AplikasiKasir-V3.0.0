@@ -26,6 +26,7 @@ Partial Class FormLapPenjualanV1
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CrystalReport31 = New AplikasiPenjualan.CrystalReport3()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,12 +59,22 @@ Partial Class FormLapPenjualanV1
         Me.DataGridView1.Size = New System.Drawing.Size(994, 199)
         Me.DataGridView1.TabIndex = 2
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(113, 22)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
         'FormLapPenjualanV1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1018, 599)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Controls.Add(Me.Button1)
@@ -73,10 +84,12 @@ Partial Class FormLapPenjualanV1
         Me.Text = "FormLapPenjualanV1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents CrystalReport31 As AplikasiPenjualan.CrystalReport3
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
