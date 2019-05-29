@@ -29,7 +29,7 @@ Public Class FormLapPenjualanV1
         strPath = strPath + "\"
         Label1.Text = strPath
         Dim rpt As New ReportDocument
-        Da = New OdbcDataAdapter("SELECT id_barang, nama_barang,harga_satuan, SUM(qty) AS qty, SUM(SubTotal) AS subtotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok,penjualan.tanggal AS tanggal FROM detail_penjualan JOIN penjualan ON penjualan.id_penjualan = detail_penjualan.id_penjualan GROUP BY id_barang", Conn)
+        Da = New OdbcDataAdapter("CALL GetAllDetails()", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "DetailTransaksi")
         DataGridView1.DataSource = Ds.Tables(0)
