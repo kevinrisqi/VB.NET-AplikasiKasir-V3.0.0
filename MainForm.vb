@@ -41,6 +41,10 @@ Public Class MainForm
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
         switchPanel(FormDashboard)
+        Call FormDashboard.totalIncome()
+        Call FormDashboard.totalProduct()
+        Call FormDashboard.totalSales()
+        Call FormDashboard.totalUser()
     End Sub
 
     Private Sub btnBarang_Click(sender As Object, e As EventArgs) Handles btnBarang.Click

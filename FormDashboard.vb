@@ -24,7 +24,7 @@ Public Class FormDashboard
 
     Sub totalSales()
         Call koneksi()
-        Cmd = New OdbcCommand("SELECT COUNT(*) FROM penjualan", Conn)
+        Cmd = New OdbcCommand("SELECT COUNT(*) FROM detail_penjualan", Conn)
         Dim count As Integer = Cmd.ExecuteScalar
         lblSales.Text = count
     End Sub
@@ -45,5 +45,4 @@ Public Class FormDashboard
             lblIncome.Text = FormatCurrency(lblIncome.Text)
         End If
     End Sub
-
 End Class
