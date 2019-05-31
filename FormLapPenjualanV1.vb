@@ -42,7 +42,38 @@ Public Class FormLapPenjualanV1
         CrystalReportViewer1.Refresh()
     End Sub
 
+    Sub customReport()
+        Call koneksi()
+        Dim strPath As String
+        Dim tanggal1 As String
+        Dim tanggal2 As String
+        DateTimePicker3.CustomFormat = "yyyy-MM-dd"
+        DateTimePicker4.CustomFormat = "yyyy-MM-dd"
+        tanggal1 = DateTimePicker3.Text
+        tanggal2 = DateTimePicker4.Text
+        strPath = Application.StartupPath
+        strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
+        strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
+        strPath = strPath + "\"
+        Dim rpt As New ReportDocument
+        Da = New OdbcDataAdapter("SELECT detail_penjualan.id_barang, detail_penjualan.nama_barang,harga_satuan, SUM(qty) AS Qty, SUM(SubTotal) AS SubTotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok,nama_kategori,ppn,tanggal FROM detail_penjualan JOIN barang ON detail_penjualan.id_barang = barang.id_barang JOIN kategori_barang ON kategori_barang.id_kategori = barang.id_kategori JOIN penjualan ON penjualan.id_penjualan = detail_penjualan.id_penjualan WHERE tanggal between '" & tanggal1 & "' and '" & tanggal2 & "' GROUP BY detail_penjualan.id_barang", Conn)
+        Ds = New DataSet
+        Da.Fill(Ds, "DetailTransaksi")
+        DateTimePicker3.CustomFormat = "dd-MM-yyyy"
+        tanggal1 = DateTimePicker3.Text
+        DateTimePicker4.CustomFormat = "dd-MM-yyyy"
+        tanggal2 = DateTimePicker4.Text
+        rpt.Load(strPath + "\Reports\LaporanHarian.rpt")
+        rpt.SetDataSource(Ds.Tables(0))
+        CrystalReportViewer1.ReportSource = rpt
+        CrystalReportViewer1.Refresh()
+    End Sub
+
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
         Call dailyReport()
+    End Sub
+
+    Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
+        Call customReport()
     End Sub
 End Class
