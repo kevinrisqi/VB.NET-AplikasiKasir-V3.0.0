@@ -6,27 +6,26 @@ Imports System.Data
 
 Public Class FormLapPenjualanV1
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         'Dim cryRpt As New ReportDocument
         'cryRpt.Load("G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\LaporanPenjualan.rpt")
         'cryRpt.Datas()
         'CrystalReportViewer1.ReportSource = cryRpt
         'CrystalReportViewer1.Refresh()
-        
-        Call loadReport()
+
+        Call dailyReport()
     End Sub
 
     Private Sub FormLapPenjualanV1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Sub loadReport()
+    Sub dailyReport()
         Call koneksi()
         Dim strPath As String
         Dim tanggal As String
         DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         tanggal = DateTimePicker1.Text
-        Label1.Text = tanggal
         strPath = Application.StartupPath
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
@@ -37,12 +36,13 @@ Public Class FormLapPenjualanV1
         Da.Fill(Ds, "DetailTransaksi")
         DateTimePicker1.CustomFormat = "dd-MM-yyyy"
         tanggal = DateTimePicker1.Text
-        'DataGridView1.DataSource = Ds.Tables(0)
         rpt.Load(strPath + "\Reports\LaporanHarian.rpt")
         rpt.SetDataSource(Ds.Tables(0))
         CrystalReportViewer1.ReportSource = rpt
         CrystalReportViewer1.Refresh()
-        
     End Sub
 
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Call dailyReport()
+    End Sub
 End Class
