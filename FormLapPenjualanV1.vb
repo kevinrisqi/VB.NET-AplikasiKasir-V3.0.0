@@ -47,6 +47,8 @@ Public Class FormLapPenjualanV1
         Dim strPath As String
         Dim tanggal1 As String
         Dim tanggal2 As String
+        'Dim paramV As CrystalDecisions.Shared.ParameterValues
+        'Dim paramDValue As CrystalDecisions.Shared.ParameterDiscreteValue
         DateTimePicker3.CustomFormat = "yyyy-MM-dd"
         DateTimePicker4.CustomFormat = "yyyy-MM-dd"
         tanggal1 = DateTimePicker3.Text
@@ -63,10 +65,19 @@ Public Class FormLapPenjualanV1
         tanggal1 = DateTimePicker3.Text
         DateTimePicker4.CustomFormat = "dd-MM-yyyy"
         tanggal2 = DateTimePicker4.Text
-        rpt.Load(strPath + "\Reports\LaporanHarian.rpt")
+        rpt.Load(strPath + "\Reports\LaporanCustom.rpt")
         rpt.SetDataSource(Ds.Tables(0))
+        rpt.SetParameterValue("tanggal1", tanggal1)
+        rpt.SetParameterValue("tanggal2", tanggal2)
         CrystalReportViewer1.ReportSource = rpt
-        CrystalReportViewer1.Refresh()
+        'paramV = New CrystalDecisions.Shared.ParameterValues
+        'paramDValue = New CrystalDecisions.Shared.ParameterDiscreteValue
+        'paramDValue.Value = tanggal1
+        'paramV.Add(paramDValue)
+        'rpt.ParameterFields.Item("tanggal1").CurrentValues = paramV
+        'rpt.ParameterFields.Item("tanggal1").HasCurrentValue = True
+
+        'CrystalReportViewer1.Refresh()
     End Sub
 
     Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click

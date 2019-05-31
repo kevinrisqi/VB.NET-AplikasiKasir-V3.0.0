@@ -51,6 +51,10 @@ Partial Class FormLapPenjualanV1
         Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(57, 222)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ShowCloseButton = False
+        Me.CrystalReportViewer1.ShowLogo = False
+        Me.CrystalReportViewer1.ShowParameterPanelButton = False
+        Me.CrystalReportViewer1.ShowRefreshButton = False
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(888, 365)
         Me.CrystalReportViewer1.TabIndex = 1
         Me.CrystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
