@@ -25,7 +25,6 @@ Partial Class FormLapPenjualanV1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CrystalReport31 = New AplikasiPenjualan.CrystalReport3()
         Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,6 +89,5 @@ Partial Class FormLapPenjualanV1
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents CrystalReport31 As AplikasiPenjualan.CrystalReport3
     Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

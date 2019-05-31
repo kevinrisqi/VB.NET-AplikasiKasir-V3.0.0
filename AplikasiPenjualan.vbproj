@@ -103,12 +103,6 @@
     <Compile Include="B_FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrystalReport3.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport3.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DetailBarang.Designer.vb">
       <DependentUpon>DetailBarang.vb</DependentUpon>
     </Compile>
@@ -133,12 +127,6 @@
     <Compile Include="FormDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKategori.Designer.vb">
-      <DependentUpon>FormKategori.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormKategori.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormKategoriBarang.Designer.vb">
       <DependentUpon>FormKategoriBarang.vb</DependentUpon>
     </Compile>
@@ -149,25 +137,6 @@
       <DependentUpon>FormLapPenjualanV1.vb</DependentUpon>
     </Compile>
     <Compile Include="FormLapPenjualanV1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.vb">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.vb">
-      <DependentUpon>FormMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenuUtama.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMenuUtama.Designer.vb">
-      <DependentUpon>FormMenuUtama.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPenjualan.Designer.vb">
@@ -187,18 +156,6 @@
     </Compile>
     <Compile Include="FormUserlist.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUtama.Designer.vb">
-      <DependentUpon>FormUtama.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormUtama.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LaporanPenjualan.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LaporanPenjualan.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -222,12 +179,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ReportPenjualan.Designer.vb">
-      <DependentUpon>ReportPenjualan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ReportPenjualan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reports\LaporanHarian.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,10 +189,6 @@
   <ItemGroup>
     <EmbeddedResource Include="B_FormLogin.resx">
       <DependentUpon>B_FormLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport3.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DetailBarang.resx">
       <DependentUpon>DetailBarang.vb</DependentUpon>
@@ -255,23 +202,11 @@
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKategori.resx">
-      <DependentUpon>FormKategori.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormKategoriBarang.resx">
       <DependentUpon>FormKategoriBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLapPenjualanV1.resx">
       <DependentUpon>FormLapPenjualanV1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMenuUtama.resx">
-      <DependentUpon>FormMenuUtama.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPenjualan.resx">
       <DependentUpon>FormPenjualan.vb</DependentUpon>
@@ -282,13 +217,6 @@
     <EmbeddedResource Include="FormUserlist.resx">
       <DependentUpon>FormUserlist.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUtama.resx">
-      <DependentUpon>FormUtama.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LaporanPenjualan.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>LaporanPenjualan.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -297,9 +225,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportPenjualan.resx">
-      <DependentUpon>ReportPenjualan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LaporanHarian.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
