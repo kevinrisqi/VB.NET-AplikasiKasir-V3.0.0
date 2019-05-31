@@ -32,7 +32,6 @@ G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.exe
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.pdb
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\AplikasiPenjualan.xml
-G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\bin\Debug\Bunifu_UI_v1.52.dll
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.vbprojResolveAssemblyReference.cache
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.B_FormLogin.resources
 G:\Project\AplikasiKasir - Fail\AplikasiPenjualanV1\Aplikasi-Penjualan\obj\Debug\AplikasiPenjualan.DetailBarang.resources
