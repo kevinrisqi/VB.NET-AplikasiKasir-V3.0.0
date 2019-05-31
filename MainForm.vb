@@ -115,7 +115,7 @@ Public Class MainForm
     End Sub
 
     Private Sub LaporanToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LaporanToolStripMenuItem.Click
-
+        switchPanel(FormLapPenjualanV1)
     End Sub
 
     Private Sub SetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SetupToolStripMenuItem.Click

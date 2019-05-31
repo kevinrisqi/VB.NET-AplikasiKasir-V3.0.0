@@ -23,20 +23,26 @@ Public Class FormLapPenjualanV1
     Sub loadReport()
         Call koneksi()
         Dim strPath As String
+        Dim tanggal As String
+        DateTimePicker1.CustomFormat = "yyyy-MM-dd"
+        tanggal = DateTimePicker1.Text
+        Label1.Text = tanggal
         strPath = Application.StartupPath
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
         strPath = strPath + "\"
-        Label1.Text = strPath
         Dim rpt As New ReportDocument
-        Da = New OdbcDataAdapter("SELECT detail_penjualan.id_barang, detail_penjualan.nama_barang,harga_satuan, SUM(qty) AS Qty, SUM(SubTotal) AS SubTotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok,nama_kategori,ppn,tanggal FROM detail_penjualan JOIN barang ON detail_penjualan.id_barang = barang.id_barang JOIN kategori_barang ON kategori_barang.id_kategori = barang.id_kategori JOIN penjualan ON penjualan.id_penjualan = detail_penjualan.id_penjualan GROUP BY detail_penjualan.id_barang", Conn)
+        Da = New OdbcDataAdapter("SELECT detail_penjualan.id_barang, detail_penjualan.nama_barang,harga_satuan, SUM(qty) AS Qty, SUM(SubTotal) AS SubTotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok,nama_kategori,ppn,tanggal FROM detail_penjualan JOIN barang ON detail_penjualan.id_barang = barang.id_barang JOIN kategori_barang ON kategori_barang.id_kategori = barang.id_kategori JOIN penjualan ON penjualan.id_penjualan = detail_penjualan.id_penjualan WHERE tanggal = '" & tanggal & "' GROUP BY detail_penjualan.id_barang", Conn)
         Ds = New DataSet
         Da.Fill(Ds, "DetailTransaksi")
-        DataGridView1.DataSource = Ds.Tables(0)
+        DateTimePicker1.CustomFormat = "dd-MM-yyyy"
+        tanggal = DateTimePicker1.Text
+        'DataGridView1.DataSource = Ds.Tables(0)
         rpt.Load(strPath + "\Reports\LaporanHarian.rpt")
         rpt.SetDataSource(Ds.Tables(0))
         CrystalReportViewer1.ReportSource = rpt
         CrystalReportViewer1.Refresh()
+        
     End Sub
 
 End Class
