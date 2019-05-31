@@ -42,6 +42,28 @@ Public Class FormLapPenjualanV1
         CrystalReportViewer1.Refresh()
     End Sub
 
+    Sub monthReport()
+        Call koneksi()
+        Dim strPath As String
+        Dim month As String
+        Dim year As String
+        month = DateTimePicker2.Value.Month
+        year = DateTimePicker2.Value.Year
+        Label1.Text = month + year
+        strPath = Application.StartupPath
+        strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
+        strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
+        strPath = strPath + "\"
+        Dim rpt As New ReportDocument
+        Da = New OdbcDataAdapter("SELECT detail_penjualan.id_barang, detail_penjualan.nama_barang,harga_satuan, SUM(qty) AS Qty, SUM(SubTotal) AS SubTotal,SUM(diskon) AS diskon,SUM(netto) AS netto,SUM(total_pokok) AS total_pokok,nama_kategori,ppn,tanggal FROM detail_penjualan JOIN barang ON detail_penjualan.id_barang = barang.id_barang JOIN kategori_barang ON kategori_barang.id_kategori = barang.id_kategori JOIN penjualan ON penjualan.id_penjualan = detail_penjualan.id_penjualan WHERE MONTH(tanggal) = '" & month & "' AND YEAR(tanggal) = '" & year & "' GROUP BY detail_penjualan.id_barang", Conn)
+        Ds = New DataSet
+        Da.Fill(Ds, "DetailTransaksi")
+        rpt.Load(strPath + "\Reports\LaporanBulanan.rpt")
+        rpt.SetDataSource(Ds.Tables(0))
+        CrystalReportViewer1.ReportSource = rpt
+        CrystalReportViewer1.Refresh()
+    End Sub
+
     Sub customReport()
         Call koneksi()
         Dim strPath As String
@@ -86,5 +108,9 @@ Public Class FormLapPenjualanV1
 
     Private Sub BunifuFlatButton2_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton2.Click
         Call customReport()
+    End Sub
+
+    Private Sub BunifuFlatButton3_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton3.Click
+        Call monthReport()
     End Sub
 End Class
