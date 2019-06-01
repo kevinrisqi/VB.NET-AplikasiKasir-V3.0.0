@@ -197,6 +197,12 @@
       <DependentUpon>LaporanHarian.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\ListBarang.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListBarang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="B_FormLogin.resx">
@@ -249,6 +255,10 @@
     <EmbeddedResource Include="Reports\LaporanHarian.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanHarian.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListBarang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListBarang.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

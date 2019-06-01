@@ -49,7 +49,6 @@ Public Class FormLapPenjualanV1
         Dim year As String
         month = DateTimePicker2.Value.Month
         year = DateTimePicker2.Value.Year
-        Label1.Text = month + year
         strPath = Application.StartupPath
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
         strPath = strPath.Substring(0, strPath.LastIndexOf("\"))
