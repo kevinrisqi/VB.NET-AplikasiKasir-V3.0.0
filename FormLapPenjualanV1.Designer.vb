@@ -29,7 +29,6 @@ Partial Class FormLapPenjualanV1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
@@ -37,6 +36,7 @@ Partial Class FormLapPenjualanV1
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -119,18 +119,9 @@ Partial Class FormLapPenjualanV1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Laporan Harian"
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(217, 32)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(58, 29)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.CustomFormat = "dd-MM-yyyy"
+        Me.DateTimePicker2.CustomFormat = "MM-yyyy"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.Location = New System.Drawing.Point(21, 34)
         Me.DateTimePicker2.Name = "DateTimePicker2"
@@ -139,14 +130,14 @@ Partial Class FormLapPenjualanV1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.BunifuFlatButton3)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Location = New System.Drawing.Point(356, 120)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(289, 96)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Laporan Harian"
+        Me.GroupBox2.Text = "Laporan Bulanan"
         '
         'DateTimePicker3
         '
@@ -246,6 +237,40 @@ Partial Class FormLapPenjualanV1
         Me.DateTimePicker4.Size = New System.Drawing.Size(133, 20)
         Me.DateTimePicker4.TabIndex = 7
         '
+        'BunifuFlatButton3
+        '
+        Me.BunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton3.BorderRadius = 0
+        Me.BunifuFlatButton3.ButtonText = "   Check"
+        Me.BunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton3.Iconimage = Global.AplikasiPenjualan.My.Resources.Resources.available_updates_40px
+        Me.BunifuFlatButton3.Iconimage_right = Nothing
+        Me.BunifuFlatButton3.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton3.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton3.IconMarginLeft = 0
+        Me.BunifuFlatButton3.IconMarginRight = 0
+        Me.BunifuFlatButton3.IconRightVisible = True
+        Me.BunifuFlatButton3.IconRightZoom = 0.0R
+        Me.BunifuFlatButton3.IconVisible = True
+        Me.BunifuFlatButton3.IconZoom = 50.0R
+        Me.BunifuFlatButton3.IsTab = False
+        Me.BunifuFlatButton3.Location = New System.Drawing.Point(163, 34)
+        Me.BunifuFlatButton3.Name = "BunifuFlatButton3"
+        Me.BunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(127, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(84, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.BunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.selected = False
+        Me.BunifuFlatButton3.Size = New System.Drawing.Size(120, 46)
+        Me.BunifuFlatButton3.TabIndex = 6
+        Me.BunifuFlatButton3.Text = "   Check"
+        Me.BunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuFlatButton3.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton3.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'FormLapPenjualanV1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -279,11 +304,11 @@ Partial Class FormLapPenjualanV1
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents BunifuFlatButton1 As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents BunifuFlatButton2 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents BunifuFlatButton3 As Bunifu.Framework.UI.BunifuFlatButton
 End Class

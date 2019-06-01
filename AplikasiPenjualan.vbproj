@@ -157,6 +157,12 @@
     <Compile Include="FormUserlist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListBarang.Designer.vb">
+      <DependentUpon>ListBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -179,6 +185,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports\LaporanBulanan.vb">
+      <DependentUpon>LaporanBulanan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\LaporanCustom.vb">
       <DependentUpon>LaporanCustom.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -190,6 +202,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LaporanHarian.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ListBarang.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListBarang.rpt</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +241,9 @@
     <EmbeddedResource Include="FormUserlist.resx">
       <DependentUpon>FormUserlist.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListBarang.resx">
+      <DependentUpon>ListBarang.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +253,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\LaporanBulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>LaporanBulanan.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\LaporanCustom.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanCustom.vb</LastGenOutput>
@@ -239,6 +264,10 @@
     <EmbeddedResource Include="Reports\LaporanHarian.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>LaporanHarian.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ListBarang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListBarang.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
