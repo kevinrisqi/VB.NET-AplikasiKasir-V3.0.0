@@ -157,6 +157,12 @@
     <Compile Include="FormUserlist.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ListBarang.Designer.vb">
+      <DependentUpon>ListBarang.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ListBarang.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
@@ -201,7 +207,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ListBarang.rpt</DependentUpon>
-      <SubType>Component</SubType>
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUserlist.resx">
       <DependentUpon>FormUserlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBarang.resx">
+      <DependentUpon>ListBarang.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
